@@ -46,7 +46,7 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({ onOpenInquiry }) => {
           </div>
 
           <div className="pt-4 text-xs font-mono text-agrya-slate-400">
-            Consultation with Partner Chartered Accountants &bull; Confidential & NDA-Bound
+            Consultation with Partner Chartered Accountants • Confidential & NDA-Bound
           </div>
         </div>
       </DoubleBezel>

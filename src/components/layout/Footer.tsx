@@ -16,17 +16,23 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           
           {/* BRAND COLUMN */}
           <div className="md:col-span-5 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-agrya-teal-500/20 border border-agrya-teal-400/30 flex items-center justify-center text-agrya-teal-300 font-extrabold text-lg">
-                A
-              </div>
-              <div>
-                <span className="font-bold text-lg tracking-tight text-white block leading-tight">Agrya Consulting</span>
-                <span className="text-[10px] text-agrya-teal-400 font-mono tracking-widest uppercase font-semibold">The Financial OS for Modern Business</span>
-              </div>
+            <button
+              onClick={() => onNavigate('/')}
+              className="bg-white px-3.5 py-2 rounded-xl inline-flex items-center shadow-sm hover:opacity-95 transition-opacity"
+              aria-label="Agrya Consulting Home"
+            >
+              <img
+                src="/assets/logo-agrya.png"
+                alt="Agrya Consulting"
+                className="h-7 w-auto object-contain"
+              />
+            </button>
+
+            <div className="text-[11px] text-agrya-teal-400 font-mono tracking-widest uppercase font-semibold">
+              The Financial OS for Modern Business
             </div>
 
-            <p className="text-agrya-slate-400 text-xs sm:text-sm leading-relaxed max-w-sm pt-2">
+            <p className="text-agrya-slate-400 text-xs sm:text-sm leading-relaxed max-w-sm pt-1">
               Empowering growth-focused businesses with modern financial infrastructure, strategic Virtual CFO leadership, and automated accounting workflows.
             </p>
 
@@ -95,17 +101,17 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </li>
               <li className="pt-2 border-t border-agrya-slate-800/60">
                 <a href="https://www.goeffortless.co" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-1">
-                  Effortless &bull; Finance OS &nearr;
+                  Effortless • Growth & Tally Sync ↗
                 </a>
               </li>
               <li>
                 <a href="https://www.myactionboard.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-1">
-                  Actionboard &bull; Financial BI &nearr;
+                  Actionboard • AI Finance on PharOS ↗
                 </a>
               </li>
               <li>
                 <a href="https://pulse.myactionboard.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-1">
-                  Pulse &bull; Project Profitability &nearr;
+                  Pulse • Project Profitability (Agrya Tech) ↗
                 </a>
               </li>
             </ul>
@@ -116,7 +122,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         {/* FOUR PHYSICAL HUB LOCATIONS (VERBATIM ADDRESSES) */}
         <div className="py-12 border-b border-agrya-slate-800/80">
           <div className="font-mono text-xs font-semibold uppercase tracking-wider text-agrya-slate-400 mb-6">
-            Physical Hubs &bull; Pan-India Presence
+            Physical Hubs • Pan-India Presence
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -139,11 +145,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         {/* BOTTOM LEGAL & COPYRIGHT */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-agrya-slate-500 font-mono gap-4">
           <div>
-            &copy; {new Date().getFullYear()} Agrya Consulting Private Limited. All rights reserved.
+            © {new Date().getFullYear()} Agrya Consulting Private Limited. All rights reserved.
           </div>
           <div className="flex items-center gap-4">
-            <span>Chennai &bull; Bengaluru &bull; Hyderabad &bull; Mumbai</span>
-            <span>&bull;</span>
+            <span>Chennai • Bengaluru • Hyderabad • Mumbai</span>
+            <span>•</span>
             <span className="text-agrya-teal-400">SOC-2 & Statutory Rigor</span>
           </div>
         </div>

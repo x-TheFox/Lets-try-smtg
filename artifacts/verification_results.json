@@ -1,0 +1,522 @@
+{
+  "timestamp": "2026-09-15T13:59:49.325Z",
+  "routes": {
+    "/": {
+      "status": "PASS",
+      "consoleErrors": [],
+      "networkErrors": [],
+      "viewports": {
+        "360": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/home-360.png"
+        },
+        "390": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/home-390.png"
+        },
+        "768": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/home-768.png"
+        },
+        "1024": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/home-1024.png"
+        },
+        "1440": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/home-1440.png"
+        },
+        "1920": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/home-1920.png"
+        }
+      }
+    },
+    "/accounting-hub": {
+      "status": "PASS",
+      "consoleErrors": [],
+      "networkErrors": [],
+      "viewports": {
+        "360": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/accounting-hub-360.png"
+        },
+        "390": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/accounting-hub-390.png"
+        },
+        "768": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/accounting-hub-768.png"
+        },
+        "1024": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/accounting-hub-1024.png"
+        },
+        "1440": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/accounting-hub-1440.png"
+        },
+        "1920": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/accounting-hub-1920.png"
+        }
+      }
+    },
+    "/cfo": {
+      "status": "PASS",
+      "consoleErrors": [],
+      "networkErrors": [],
+      "viewports": {
+        "360": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/cfo-360.png"
+        },
+        "390": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/cfo-390.png"
+        },
+        "768": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/cfo-768.png"
+        },
+        "1024": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/cfo-1024.png"
+        },
+        "1440": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/cfo-1440.png"
+        },
+        "1920": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/cfo-1920.png"
+        }
+      }
+    },
+    "/cfo-support": {
+      "status": "PASS",
+      "consoleErrors": [],
+      "networkErrors": [],
+      "viewports": {
+        "360": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/cfo-support-360.png"
+        },
+        "390": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/cfo-support-390.png"
+        },
+        "768": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/cfo-support-768.png"
+        },
+        "1024": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/cfo-support-1024.png"
+        },
+        "1440": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/cfo-support-1440.png"
+        },
+        "1920": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/cfo-support-1920.png"
+        }
+      }
+    },
+    "/story": {
+      "status": "PASS",
+      "consoleErrors": [],
+      "networkErrors": [],
+      "viewports": {
+        "360": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/story-360.png"
+        },
+        "390": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/story-390.png"
+        },
+        "768": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/story-768.png"
+        },
+        "1024": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/story-1024.png"
+        },
+        "1440": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/story-1440.png"
+        },
+        "1920": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/story-1920.png"
+        }
+      }
+    },
+    "/team": {
+      "status": "PASS",
+      "consoleErrors": [],
+      "networkErrors": [],
+      "viewports": {
+        "360": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/team-360.png"
+        },
+        "390": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/team-390.png"
+        },
+        "768": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/team-768.png"
+        },
+        "1024": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/team-1024.png"
+        },
+        "1440": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/team-1440.png"
+        },
+        "1920": {
+          "statusCode": 200,
+          "screenshot": "artifacts/built-site/team-1920.png"
+        }
+      }
+    }
+  },
+  "interactions": {
+    "stageToggleSeed": "PASS (Interpolated to 18.4 Mo)",
+    "stageToggleEnterprise": "PASS (Interpolated to 36+ Mo)",
+    "ecosystemActionboard": "PASS (PharOS live ledger telemetry rendered)",
+    "ecosystemPulse": "PASS (Authentic service profitability telemetry rendered)",
+    "cfoRunwaySimulator": "PASS (Dynamic sensitivity calculation)",
+    "teamPartnerConsultation": "PASS (Partner pre-targeted)",
+    "notFoundBoundary": "PASS"
+  },
+  "a11y": {
+    "/": {
+      "h1Count": 1,
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Financial clarity for modern business"
+        },
+        {
+          "tag": "H2",
+          "text": "Comprehensive financial solutions"
+        },
+        {
+          "tag": "H3",
+          "text": "Accounting Hub"
+        },
+        {
+          "tag": "H3",
+          "text": "Virtual CFO"
+        },
+        {
+          "tag": "H3",
+          "text": "CFO Support"
+        },
+        {
+          "tag": "H2",
+          "text": "Powered by Intelligence"
+        },
+        {
+          "tag": "H3",
+          "text": "Effortless"
+        },
+        {
+          "tag": "H3",
+          "text": "Actionboard"
+        },
+        {
+          "tag": "H3",
+          "text": "Pulse"
+        },
+        {
+          "tag": "H4",
+          "text": "Effortless — The All-In-One Growth Platf"
+        }
+      ],
+      "imagesWithoutAlt": 0,
+      "buttonsWithoutLabel": 0
+    },
+    "/accounting-hub": {
+      "h1Count": 1,
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Professional accounting, powered by tech"
+        },
+        {
+          "tag": "H2",
+          "text": "Operating Cost & Efficiency Benchmark"
+        },
+        {
+          "tag": "H2",
+          "text": "Complete end-to-end accounting pipeline."
+        },
+        {
+          "tag": "H3",
+          "text": "End-to-End Bookkeeping"
+        },
+        {
+          "tag": "H3",
+          "text": "Statutory & Tax Compliance"
+        },
+        {
+          "tag": "H3",
+          "text": "Executive MIS & Reporting"
+        },
+        {
+          "tag": "H3",
+          "text": "Payroll & Treasury Processing"
+        },
+        {
+          "tag": "H3",
+          "text": "Supported Financial Platforms"
+        },
+        {
+          "tag": "H2",
+          "text": "Get your books in order."
+        },
+        {
+          "tag": "H3",
+          "text": "Company"
+        }
+      ],
+      "imagesWithoutAlt": 0,
+      "buttonsWithoutLabel": 0
+    },
+    "/cfo": {
+      "h1Count": 1,
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Strategic financial leadership, on deman"
+        },
+        {
+          "tag": "H2",
+          "text": "Dynamic FP&A & Runway Scenario Simulator"
+        },
+        {
+          "tag": "H2",
+          "text": "Four pillars of Virtual CFO leadership."
+        },
+        {
+          "tag": "H3",
+          "text": "Dynamic FP&A & 3-Statement Modeling"
+        },
+        {
+          "tag": "H3",
+          "text": "Fundraising & Investor Readiness"
+        },
+        {
+          "tag": "H3",
+          "text": "Unit Economics & Pricing Strategy"
+        },
+        {
+          "tag": "H3",
+          "text": "Board Reporting & Governance"
+        },
+        {
+          "tag": "H3",
+          "text": "Institutional Quality Assurance"
+        },
+        {
+          "tag": "H2",
+          "text": "Accelerate your growth trajectory."
+        },
+        {
+          "tag": "H3",
+          "text": "Company"
+        }
+      ],
+      "imagesWithoutAlt": 0,
+      "buttonsWithoutLabel": 0
+    },
+    "/cfo-support": {
+      "h1Count": 1,
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Power your in-house finance team with ex"
+        },
+        {
+          "tag": "H2",
+          "text": "Specialized execution pods for in-house "
+        },
+        {
+          "tag": "H3",
+          "text": "Due Diligence & Audit Remediation"
+        },
+        {
+          "tag": "H3",
+          "text": "Systems & ERP Migration"
+        },
+        {
+          "tag": "H3",
+          "text": "Specialized FP&A Sprints"
+        },
+        {
+          "tag": "H3",
+          "text": "Overflow Back-Office Execution"
+        },
+        {
+          "tag": "H2",
+          "text": "Execution Pod Integration Matrix"
+        },
+        {
+          "tag": "H3",
+          "text": "Flexible Engagement Models"
+        },
+        {
+          "tag": "H2",
+          "text": "Scale your in-house capacity"
+        },
+        {
+          "tag": "H3",
+          "text": "Company"
+        }
+      ],
+      "imagesWithoutAlt": 0,
+      "buttonsWithoutLabel": 0
+    },
+    "/story": {
+      "h1Count": 1,
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Built by finance leaders for founders wh"
+        },
+        {
+          "tag": "H2",
+          "text": "The Problem We Set Out to Solve"
+        },
+        {
+          "tag": "H2",
+          "text": "The Financial Operating System"
+        },
+        {
+          "tag": "H3",
+          "text": "How Agrya Operates"
+        },
+        {
+          "tag": "H4",
+          "text": "Zero Vanity Metrics"
+        },
+        {
+          "tag": "H4",
+          "text": "Chartered Pedigree"
+        },
+        {
+          "tag": "H4",
+          "text": "Software + Wisdom"
+        },
+        {
+          "tag": "H2",
+          "text": "Build with financial confidence."
+        },
+        {
+          "tag": "H3",
+          "text": "Company"
+        },
+        {
+          "tag": "H3",
+          "text": "Services & Ecosystem"
+        }
+      ],
+      "imagesWithoutAlt": 0,
+      "buttonsWithoutLabel": 0
+    },
+    "/team": {
+      "h1Count": 1,
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Leadership & Expertise"
+        },
+        {
+          "tag": "H2",
+          "text": "Founding Partners"
+        },
+        {
+          "tag": "H3",
+          "text": "Avinash Sancheti"
+        },
+        {
+          "tag": "H3",
+          "text": "Jayakumar"
+        },
+        {
+          "tag": "H2",
+          "text": "Partners & Practice Specialists"
+        },
+        {
+          "tag": "H3",
+          "text": "Manoj"
+        },
+        {
+          "tag": "H3",
+          "text": "Priya"
+        },
+        {
+          "tag": "H3",
+          "text": "Ramprakash"
+        },
+        {
+          "tag": "H3",
+          "text": "Saichand"
+        },
+        {
+          "tag": "H3",
+          "text": "Hrishi"
+        }
+      ],
+      "imagesWithoutAlt": 0,
+      "buttonsWithoutLabel": 0
+    }
+  },
+  "performance": {
+    "/": {
+      "ttfb": 0.7000000029802322,
+      "domContentLoaded": 6.799999997019768,
+      "load": 6.799999997019768,
+      "fcp": 36
+    },
+    "/accounting-hub": {
+      "ttfb": 0.8000000044703484,
+      "domContentLoaded": 7.600000001490116,
+      "load": 8,
+      "fcp": 28
+    },
+    "/cfo": {
+      "ttfb": 0.6999999955296516,
+      "domContentLoaded": 7.799999997019768,
+      "load": 7.799999997019768,
+      "fcp": 36
+    },
+    "/cfo-support": {
+      "ttfb": 0.7000000029802322,
+      "domContentLoaded": 7.399999998509884,
+      "load": 7.700000002980232,
+      "fcp": 32
+    },
+    "/story": {
+      "ttfb": 1,
+      "domContentLoaded": 8.700000002980232,
+      "load": 8.700000002980232,
+      "fcp": 36
+    },
+    "/team": {
+      "ttfb": 1.1000000014901161,
+      "domContentLoaded": 9.799999997019768,
+      "load": 10.399999998509884,
+      "fcp": 48
+    }
+  }
+}

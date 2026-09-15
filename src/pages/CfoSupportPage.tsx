@@ -12,6 +12,37 @@ interface CfoSupportPageProps {
 export const CfoSupportPage: React.FC<CfoSupportPageProps> = ({ onOpenInquiry }) => {
   const data = servicesData['cfo-support'];
 
+  const podMatrix = [
+    {
+      stream: 'AP/AR Ingestion & Vendor Reconciliation',
+      clientInterface: 'In-House Controller / Ops',
+      podRole: 'Dedicated Execution Specialist',
+      turnaround: '24 Hours',
+      protocol: 'Two-way ERP & Bank API Sync'
+    },
+    {
+      stream: 'Dynamic FP&A & Scenario Modeling',
+      clientInterface: 'CFO / VP Finance',
+      podRole: 'Senior Financial Modeler',
+      turnaround: '48 Hours',
+      protocol: 'Dynamic Cloud Models & Cohort BI'
+    },
+    {
+      stream: 'Statutory Governance & Audit Defense',
+      clientInterface: 'Head of Compliance / Legal',
+      podRole: 'ICAI Fellow Partner CA',
+      turnaround: 'Zero Delay',
+      protocol: 'Pre-Audit Workpapers & MCA/GST Filings'
+    },
+    {
+      stream: 'Systems Architecture & ERP Automation',
+      clientInterface: 'CTO / Tech & IT Lead',
+      podRole: 'Financial Systems Architect',
+      turnaround: 'Continuous',
+      protocol: 'SOC-2 Encrypted Webhook Ingestion'
+    }
+  ];
+
   return (
     <div className="max-w-6xl mx-auto px-6 pt-12 pb-24 space-y-20">
       
@@ -38,7 +69,7 @@ export const CfoSupportPage: React.FC<CfoSupportPageProps> = ({ onOpenInquiry })
             Request Support Proposal
           </ButtonInButton>
           <span className="text-xs font-mono text-agrya-slate-500">
-            Elastic Team Capacity &bull; Zero Delay
+            Elastic Team Capacity • Zero Delay
           </span>
         </div>
       </section>
@@ -50,7 +81,7 @@ export const CfoSupportPage: React.FC<CfoSupportPageProps> = ({ onOpenInquiry })
             Execution Horsepower
           </div>
           <h2 className="text-3xl font-extrabold text-agrya-slate-950 tracking-tight">
-            Specialized execution pods for in-house finance teams.
+            Specialized execution pods for in-house finance teams
           </h2>
         </div>
 
@@ -76,6 +107,60 @@ export const CfoSupportPage: React.FC<CfoSupportPageProps> = ({ onOpenInquiry })
             </DoubleBezel>
           ))}
         </div>
+      </section>
+
+      {/* EXECUTION POD INTEGRATION MATRIX (SIGNATURE DIFFERENTIATOR) */}
+      <section className="space-y-6">
+        <div>
+          <div className="font-mono text-xs text-agrya-teal-700 font-semibold uppercase tracking-wider mb-2">
+            Operational Handshake
+          </div>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-agrya-slate-950 tracking-tight">
+            Execution Pod Integration Matrix
+          </h2>
+          <p className="text-agrya-slate-600 text-sm mt-1 max-w-2xl">
+            Clear delineation of in-house team handoffs, dedicated Agrya pod roles, guaranteed turnaround SLAs, and system sync protocols.
+          </p>
+        </div>
+
+        <DoubleBezel className="w-full overflow-hidden">
+          <div className="p-6 sm:p-8 overflow-x-auto">
+            <table className="w-full text-left border-collapse min-w-[640px]">
+              <thead>
+                <tr className="border-b border-agrya-slate-200 text-[11px] font-mono text-agrya-slate-500 uppercase tracking-wider">
+                  <th className="pb-3 pr-4 font-bold">Operational Stream</th>
+                  <th className="pb-3 px-4 font-bold">In-House Interface</th>
+                  <th className="pb-3 px-4 font-bold">Agrya Pod Specialist</th>
+                  <th className="pb-3 px-4 font-bold">Turnaround SLA</th>
+                  <th className="pb-3 pl-4 font-bold">Data Protocol</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-agrya-slate-100 text-xs">
+                {podMatrix.map((row) => (
+                  <tr key={row.stream} className="hover:bg-agrya-slate-50/60 transition-colors">
+                    <td className="py-4 pr-4 font-semibold text-agrya-slate-900">
+                      {row.stream}
+                    </td>
+                    <td className="py-4 px-4 text-agrya-slate-600 font-mono text-[11px]">
+                      {row.clientInterface}
+                    </td>
+                    <td className="py-4 px-4 text-agrya-teal-800 font-medium">
+                      <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-agrya-teal-50 border border-agrya-teal-200/50">
+                        {row.podRole}
+                      </span>
+                    </td>
+                    <td className="py-4 px-4 font-mono font-bold text-agrya-slate-900">
+                      {row.turnaround}
+                    </td>
+                    <td className="py-4 pl-4 text-agrya-slate-500 font-mono text-[11px]">
+                      {row.protocol}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </DoubleBezel>
       </section>
 
       {/* ENGAGEMENT MODELS */}
@@ -118,7 +203,7 @@ export const CfoSupportPage: React.FC<CfoSupportPageProps> = ({ onOpenInquiry })
 
       {/* BOTTOM CTA */}
       <section className="text-center max-w-xl mx-auto space-y-4 pt-6">
-        <h2 className="text-2xl font-bold text-agrya-slate-900">Scale your in-house capacity.</h2>
+        <h2 className="text-2xl font-bold text-agrya-slate-900">Scale your in-house capacity</h2>
         <p className="text-xs sm:text-sm text-agrya-slate-600">
           Overcome back-office bottlenecks and ensure institutional compliance. Talk to our partners.
         </p>

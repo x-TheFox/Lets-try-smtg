@@ -6,17 +6,20 @@ import { ButtonInButton } from '../components/ui/ButtonInButton';
 import { Award, ArrowRight } from 'lucide-react';
 
 interface TeamPageProps {
-  onOpenInquiry: () => void;
+  onOpenInquiry: (partnerName?: string) => void;
 }
 
 export const TeamPage: React.FC<TeamPageProps> = ({ onOpenInquiry }) => {
+  const founders = teamMembers.filter((m) => m.role.includes('Co-Founder'));
+  const partnersAndLeads = teamMembers.filter((m) => !m.role.includes('Co-Founder'));
+
   return (
     <div className="max-w-6xl mx-auto px-6 pt-12 pb-24 space-y-20">
       
       {/* HERO SECTION */}
       <section className="max-w-3xl">
         <Badge pulse variant="teal" className="mb-6">
-          Chartered Pedigree &bull; Leadership
+          Chartered Pedigree • Leadership
         </Badge>
 
         <h1 className="text-4xl sm:text-6xl font-extrabold text-agrya-slate-950 tracking-tight leading-[1.1] mb-6">
@@ -31,34 +34,105 @@ export const TeamPage: React.FC<TeamPageProps> = ({ onOpenInquiry }) => {
           <ButtonInButton
             variant="primary"
             iconType="arrow-right"
-            onClick={onOpenInquiry}
+            onClick={() => onOpenInquiry()}
           >
             Speak with an Agrya Partner
           </ButtonInButton>
           <span className="text-xs font-mono text-agrya-slate-500">
-            FCA &bull; ACA &bull; DISA Certified Leaders
+            FCA • ACA • DISA Certified Leaders
           </span>
         </div>
       </section>
 
-      {/* TEAM MEMBER DOSSIERS GRID */}
+      {/* CO-FOUNDERS & EXECUTIVE PARTNERS (TIER 1 - 2 COLUMNS) */}
       <section className="space-y-8">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-agrya-slate-200/80 pb-4">
           <div>
             <div className="font-mono text-xs text-agrya-teal-700 font-semibold uppercase tracking-wider mb-1">
-              The Partners & Leads
+              Executive Leadership
             </div>
-            <h2 className="text-3xl font-extrabold text-agrya-slate-950 tracking-tight">
-              Executive Partners & Specialists
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-agrya-slate-950 tracking-tight">
+              Founding Partners
             </h2>
           </div>
           <span className="font-mono text-xs text-agrya-slate-400">
-            Chennai &bull; Bengaluru &bull; Hyderabad &bull; Mumbai
+            ICAI Registered Fellows • Decades of Combined Practice
+          </span>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {founders.map((member) => (
+            <DoubleBezel key={member.id} className="h-full group">
+              <div className="p-6 sm:p-8 flex flex-col justify-between h-full space-y-6">
+                
+                {/* PHOTO & BADGE */}
+                <div>
+                  <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-agrya-slate-100 border border-agrya-slate-200/80 mb-6">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 spring-standard transition-all duration-500"
+                      loading="lazy"
+                    />
+                    {member.credentials && (
+                      <div className="absolute bottom-3 left-3 bg-agrya-slate-900/90 backdrop-blur-md text-white px-3 py-1 rounded-lg text-xs font-mono font-bold tracking-wider border border-white/15">
+                        {member.credentials}
+                      </div>
+                    )}
+                    <div className="absolute top-3 right-3 bg-agrya-teal-600/90 backdrop-blur-md text-white px-2.5 py-1 rounded-lg text-[10px] font-mono font-semibold tracking-wider">
+                      Co-Founder
+                    </div>
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-agrya-slate-900 group-hover:text-agrya-teal-700 spring-snappy transition-colors">
+                    {member.name}
+                  </h3>
+                  
+                  <div className="text-sm font-semibold text-agrya-teal-700 font-mono mt-1 mb-4">
+                    {member.role}
+                  </div>
+
+                  <p className="text-sm text-agrya-slate-600 leading-relaxed">
+                    {member.bio}
+                  </p>
+                </div>
+
+                {/* DIRECT ENGAGEMENT ACTION */}
+                <div className="pt-5 border-t border-agrya-slate-100 flex items-center justify-between">
+                  <button
+                    onClick={() => onOpenInquiry(member.name)}
+                    className="text-xs font-semibold text-agrya-slate-900 hover:text-agrya-teal-700 flex items-center gap-1.5 transition-colors group-hover:translate-x-0.5 spring-snappy"
+                  >
+                    <span>Request Partner Consultation</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </button>
+                  <span className="font-mono text-[11px] text-agrya-slate-400">Direct Partner Desk</span>
+                </div>
+
+              </div>
+            </DoubleBezel>
+          ))}
+        </div>
+      </section>
+
+      {/* PRACTICE PARTNERS & SPECIALISTS (TIER 2 - 3 COLUMNS) */}
+      <section className="space-y-8">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-agrya-slate-200/80 pb-4">
+          <div>
+            <div className="font-mono text-xs text-agrya-teal-700 font-semibold uppercase tracking-wider mb-1">
+              Practice Leads
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-agrya-slate-950 tracking-tight">
+              Partners & Practice Specialists
+            </h2>
+          </div>
+          <span className="font-mono text-xs text-agrya-slate-400">
+            Chennai • Bengaluru • Hyderabad • Mumbai
           </span>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {teamMembers.map((member) => (
+          {partnersAndLeads.map((member) => (
             <DoubleBezel key={member.id} className="h-full group">
               <div className="p-6 flex flex-col justify-between h-full space-y-6">
                 
@@ -94,10 +168,10 @@ export const TeamPage: React.FC<TeamPageProps> = ({ onOpenInquiry }) => {
                 {/* DIRECT ENGAGEMENT ACTION */}
                 <div className="pt-4 border-t border-agrya-slate-100 flex items-center justify-between">
                   <button
-                    onClick={onOpenInquiry}
+                    onClick={() => onOpenInquiry(member.name)}
                     className="text-xs font-semibold text-agrya-slate-900 hover:text-agrya-teal-700 flex items-center gap-1.5 transition-colors group-hover:translate-x-0.5 spring-snappy"
                   >
-                    <span>Request Partner Consultation</span>
+                    <span>Request Consultation</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
                 </div>
@@ -124,7 +198,7 @@ export const TeamPage: React.FC<TeamPageProps> = ({ onOpenInquiry }) => {
               </div>
             </div>
             <button
-              onClick={onOpenInquiry}
+              onClick={() => onOpenInquiry()}
               className="shrink-0 px-5 py-2.5 bg-agrya-slate-900 hover:bg-agrya-slate-800 text-white rounded-full text-xs font-semibold spring-snappy"
             >
               Consult with Partners
@@ -135,12 +209,12 @@ export const TeamPage: React.FC<TeamPageProps> = ({ onOpenInquiry }) => {
 
       {/* BOTTOM CTA */}
       <section className="text-center max-w-xl mx-auto space-y-4 pt-6">
-        <h2 className="text-2xl font-bold text-agrya-slate-900">Work directly with senior leadership.</h2>
+        <h2 className="text-2xl font-bold text-agrya-slate-900">Work directly with senior leadership</h2>
         <p className="text-xs sm:text-sm text-agrya-slate-600">
           No handoffs to inexperienced junior staff. Every client is assigned a dedicated Partner CA.
         </p>
         <div className="pt-2">
-          <ButtonInButton variant="dark" iconType="arrow-right" onClick={onOpenInquiry}>
+          <ButtonInButton variant="dark" iconType="arrow-right" onClick={() => onOpenInquiry()}>
             Schedule Partner Discovery Call
           </ButtonInButton>
         </div>

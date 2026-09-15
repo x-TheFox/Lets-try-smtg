@@ -1,0 +1,417 @@
+{
+  "/": {
+    "path": "/",
+    "title": "Agrya | The Financial OS for Modern Business",
+    "description": "Agrya empowers growth-focused companies with expert Virtual CFO, Accounting, and financial intelligence services.",
+    "headings": [
+      {
+        "level": "h1",
+        "text": "Financial clarity for  modern business."
+      },
+      {
+        "level": "h2",
+        "text": "Expertise"
+      },
+      {
+        "level": "h3",
+        "text": "Accounting Hub"
+      },
+      {
+        "level": "h3",
+        "text": "Virtual CFO"
+      },
+      {
+        "level": "h3",
+        "text": "CFO Support"
+      },
+      {
+        "level": "h2",
+        "text": "Powered by Intelligence."
+      },
+      {
+        "level": "h3",
+        "text": "Effortless"
+      },
+      {
+        "level": "h3",
+        "text": "Actionboard"
+      },
+      {
+        "level": "h3",
+        "text": "Pulse"
+      },
+      {
+        "level": "h2",
+        "text": "Ready to transform your finance function?"
+      },
+      {
+        "level": "h3",
+        "text": "Company"
+      },
+      {
+        "level": "h3",
+        "text": "Services & Ecosystem"
+      },
+      {
+        "level": "h3",
+        "text": "Chennai"
+      },
+      {
+        "level": "h3",
+        "text": "Mumbai"
+      },
+      {
+        "level": "h3",
+        "text": "Bengaluru"
+      },
+      {
+        "level": "h3",
+        "text": "Hyderabad"
+      }
+    ],
+    "forms": []
+  },
+  "/accounting-hub": {
+    "path": "/accounting-hub",
+    "title": "Accounting Hub | Modern Bookkeeping &amp; Payroll",
+    "description": "Agrya",
+    "headings": [
+      {
+        "level": "h1",
+        "text": "Accounting Hub"
+      },
+      {
+        "level": "h2",
+        "text": "Focus on what matters."
+      },
+      {
+        "level": "h2",
+        "text": "Services"
+      },
+      {
+        "level": "h4",
+        "text": "Accounts Receivable"
+      },
+      {
+        "level": "h4",
+        "text": "Accounts Payable"
+      },
+      {
+        "level": "h4",
+        "text": "Banking"
+      },
+      {
+        "level": "h4",
+        "text": "Inventory"
+      },
+      {
+        "level": "h4",
+        "text": "Payroll"
+      },
+      {
+        "level": "h4",
+        "text": "Compliance"
+      },
+      {
+        "level": "h3",
+        "text": "Real-time Financial Intelligence"
+      },
+      {
+        "level": "h3",
+        "text": "Ready to optimize your operations?"
+      },
+      {
+        "level": "h3",
+        "text": "Company"
+      },
+      {
+        "level": "h3",
+        "text": "Services & Ecosystem"
+      },
+      {
+        "level": "h3",
+        "text": "Chennai"
+      },
+      {
+        "level": "h3",
+        "text": "Mumbai"
+      },
+      {
+        "level": "h3",
+        "text": "Bengaluru"
+      },
+      {
+        "level": "h3",
+        "text": "Hyderabad"
+      }
+    ],
+    "forms": []
+  },
+  "/cfo": {
+    "path": "/cfo",
+    "title": "Virtual CFO Services | Agrya",
+    "description": "Agrya",
+    "headings": [
+      {
+        "level": "h1",
+        "text": "Virtual CFO"
+      },
+      {
+        "level": "h5",
+        "text": "The Concept"
+      },
+      {
+        "level": "h5",
+        "text": "Scaling Up"
+      },
+      {
+        "level": "h5",
+        "text": "Streamlining"
+      },
+      {
+        "level": "h2",
+        "text": "Enterprise excellence, accessibly priced."
+      },
+      {
+        "level": "h3",
+        "text": "Our Responsibilities"
+      },
+      {
+        "level": "h2",
+        "text": "Impact"
+      },
+      {
+        "level": "h3",
+        "text": "15Cr to 75Cr Revenue"
+      },
+      {
+        "level": "h3",
+        "text": "Compliance Overhaul"
+      },
+      {
+        "level": "h3",
+        "text": "Need strategic direction?"
+      },
+      {
+        "level": "h3",
+        "text": "Company"
+      },
+      {
+        "level": "h3",
+        "text": "Services & Ecosystem"
+      },
+      {
+        "level": "h3",
+        "text": "Chennai"
+      },
+      {
+        "level": "h3",
+        "text": "Mumbai"
+      },
+      {
+        "level": "h3",
+        "text": "Bengaluru"
+      },
+      {
+        "level": "h3",
+        "text": "Hyderabad"
+      }
+    ],
+    "forms": []
+  },
+  "/cfo-support": {
+    "path": "/cfo-support",
+    "title": "CFO Support Services | Agrya",
+    "description": "Agrya provides specialized support for CFOs, including audit preparedness, payroll management, and complex regulatory compliance in India.",
+    "headings": [
+      {
+        "level": "h1",
+        "text": "CFO Support"
+      },
+      {
+        "level": "h3",
+        "text": "Audit Preparedness"
+      },
+      {
+        "level": "h3",
+        "text": "Payroll Management"
+      },
+      {
+        "level": "h3",
+        "text": "Regulatory Support"
+      },
+      {
+        "level": "h2",
+        "text": "Focus on Strategy, Not Compliance"
+      },
+      {
+        "level": "h3",
+        "text": "Need operational backup?"
+      },
+      {
+        "level": "h3",
+        "text": "Company"
+      },
+      {
+        "level": "h3",
+        "text": "Services & Ecosystem"
+      },
+      {
+        "level": "h3",
+        "text": "Chennai"
+      },
+      {
+        "level": "h3",
+        "text": "Mumbai"
+      },
+      {
+        "level": "h3",
+        "text": "Bengaluru"
+      },
+      {
+        "level": "h3",
+        "text": "Hyderabad"
+      }
+    ],
+    "forms": []
+  },
+  "/story": {
+    "path": "/story",
+    "title": "Our Story | The Agrya Journey",
+    "description": "Learn why Priya and Jayakumar founded Agrya: to bridge the gap between entrepreneurial ambition and financial clarity.",
+    "headings": [
+      {
+        "level": "h1",
+        "text": "We noticed a gap."
+      },
+      {
+        "level": "h2",
+        "text": "The Realization"
+      },
+      {
+        "level": "h3",
+        "text": "The Distraction Trap"
+      },
+      {
+        "level": "h3",
+        "text": "Compliance Blindspots"
+      },
+      {
+        "level": "h3",
+        "text": "Financial Fog"
+      },
+      {
+        "level": "h3",
+        "text": "Scaling Ceilings"
+      },
+      {
+        "level": "h2",
+        "text": "So we built Agrya."
+      },
+      {
+        "level": "h3",
+        "text": "Company"
+      },
+      {
+        "level": "h3",
+        "text": "Services & Ecosystem"
+      },
+      {
+        "level": "h3",
+        "text": "Chennai"
+      },
+      {
+        "level": "h3",
+        "text": "Mumbai"
+      },
+      {
+        "level": "h3",
+        "text": "Bengaluru"
+      },
+      {
+        "level": "h3",
+        "text": "Hyderabad"
+      }
+    ],
+    "forms": []
+  },
+  "/team": {
+    "path": "/team",
+    "title": "Our Team | Expert CAs &amp; Financial Advisors | Agrya",
+    "description": "Meet the Agrya team: seasoned Chartered Accountants and financial experts with decades of experience at Deloitte, PWC, and top corporates.",
+    "headings": [
+      {
+        "level": "h1",
+        "text": "Built by Experts.\nDriven by Passion."
+      },
+      {
+        "level": "h3",
+        "text": "Priya Raghavan"
+      },
+      {
+        "level": "h3",
+        "text": "Jayakumar M"
+      },
+      {
+        "level": "h3",
+        "text": "Ram Prakash R"
+      },
+      {
+        "level": "h3",
+        "text": "Hrishikesh Redij"
+      },
+      {
+        "level": "h3",
+        "text": "Sai Avinash K"
+      },
+      {
+        "level": "h3",
+        "text": "Sai Chand Perla"
+      },
+      {
+        "level": "h3",
+        "text": "Manojkumar C"
+      },
+      {
+        "level": "h3",
+        "text": "Mrudula"
+      },
+      {
+        "level": "h2",
+        "text": "Join the team"
+      },
+      {
+        "level": "h3",
+        "text": "Company"
+      },
+      {
+        "level": "h3",
+        "text": "Services & Ecosystem"
+      },
+      {
+        "level": "h3",
+        "text": "Chennai"
+      },
+      {
+        "level": "h3",
+        "text": "Mumbai"
+      },
+      {
+        "level": "h3",
+        "text": "Bengaluru"
+      },
+      {
+        "level": "h3",
+        "text": "Hyderabad"
+      }
+    ],
+    "forms": []
+  },
+  "/sitemap-index.xml": {
+    "path": "/sitemap-index.xml",
+    "title": "",
+    "description": "",
+    "headings": [],
+    "forms": []
+  }
+}

@@ -52,7 +52,7 @@ export const teamMembers: TeamMember[] = [
     id: 'saichand',
     name: 'Saichand',
     role: 'Partner',
-    credentials: 'Partner',
+    credentials: 'Treasury & Debt Syndication',
     bio: 'Specialist in treasury operations, debt syndication, working capital optimization, and corporate financial restructuring.',
     image: '/assets/original/team/saichand.jpg'
   },

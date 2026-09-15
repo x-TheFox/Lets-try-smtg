@@ -1,0 +1,710 @@
+{
+  "/": {
+    "route": "/",
+    "title": "Agrya | The Financial OS for Modern Business",
+    "description": "Agrya empowers growth-focused companies with expert Virtual CFO, Accounting, and financial intelligence services.",
+    "sections": [
+      {
+        "headings": [
+          {
+            "level": "h1",
+            "text": "Financial clarity for  modern business."
+          }
+        ],
+        "paragraphs": [
+          "Agrya combines expert Virtual CFO services with intelligence-driven accounting to help you scale faster and smarter."
+        ],
+        "listItems": [],
+        "links": [
+          {
+            "href": "/cfo",
+            "text": "Explore Services"
+          },
+          {
+            "href": "/story",
+            "text": "Our Story"
+          }
+        ]
+      },
+      {
+        "headings": [
+          {
+            "level": "h2",
+            "text": "Expertise"
+          },
+          {
+            "level": "h3",
+            "text": "Accounting Hub"
+          },
+          {
+            "level": "h3",
+            "text": "Virtual CFO"
+          },
+          {
+            "level": "h3",
+            "text": "CFO Support"
+          }
+        ],
+        "paragraphs": [
+          "Comprehensive financial solutions.",
+          "From day-to-day bookkeeping to high-level strategic planning, we cover the entire financial spectrum of your business.",
+          "Real-time financial clarity. We handle the books so you can handle the business. Cut operational costs by up to 50%.",
+          "Strategy       Virtual CFO    Strategic financial leadership without the full-time headcount. Designed for ambitious entrepreneurs focused on growth.",
+          "Operations       CFO Support    Force-multiply your finance team. Specialized support for AP/AR, FP&amp;A, payroll, and regulatory compliance."
+        ],
+        "listItems": [],
+        "links": [
+          {
+            "href": "/accounting-hub",
+            "text": "Accounting Hub"
+          },
+          {
+            "href": "/cfo",
+            "text": "Virtual CFO"
+          },
+          {
+            "href": "/cfo-support",
+            "text": "CFO Support"
+          }
+        ]
+      },
+      {
+        "headings": [
+          {
+            "level": "h2",
+            "text": "Powered by Intelligence."
+          },
+          {
+            "level": "h3",
+            "text": "Effortless"
+          },
+          {
+            "level": "h3",
+            "text": "Actionboard"
+          },
+          {
+            "level": "h3",
+            "text": "Pulse"
+          }
+        ],
+        "paragraphs": [
+          "We don't just use software; we build ecosystems. Our proprietary and partner tools give you an unfair advantage in financial visibility.",
+          "Effortless The Finance OS for your business.",
+          "Instant reports from your financial data.",
+          "Project cost tracking for service firms."
+        ],
+        "listItems": [],
+        "links": [
+          {
+            "href": "https://www.goeffortless.co",
+            "text": "Explore our tech ecosystem"
+          },
+          {
+            "href": "https://goeffortless.ai",
+            "text": "Effortless The Finance OS for your business."
+          },
+          {
+            "href": "https://www.myactionboard.com",
+            "text": "Actionboard Instant reports from your financial data."
+          },
+          {
+            "href": "https://pulse.myactionboard.com",
+            "text": "📈   Pulse Project cost tracking for service firms."
+          }
+        ]
+      },
+      {
+        "headings": [
+          {
+            "level": "h2",
+            "text": "Ready to transform your finance function?"
+          }
+        ],
+        "paragraphs": [
+          "Join the new age of business. Let's build a financial roadmap that leads to your growth."
+        ],
+        "listItems": [],
+        "links": [
+          {
+            "href": "/cfo",
+            "text": "Get Started"
+          },
+          {
+            "href": "/team",
+            "text": "Meet the Team"
+          }
+        ]
+      }
+    ],
+    "teamMembers": []
+  },
+  "/accounting-hub": {
+    "route": "/accounting-hub",
+    "title": "Accounting Hub | Modern Bookkeeping &amp; Payroll",
+    "description": "Agrya",
+    "sections": [
+      {
+        "headings": [
+          {
+            "level": "h1",
+            "text": "Accounting Hub"
+          }
+        ],
+        "paragraphs": [
+          "Low cost, tailor-made outsourcing for the modern enterprise. We handle the books; you build the business."
+        ],
+        "listItems": [],
+        "links": []
+      },
+      {
+        "headings": [
+          {
+            "level": "h2",
+            "text": "Focus on what matters."
+          }
+        ],
+        "paragraphs": [
+          "We provide end-to-end bookkeeping services on multiple platforms including Tally, QuickBooks, and our proprietary cloud-based solution. Our robust processes ensure accuracy and full compliance.",
+          "We implement workflows tailored to your specific business needs, providing a reliable support structure that remains flexible as you scale."
+        ],
+        "listItems": [],
+        "links": []
+      },
+      {
+        "headings": [
+          {
+            "level": "h2",
+            "text": "Services"
+          },
+          {
+            "level": "h4",
+            "text": "Accounts Receivable"
+          },
+          {
+            "level": "h4",
+            "text": "Accounts Payable"
+          },
+          {
+            "level": "h4",
+            "text": "Banking"
+          },
+          {
+            "level": "h4",
+            "text": "Inventory"
+          },
+          {
+            "level": "h4",
+            "text": "Payroll"
+          },
+          {
+            "level": "h4",
+            "text": "Compliance"
+          }
+        ],
+        "paragraphs": [
+          "Comprehensive Financial Suite"
+        ],
+        "listItems": [
+          "Customer Setup",
+          "Invoice Preparation",
+          "Payment Application",
+          "AR Management",
+          "Purchase Order Tracking",
+          "Vendor Set-Up",
+          "Bill Processing",
+          "Expense Management",
+          "Bank Reconciliations",
+          "Transaction Recording",
+          "Petty Cash Management",
+          "Payment Processing",
+          "SKU Management",
+          "Cost Maintenance",
+          "Third-party Integration",
+          "Inventory Adjustments",
+          "Full Service Payroll",
+          "Tax Filings",
+          "Self-Service Portal",
+          "Proof Validation",
+          "GST Returns",
+          "TDS Management",
+          "Income Tax Estimation",
+          "Regulatory Filings"
+        ],
+        "links": []
+      },
+      {
+        "headings": [
+          {
+            "level": "h3",
+            "text": "Real-time Financial Intelligence"
+          }
+        ],
+        "paragraphs": [
+          "Don't wait for the end of the month. Get insights when you need them with our advanced reporting framework."
+        ],
+        "listItems": [],
+        "links": [
+          {
+            "href": "https://www.myactionboard.com",
+            "text": "Explore Actionboard"
+          }
+        ]
+      },
+      {
+        "headings": [
+          {
+            "level": "h3",
+            "text": "Ready to optimize your operations?"
+          }
+        ],
+        "paragraphs": [
+          "Talk to Jayakumar, our partner leading the Accounting Hub projects."
+        ],
+        "listItems": [],
+        "links": [
+          {
+            "href": "mailto:jk@agrya.in",
+            "text": "Contact Jayakumar"
+          }
+        ]
+      }
+    ],
+    "teamMembers": []
+  },
+  "/cfo": {
+    "route": "/cfo",
+    "title": "Virtual CFO Services | Agrya",
+    "description": "Agrya",
+    "sections": [
+      {
+        "headings": [
+          {
+            "level": "h1",
+            "text": "Virtual CFO"
+          },
+          {
+            "level": "h5",
+            "text": "The Concept"
+          },
+          {
+            "level": "h5",
+            "text": "Scaling Up"
+          },
+          {
+            "level": "h5",
+            "text": "Streamlining"
+          }
+        ],
+        "paragraphs": [
+          "Your trusted co-pilot in navigating complex financial landscapes. Strategic leadership without the full-time overhead.",
+          "What is a vCFO and how does it work?",
+          "Case study: 5x revenue growth.",
+          "Case study: Process optimization."
+        ],
+        "listItems": [],
+        "links": [
+          {
+            "href": "#concept",
+            "text": "💡 The Concept What is a vCFO and how does it work?"
+          },
+          {
+            "href": "#scaling",
+            "text": "🚀 Scaling Up Case study: 5x revenue growth."
+          },
+          {
+            "href": "#streamlining",
+            "text": "⚙️ Streamlining Case study: Process optimization."
+          }
+        ]
+      },
+      {
+        "headings": [
+          {
+            "level": "h2",
+            "text": "Enterprise excellence, accessibly priced."
+          },
+          {
+            "level": "h3",
+            "text": "Our Responsibilities"
+          }
+        ],
+        "paragraphs": [
+          "Quality finance professionals and robust accounting systems shouldn't be the privilege of only large corporations. Stakeholders require timely financial data to make informed decisions.",
+          "Our vCFO service delivers this high-quality talent and infrastructure at a fraction of the cost of a full-time executive hire."
+        ],
+        "listItems": [
+          "Resource Planning &amp; Allocation",
+          "Stakeholder Financial Reporting",
+          "Cost Optimization &amp; Negotiation",
+          "Internal Controls &amp; Operations",
+          "Regulatory Compliance Management",
+          "Financial Progress Reviews",
+          "Investor &amp; Banker Liaison"
+        ],
+        "links": []
+      },
+      {
+        "headings": [
+          {
+            "level": "h2",
+            "text": "Impact"
+          },
+          {
+            "level": "h3",
+            "text": "15Cr to 75Cr Revenue"
+          },
+          {
+            "level": "h3",
+            "text": "Compliance Overhaul"
+          }
+        ],
+        "paragraphs": [
+          "Proven Results",
+          "Over 4 years, we helped a client expand from 1 to 5 offices and grow from 120 to 800+ employees.",
+          "We fixed broken compliance and reporting processes for a client, positioning them for sustainable long-term debt."
+        ],
+        "listItems": [
+          "Resolved revenue recognition issues",
+          "Fixed tax payment non-compliance",
+          "Raised ₹100Cr+ in debt",
+          "Supported facility expansion"
+        ],
+        "links": []
+      },
+      {
+        "headings": [
+          {
+            "level": "h3",
+            "text": "Need strategic direction?"
+          }
+        ],
+        "paragraphs": [
+          "Talk to Jayakumar, our partner leading the Virtual CFO practice."
+        ],
+        "listItems": [],
+        "links": [
+          {
+            "href": "mailto:jk@agrya.in",
+            "text": "Contact Jayakumar"
+          }
+        ]
+      }
+    ],
+    "teamMembers": []
+  },
+  "/cfo-support": {
+    "route": "/cfo-support",
+    "title": "CFO Support Services | Agrya",
+    "description": "Agrya provides specialized support for CFOs, including audit preparedness, payroll management, and complex regulatory compliance in India.",
+    "sections": [
+      {
+        "headings": [
+          {
+            "level": "h1",
+            "text": "CFO Support"
+          }
+        ],
+        "paragraphs": [
+          "Specialized support for AP/AR, FP&A, payroll, and regulatory compliance. We clear the operational fog so you can focus on strategy."
+        ],
+        "listItems": [],
+        "links": []
+      },
+      {
+        "headings": [
+          {
+            "level": "h3",
+            "text": "Audit Preparedness"
+          },
+          {
+            "level": "h3",
+            "text": "Payroll Management"
+          },
+          {
+            "level": "h3",
+            "text": "Regulatory Support"
+          }
+        ],
+        "paragraphs": [
+          "Acting as the primary liaison between management and auditors to ensure timely completion.",
+          "Schedule &amp; Financials preparation   Handling auditor queries   Managing team transitions during audits      💸  Payroll Management  Comprehensive payroll services powered by world-leading technology platforms.",
+          "Complex taxation management   Secure self-service employee portals   Form 16 &amp; Tax declaration handling      🏛️  Regulatory Support  Navigating India&#39;s intricate compliance landscape so you don&#39;t have to."
+        ],
+        "listItems": [
+          "Schedule &amp; Financials preparation",
+          "Handling auditor queries",
+          "Managing team transitions during audits",
+          "Complex taxation management",
+          "Secure self-service employee portals",
+          "Form 16 &amp; Tax declaration handling",
+          "Monthly tax reviews &amp; memos",
+          "GST &amp; Withholding tax filings",
+          "Eligibility credit optimization"
+        ],
+        "links": []
+      },
+      {
+        "headings": [
+          {
+            "level": "h2",
+            "text": "Focus on Strategy, Not Compliance"
+          }
+        ],
+        "paragraphs": [
+          "India's compliance landscape is intricate. With our support, CFOs can shift their focus from routine compliance and bandwidth issues to high-level strategic business initiatives."
+        ],
+        "listItems": [],
+        "links": []
+      },
+      {
+        "headings": [
+          {
+            "level": "h3",
+            "text": "Need operational backup?"
+          }
+        ],
+        "paragraphs": [
+          "Talk to Jayakumar, our partner leading the CFO Support projects."
+        ],
+        "listItems": [],
+        "links": [
+          {
+            "href": "mailto:jk@agrya.in",
+            "text": "Contact Jayakumar"
+          }
+        ]
+      }
+    ],
+    "teamMembers": []
+  },
+  "/story": {
+    "route": "/story",
+    "title": "Our Story | The Agrya Journey",
+    "description": "Learn why Priya and Jayakumar founded Agrya: to bridge the gap between entrepreneurial ambition and financial clarity.",
+    "sections": [
+      {
+        "headings": [
+          {
+            "level": "h1",
+            "text": "We noticed a gap."
+          }
+        ],
+        "paragraphs": [
+          "Between what ambitious entrepreneurs needed and what the traditional finance industry provided."
+        ],
+        "listItems": [],
+        "links": []
+      },
+      {
+        "headings": [],
+        "paragraphs": [
+          "\"Hey, we are Priya and Jayakumar. During our 15 years at Deloitte, we worked with massive global corporations. We saw how powerful a well-oiled finance machine could be.\""
+        ],
+        "listItems": [],
+        "links": []
+      },
+      {
+        "headings": [
+          {
+            "level": "h2",
+            "text": "The Realization"
+          },
+          {
+            "level": "h3",
+            "text": "The Distraction Trap"
+          },
+          {
+            "level": "h3",
+            "text": "Compliance Blindspots"
+          },
+          {
+            "level": "h3",
+            "text": "Financial Fog"
+          },
+          {
+            "level": "h3",
+            "text": "Scaling Ceilings"
+          }
+        ],
+        "paragraphs": [
+          "6 years ago, we started working with passionate startups. We quickly realized they were facing the same specific set of problems, over and over again.",
+          "Entrepreneurs getting pulled into non-core finance and admin tasks instead of building their product.",
+          "Regulatory issues discovered only during due diligence—often threatening funding rounds.",
+          "Critical data like real-time cash flow availability simply wasn&#39;t available when needed most.",
+          "Lack of robust processes preventing the business from growing as fast as the vision."
+        ],
+        "listItems": [],
+        "links": []
+      },
+      {
+        "headings": [
+          {
+            "level": "h2",
+            "text": "So we built Agrya."
+          }
+        ],
+        "paragraphs": [
+          "We designed our Virtual CFO service to be the partner we wished we had. A service that relieves founders of the financial burden, so they can focus on changing the world."
+        ],
+        "listItems": [],
+        "links": []
+      },
+      {
+        "headings": [],
+        "paragraphs": [
+          "\"We believe our success comes entirely from the success of our clients.\"",
+          "If you are an entrepreneur looking to leave your mark on this world, we would love to be the ones clearing the path for you.",
+          "Priya & Jayakumar",
+          "Founders"
+        ],
+        "listItems": [],
+        "links": []
+      }
+    ],
+    "teamMembers": []
+  },
+  "/team": {
+    "route": "/team",
+    "title": "Our Team | Expert CAs &amp; Financial Advisors | Agrya",
+    "description": "Meet the Agrya team: seasoned Chartered Accountants and financial experts with decades of experience at Deloitte, PWC, and top corporates.",
+    "sections": [
+      {
+        "headings": [
+          {
+            "level": "h1",
+            "text": "Built by Experts.\nDriven by Passion."
+          }
+        ],
+        "paragraphs": [
+          "We are a team of seasoned Chartered Accountants and financial strategists. We bring big-four experience to ambitious growth companies."
+        ],
+        "listItems": [],
+        "links": []
+      },
+      {
+        "headings": [
+          {
+            "level": "h3",
+            "text": "Priya Raghavan"
+          },
+          {
+            "level": "h3",
+            "text": "Jayakumar M"
+          },
+          {
+            "level": "h3",
+            "text": "Ram Prakash R"
+          },
+          {
+            "level": "h3",
+            "text": "Hrishikesh Redij"
+          },
+          {
+            "level": "h3",
+            "text": "Sai Avinash K"
+          },
+          {
+            "level": "h3",
+            "text": "Sai Chand Perla"
+          },
+          {
+            "level": "h3",
+            "text": "Manojkumar C"
+          },
+          {
+            "level": "h3",
+            "text": "Mrudula"
+          }
+        ],
+        "paragraphs": [
+          "Co-founder and Managing Partner",
+          "Fellow Chartered Accountant with a Diploma in IFRS from ACCA, London. Co-founded Agrya after a 15-year tenure at Deloitte, bringing deep expertise in large corporate strategy.",
+          "Co-founder and Managing Partner",
+          "Chartered Accountant &amp; Company Secretary. With extensive experience at Deloitte serving MNCs in manufacturing and finance, JK bridges the gap between complex regulation and business growth.",
+          "Partner, Head of Automations",
+          "Leading digital transformation and finance automation. 10+ years experience including Deloitte and CCD.",
+          "Partner",
+          "Specialist in FP&amp;A and controllership. Former CFO at Hansa Cequity and Associate Director at CRISIL.",
+          "Partner, Hyderabad Practice",
+          "Heads the Hyderabad practice. Expert in Assurance and Taxation with prior experience at PWC India.",
+          "Partner",
+          "Expert in financial controllership, SEZ compliances, and auditing. Previously with Deloitte India.",
+          "Director - CFO Advisory",
+          "Specialises in Financial Reporting, FP&amp;A, and Business Planning. Instrumental in designing processes for regulatory compliance.",
+          "Head of Tax and Compliance",
+          "Leading tax and compliance engagements. Spearheads projects with the Tamil Nadu government and IIT Startup Incubation Cell."
+        ],
+        "listItems": [],
+        "links": []
+      },
+      {
+        "headings": [
+          {
+            "level": "h2",
+            "text": "Join the team"
+          }
+        ],
+        "paragraphs": [
+          "We are always looking for talented and passionate people to join our journey."
+        ],
+        "listItems": [],
+        "links": [
+          {
+            "href": "mailto:hr@agrya.in",
+            "text": "View Openings"
+          }
+        ]
+      }
+    ],
+    "teamMembers": [
+      {
+        "name": "Priya Raghavan",
+        "role": "",
+        "bio": "We are a team of seasoned Chartered Accountants and financial strategists. We bring big-four experience to ambitious growth companies.",
+        "image": "/images/team/priya.png"
+      },
+      {
+        "name": "Jayakumar M",
+        "role": "",
+        "bio": "Chartered Accountant &amp; Company Secretary. With extensive experience at Deloitte serving MNCs in manufacturing and finance, JK bridges the gap between complex regulation and business growth.",
+        "image": "/images/team/jayakumar.png"
+      },
+      {
+        "name": "Ram Prakash R",
+        "role": "",
+        "bio": "Leading digital transformation and finance automation. 10+ years experience including Deloitte and CCD.",
+        "image": "/images/team/ramprakash.png"
+      },
+      {
+        "name": "Hrishikesh Redij",
+        "role": "",
+        "bio": "Specialist in FP&amp;A and controllership. Former CFO at Hansa Cequity and Associate Director at CRISIL.",
+        "image": "/images/team/hrishi.jpeg"
+      },
+      {
+        "name": "Sai Avinash K",
+        "role": "",
+        "bio": "Heads the Hyderabad practice. Expert in Assurance and Taxation with prior experience at PWC India.",
+        "image": "/images/team/avinash.png"
+      },
+      {
+        "name": "Sai Chand Perla",
+        "role": "",
+        "bio": "Expert in financial controllership, SEZ compliances, and auditing. Previously with Deloitte India.",
+        "image": "/images/team/saichand.jpg"
+      },
+      {
+        "name": "Manojkumar C",
+        "role": "",
+        "bio": "Specialises in Financial Reporting, FP&amp;A, and Business Planning. Instrumental in designing processes for regulatory compliance.",
+        "image": "/images/team/manoj.png"
+      },
+      {
+        "name": "Mrudula",
+        "role": "",
+        "bio": "Leading tax and compliance engagements. Spearheads projects with the Tamil Nadu government and IIT Startup Incubation Cell.",
+        "image": "/images/team/mrudula.jpeg"
+      }
+    ]
+  }
+}

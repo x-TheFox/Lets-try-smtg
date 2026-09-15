@@ -5,30 +5,32 @@ export interface EcosystemTool {
   url: string;
   logo?: string;
   category: string;
+  isSubsidiary?: boolean;
 }
 
 export const ecosystemTools: EcosystemTool[] = [
   {
     name: 'Effortless',
-    tagline: 'The Finance OS for your business',
-    description: 'Unified automated financial operations, e-invoicing, payments, and multi-bank reconciliation built for high-growth enterprises.',
+    tagline: 'The All-In-One Growth Platform for Indian SMBs',
+    description: 'Automating billing, expenses, 100% bi-directional Tally sync, AI-powered 3-way reconciliation (PO + GRN + Vendor Bills), and cashflow control.',
     url: 'https://www.goeffortless.co',
     logo: '/assets/original/effortless-logo.png',
     category: 'Financial Operations'
   },
   {
     name: 'Actionboard',
-    tagline: 'Instant reports from your financial data',
-    description: 'Transform complex multi-ledger accounting entries into real-time board-ready executive business intelligence and KPI tracking.',
+    tagline: 'AI Finance Software for the CFO\'s Office',
+    description: 'Runs the CFO\'s office on PharOS: live ledger financial reporting, multi-entity consolidation, procure-to-pay, and order-to-cash. Built by Chartered Accountants.',
     url: 'https://www.myactionboard.com',
     logo: '/assets/original/actionboard-logo.png',
-    category: 'Business Intelligence'
+    category: 'CFO Office & BI'
   },
   {
     name: 'Pulse',
-    tagline: 'Project cost tracking for service firms',
-    description: 'Granular project-level profitability, employee billable utilization, and client margin intelligence tailored for services and consulting.',
+    tagline: 'Bridge the gap between costs and time spent',
+    description: 'Built by Actionboard, the tech subsidiary of Agrya. Track timesheets, enforce project time budgets, flag projects in the red, and deliver granular profitability reports.',
     url: 'https://pulse.myactionboard.com',
-    category: 'Profitability Intelligence'
+    category: 'Service Profitability',
+    isSubsidiary: true
   }
 ];

@@ -35,7 +35,7 @@ export const StoryPage: React.FC<StoryPageProps> = ({ onOpenInquiry }) => {
             Partner With Us
           </ButtonInButton>
           <span className="text-xs font-mono text-agrya-slate-500">
-            Founded by Chartered Accountants &bull; Built for Scale
+            Founded by Chartered Accountants • Built for Scale
           </span>
         </div>
       </section>

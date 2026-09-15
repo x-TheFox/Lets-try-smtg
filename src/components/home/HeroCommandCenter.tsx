@@ -74,7 +74,7 @@ export const HeroCommandCenter: React.FC<HeroCommandCenterProps> = ({
         <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-agrya-slate-950 leading-[1.08] mb-6">
           Financial clarity for <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-agrya-teal-700 to-agrya-slate-900">
-            modern business.
+            modern business
           </span>
         </h1>
         
@@ -115,11 +115,11 @@ export const HeroCommandCenter: React.FC<HeroCommandCenterProps> = ({
               </div>
 
               {/* STAGE TOGGLES */}
-              <div className="flex items-center p-1 rounded-xl bg-agrya-slate-100 border border-agrya-slate-200 text-xs font-semibold">
+              <div className="flex items-center p-1 rounded-xl bg-agrya-slate-100 border border-agrya-slate-200 text-xs font-semibold overflow-x-auto">
                 <button
                   onClick={() => setActiveStage('seed')}
                   className={clsx(
-                    "px-3 py-1.5 rounded-lg spring-snappy transition-all",
+                    "px-3 py-1.5 rounded-lg spring-snappy transition-all whitespace-nowrap",
                     activeStage === 'seed' 
                       ? "bg-white text-agrya-slate-900 shadow-sm" 
                       : "text-agrya-slate-500 hover:text-agrya-slate-900"
@@ -130,7 +130,7 @@ export const HeroCommandCenter: React.FC<HeroCommandCenterProps> = ({
                 <button
                   onClick={() => setActiveStage('growth')}
                   className={clsx(
-                    "px-3 py-1.5 rounded-lg spring-snappy transition-all",
+                    "px-3 py-1.5 rounded-lg spring-snappy transition-all whitespace-nowrap",
                     activeStage === 'growth' 
                       ? "bg-white text-agrya-slate-900 shadow-sm" 
                       : "text-agrya-slate-500 hover:text-agrya-slate-900"
@@ -141,7 +141,7 @@ export const HeroCommandCenter: React.FC<HeroCommandCenterProps> = ({
                 <button
                   onClick={() => setActiveStage('enterprise')}
                   className={clsx(
-                    "px-3 py-1.5 rounded-lg spring-snappy transition-all",
+                    "px-3 py-1.5 rounded-lg spring-snappy transition-all whitespace-nowrap",
                     activeStage === 'enterprise' 
                       ? "bg-white text-agrya-slate-900 shadow-sm" 
                       : "text-agrya-slate-500 hover:text-agrya-slate-900"
@@ -165,7 +165,7 @@ export const HeroCommandCenter: React.FC<HeroCommandCenterProps> = ({
                   {current.runway}
                 </div>
                 <div className="text-xs text-emerald-600 font-medium mt-1">
-                  &uarr; {current.runwayDelta}
+                  ↑ {current.runwayDelta}
                 </div>
               </div>
 

@@ -26,20 +26,19 @@ export const Navbar: React.FC<NavbarProps> = ({
     <header className="sticky top-4 z-50 max-w-5xl mx-auto px-4 w-full">
       <nav 
         aria-label="Main Navigation"
-        className="bg-white/90 backdrop-blur-xl border border-agrya-slate-200/80 rounded-full px-5 py-2.5 shadow-float-nav flex items-center justify-between transition-all"
+        className="bg-white/95 backdrop-blur-xl border border-agrya-slate-200/90 rounded-full px-5 py-2.5 shadow-float-nav flex items-center justify-between transition-all"
       >
-        {/* BRAND LOGO */}
+        {/* BRAND LOGO (OFFICIAL AGRYA LOGO) */}
         <button
           onClick={() => handleNavClick('/')}
-          className="flex items-center gap-3 group text-left focus:outline-none focus:ring-2 focus:ring-agrya-teal-500 rounded-lg p-1"
+          className="flex items-center gap-3 group text-left focus:outline-none focus:ring-2 focus:ring-agrya-teal-500 rounded-xl p-1 transition-transform group-hover:scale-[1.02]"
+          aria-label="Agrya Consulting Home"
         >
-          <div className="w-9 h-9 rounded-xl bg-agrya-teal-50 border border-agrya-teal-200/60 flex items-center justify-center text-agrya-teal-800 font-extrabold text-lg tracking-tight group-hover:scale-105 spring-snappy">
-            A
-          </div>
-          <div>
-            <span className="font-bold text-base tracking-tight text-agrya-slate-900 block leading-tight">Agrya</span>
-            <span className="text-[10px] text-agrya-teal-700 font-mono block -mt-0.5 tracking-widest uppercase font-semibold">Consulting</span>
-          </div>
+          <img
+            src="/assets/logo-agrya.png"
+            alt="Agrya Consulting"
+            className="h-8 w-auto object-contain"
+          />
         </button>
 
         {/* DESKTOP LINKS */}
@@ -80,7 +79,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                     onClick={() => handleNavClick('/cfo')}
                     className={clsx(
                       "w-full text-left px-3 py-2.5 rounded-xl hover:bg-agrya-slate-50 spring-snappy transition-colors group",
-                      currentPath === '/cfo' && "bg-agrya-teal-50"
+                      currentPath === '/cfo' && "bg-agrya-teal-800 group-hover:text-agrya-teal-800"
                     )}
                   >
                     <div className="font-bold text-xs text-agrya-slate-900 group-hover:text-agrya-teal-800">Virtual CFO</div>
@@ -148,7 +147,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* MOBILE COLLAPSED DRAWER */}
       {isMobileMenuOpen && (
-        <div className="md:hidden mt-2 bg-white/95 backdrop-blur-2xl border border-agrya-slate-200 rounded-3xl p-5 shadow-card-elevated space-y-4">
+        <div className="md:hidden mt-2 bg-white/98 backdrop-blur-2xl border border-agrya-slate-200 rounded-3xl p-5 shadow-card-elevated space-y-4">
           <div className="space-y-1">
             <div className="text-[10px] font-mono font-semibold uppercase text-agrya-slate-400 px-3 py-1">Services</div>
             <button
@@ -164,7 +163,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               onClick={() => handleNavClick('/cfo')}
               className={clsx(
                 "w-full text-left px-3 py-2 rounded-xl text-sm font-semibold",
-                currentPath === '/cfo' ? "bg-agrya-teal-50 text-agrya-teal-800" : "text-agrya-slate-700"
+                currentPath === '/cfo' ? "bg-agrya-teal-800" : "text-agrya-slate-700"
               )}
             >
               Virtual CFO
@@ -210,7 +209,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               }}
               className="w-full py-3 bg-agrya-slate-900 text-white font-semibold rounded-2xl text-center text-sm shadow-sm"
             >
-              Get in Touch &nearr;
+              Get in Touch ↗
             </button>
           </div>
         </div>

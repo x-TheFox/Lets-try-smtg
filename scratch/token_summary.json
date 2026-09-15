@@ -1,0 +1,285 @@
+{
+  "fontFamilies": [
+    "\"Plus Jakarta Sans\", ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\""
+  ],
+  "fontSizes": [
+    "10px",
+    "12px",
+    "14px",
+    "16px",
+    "18px",
+    "20px",
+    "36px",
+    "72px"
+  ],
+  "colors": [
+    "oklch(0.446 0.043 257.281)",
+    "rgb(255, 255, 255)",
+    "oklch(0.208 0.042 265.755)",
+    "rgb(13, 148, 136)",
+    "oklch(0.372 0.044 257.287)",
+    "rgb(59, 130, 246)",
+    "oklch(0.704 0.04 256.788)",
+    "oklch(0.554 0.046 257.417)"
+  ],
+  "bgColors": [
+    "oklch(0.208 0.042 265.755)",
+    "rgb(255, 255, 255)",
+    "oklab(0.999994 0.0000455678 0.0000200868 / 0.05)",
+    "rgb(15, 23, 42)"
+  ],
+  "sampleKeyElements": [
+    {
+      "tag": "BUTTON",
+      "text": "Services",
+      "c": "oklch(0.446 0.043 257.281)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fs": "14px",
+      "lh": "20px",
+      "ls": "-0.35px"
+    },
+    {
+      "tag": "A",
+      "text": "Get in Touch",
+      "c": "rgb(255, 255, 255)",
+      "bg": "oklch(0.208 0.042 265.755)",
+      "fs": "14px",
+      "lh": "20px",
+      "ls": "-0.35px"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "c": "oklch(0.446 0.043 257.281)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fs": "16px",
+      "lh": "24px",
+      "ls": "normal"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "c": "oklch(0.446 0.043 257.281)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fs": "16px",
+      "lh": "24px",
+      "ls": "normal"
+    },
+    {
+      "tag": "A",
+      "text": "Get in Touch",
+      "c": "rgb(255, 255, 255)",
+      "bg": "oklch(0.208 0.042 265.755)",
+      "fs": "20px",
+      "lh": "28px",
+      "ls": "normal"
+    },
+    {
+      "tag": "H1",
+      "text": "Financial clarity for\nmodern business.",
+      "c": "oklch(0.208 0.042 265.755)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fs": "72px",
+      "lh": "79.2px",
+      "ls": "-1.8px"
+    },
+    {
+      "tag": "A",
+      "text": "Explore Services",
+      "c": "rgb(255, 255, 255)",
+      "bg": "oklch(0.208 0.042 265.755)",
+      "fs": "16px",
+      "lh": "24px",
+      "ls": "normal"
+    },
+    {
+      "tag": "A",
+      "text": "Our Story",
+      "c": "oklch(0.372 0.044 257.287)",
+      "bg": "rgb(255, 255, 255)",
+      "fs": "16px",
+      "lh": "24px",
+      "ls": "normal"
+    },
+    {
+      "tag": "H2",
+      "text": "Expertise",
+      "c": "rgb(59, 130, 246)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fs": "16px",
+      "lh": "28px",
+      "ls": "normal"
+    },
+    {
+      "tag": "H3",
+      "text": "Accounting Hub",
+      "c": "oklch(0.208 0.042 265.755)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fs": "20px",
+      "lh": "28px",
+      "ls": "normal"
+    },
+    {
+      "tag": "H3",
+      "text": "Virtual CFO",
+      "c": "oklch(0.208 0.042 265.755)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fs": "20px",
+      "lh": "28px",
+      "ls": "normal"
+    },
+    {
+      "tag": "H3",
+      "text": "CFO Support",
+      "c": "oklch(0.208 0.042 265.755)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fs": "20px",
+      "lh": "28px",
+      "ls": "normal"
+    },
+    {
+      "tag": "H2",
+      "text": "Powered by Intelligence.",
+      "c": "rgb(255, 255, 255)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fs": "36px",
+      "lh": "40px",
+      "ls": "-0.9px"
+    },
+    {
+      "tag": "A",
+      "text": "Effortless\n\nThe Finance OS for your busi",
+      "c": "rgb(255, 255, 255)",
+      "bg": "oklab(0.999994 0.0000455678 0.0000200868 / 0.05)",
+      "fs": "16px",
+      "lh": "24px",
+      "ls": "normal"
+    },
+    {
+      "tag": "H3",
+      "text": "Effortless",
+      "c": "rgb(255, 255, 255)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fs": "18px",
+      "lh": "28px",
+      "ls": "normal"
+    },
+    {
+      "tag": "A",
+      "text": "Actionboard\n\nInstant reports from your f",
+      "c": "rgb(255, 255, 255)",
+      "bg": "oklab(0.999994 0.0000455678 0.0000200868 / 0.05)",
+      "fs": "16px",
+      "lh": "24px",
+      "ls": "normal"
+    },
+    {
+      "tag": "H3",
+      "text": "Actionboard",
+      "c": "rgb(255, 255, 255)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fs": "18px",
+      "lh": "28px",
+      "ls": "normal"
+    },
+    {
+      "tag": "A",
+      "text": "📈\nPulse\n\nProject cost tracking for serv",
+      "c": "rgb(255, 255, 255)",
+      "bg": "oklab(0.999994 0.0000455678 0.0000200868 / 0.05)",
+      "fs": "16px",
+      "lh": "24px",
+      "ls": "normal"
+    },
+    {
+      "tag": "H3",
+      "text": "Pulse",
+      "c": "rgb(255, 255, 255)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fs": "18px",
+      "lh": "28px",
+      "ls": "normal"
+    },
+    {
+      "tag": "H2",
+      "text": "Ready to transform your finance function",
+      "c": "oklch(0.208 0.042 265.755)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fs": "36px",
+      "lh": "40px",
+      "ls": "-0.9px"
+    },
+    {
+      "tag": "A",
+      "text": "Get Started",
+      "c": "rgb(255, 255, 255)",
+      "bg": "rgb(15, 23, 42)",
+      "fs": "16px",
+      "lh": "24px",
+      "ls": "normal"
+    },
+    {
+      "tag": "A",
+      "text": "Meet the Team",
+      "c": "oklch(0.372 0.044 257.287)",
+      "bg": "rgb(255, 255, 255)",
+      "fs": "16px",
+      "lh": "24px",
+      "ls": "normal"
+    },
+    {
+      "tag": "H3",
+      "text": "COMPANY",
+      "c": "oklch(0.208 0.042 265.755)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fs": "12px",
+      "lh": "16px",
+      "ls": "0.6px"
+    },
+    {
+      "tag": "H3",
+      "text": "SERVICES & ECOSYSTEM",
+      "c": "oklch(0.208 0.042 265.755)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fs": "12px",
+      "lh": "16px",
+      "ls": "0.6px"
+    },
+    {
+      "tag": "H3",
+      "text": "CHENNAI",
+      "c": "oklch(0.208 0.042 265.755)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fs": "10px",
+      "lh": "14.2857px",
+      "ls": "0.5px"
+    },
+    {
+      "tag": "H3",
+      "text": "MUMBAI",
+      "c": "oklch(0.208 0.042 265.755)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fs": "10px",
+      "lh": "14.2857px",
+      "ls": "0.5px"
+    },
+    {
+      "tag": "H3",
+      "text": "BENGALURU",
+      "c": "oklch(0.208 0.042 265.755)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fs": "10px",
+      "lh": "14.2857px",
+      "ls": "0.5px"
+    },
+    {
+      "tag": "H3",
+      "text": "HYDERABAD",
+      "c": "oklch(0.208 0.042 265.755)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fs": "10px",
+      "lh": "14.2857px",
+      "ls": "0.5px"
+    }
+  ]
+}

@@ -16,7 +16,7 @@ export const NotFoundPage: React.FC<NotFoundPageProps> = ({ onNavigate }) => {
           </div>
 
           <div className="font-mono text-xs font-bold text-agrya-teal-700 uppercase tracking-wider">
-            Error 404 &bull; Page Not Found
+            Error 404 • Page Not Found
           </div>
 
           <h1 className="text-3xl sm:text-4xl font-extrabold text-agrya-slate-950 tracking-tight">

@@ -1,0 +1,107 @@
+[
+  {
+    "url": "https://www.agrya.in/images/logo.png",
+    "status": 200,
+    "dest": "public/assets/original/logo.png",
+    "bytes": 9624,
+    "contentType": "image/png"
+  },
+  {
+    "url": "https://www.agrya.in/images/actionboard-logo.png",
+    "status": 200,
+    "dest": "public/assets/original/actionboard-logo.png",
+    "bytes": 276657,
+    "contentType": "image/png"
+  },
+  {
+    "url": "https://www.agrya.in/images/effortless-logo.png",
+    "status": 200,
+    "dest": "public/assets/original/effortless-logo.png",
+    "bytes": 16162,
+    "contentType": "image/png"
+  },
+  {
+    "url": "https://www.agrya.in/images/accounting.jpg",
+    "status": 200,
+    "dest": "public/assets/original/accounting.jpg",
+    "bytes": 22583,
+    "contentType": "image/jpeg"
+  },
+  {
+    "url": "https://www.agrya.in/images/cfo-support.jpg",
+    "status": 200,
+    "dest": "public/assets/original/cfo-support.jpg",
+    "bytes": 34605,
+    "contentType": "image/jpeg"
+  },
+  {
+    "url": "https://www.agrya.in/images/virtual-cfo.jpg",
+    "status": 200,
+    "dest": "public/assets/original/virtual-cfo.jpg",
+    "bytes": 47629,
+    "contentType": "image/jpeg"
+  },
+  {
+    "url": "https://www.agrya.in/images/vcfo-hero.jpg",
+    "status": 200,
+    "dest": "public/assets/original/vcfo-hero.jpg",
+    "bytes": 265374,
+    "contentType": "image/jpeg"
+  },
+  {
+    "url": "https://www.agrya.in/images/team/avinash.png",
+    "status": 200,
+    "dest": "public/assets/original/team/avinash.png",
+    "bytes": 68375,
+    "contentType": "image/png"
+  },
+  {
+    "url": "https://www.agrya.in/images/team/hrishi.jpeg",
+    "status": 200,
+    "dest": "public/assets/original/team/hrishi.jpeg",
+    "bytes": 80132,
+    "contentType": "image/jpeg"
+  },
+  {
+    "url": "https://www.agrya.in/images/team/jayakumar.png",
+    "status": 200,
+    "dest": "public/assets/original/team/jayakumar.png",
+    "bytes": 59438,
+    "contentType": "image/png"
+  },
+  {
+    "url": "https://www.agrya.in/images/team/manoj.png",
+    "status": 200,
+    "dest": "public/assets/original/team/manoj.png",
+    "bytes": 70872,
+    "contentType": "image/png"
+  },
+  {
+    "url": "https://www.agrya.in/images/team/mrudula.jpeg",
+    "status": 200,
+    "dest": "public/assets/original/team/mrudula.jpeg",
+    "bytes": 112333,
+    "contentType": "image/jpeg"
+  },
+  {
+    "url": "https://www.agrya.in/images/team/priya.png",
+    "status": 200,
+    "dest": "public/assets/original/team/priya.png",
+    "bytes": 87831,
+    "contentType": "image/png"
+  },
+  {
+    "url": "https://www.agrya.in/images/team/ramprakash.png",
+    "status": 200,
+    "dest": "public/assets/original/team/ramprakash.png",
+    "bytes": 69814,
+    "contentType": "image/png"
+  },
+  {
+    "url": "https://www.agrya.in/images/team/saichand.jpg",
+    "status": 200,
+    "dest": "public/assets/original/team/saichand.jpg",
+    "bytes": 35169,
+    "contentType": "image/jpeg"
+  }
+]

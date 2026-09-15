@@ -17,6 +17,7 @@ export function App() {
   });
   const [isInquiryOpen, setIsInquiryOpen] = useState<boolean>(false);
   const [inquiryService, setInquiryService] = useState<string>('Virtual CFO');
+  const [inquiryPartner, setInquiryPartner] = useState<string | undefined>(undefined);
 
   // Handle browser back/forward buttons
   useEffect(() => {
@@ -68,6 +69,13 @@ export function App() {
 
   const openInquiryForService = (serviceName: string) => {
     setInquiryService(serviceName);
+    setInquiryPartner(undefined);
+    setIsInquiryOpen(true);
+  };
+
+  const openInquiryForPartner = (partnerName?: string) => {
+    setInquiryService('Executive Partner Consultation');
+    setInquiryPartner(partnerName);
     setIsInquiryOpen(true);
   };
 
@@ -75,7 +83,7 @@ export function App() {
   const renderRoute = () => {
     switch (currentPath) {
       case '/':
-        return <HomePage onNavigate={navigate} onOpenInquiry={() => setIsInquiryOpen(true)} />;
+        return <HomePage onNavigate={navigate} onOpenInquiry={() => { setInquiryPartner(undefined); setIsInquiryOpen(true); }} />;
       case '/accounting-hub':
         return <AccountingHubPage onOpenInquiry={() => openInquiryForService('Accounting Hub')} />;
       case '/cfo':
@@ -83,9 +91,9 @@ export function App() {
       case '/cfo-support':
         return <CfoSupportPage onOpenInquiry={() => openInquiryForService('CFO Support')} />;
       case '/story':
-        return <StoryPage onOpenInquiry={() => setIsInquiryOpen(true)} />;
+        return <StoryPage onOpenInquiry={() => { setInquiryPartner(undefined); setIsInquiryOpen(true); }} />;
       case '/team':
-        return <TeamPage onOpenInquiry={() => setIsInquiryOpen(true)} />;
+        return <TeamPage onOpenInquiry={openInquiryForPartner} />;
       default:
         return <NotFoundPage onNavigate={navigate} />;
     }
@@ -98,7 +106,7 @@ export function App() {
       <Navbar
         currentPath={currentPath}
         onNavigate={navigate}
-        onOpenInquiry={() => setIsInquiryOpen(true)}
+        onOpenInquiry={() => { setInquiryPartner(undefined); setIsInquiryOpen(true); }}
       />
 
       {/* DYNAMIC ROUTE CONTAINER */}
@@ -114,6 +122,7 @@ export function App() {
         isOpen={isInquiryOpen}
         onClose={() => setIsInquiryOpen(false)}
         defaultService={inquiryService}
+        partnerName={inquiryPartner}
       />
 
     </div>
