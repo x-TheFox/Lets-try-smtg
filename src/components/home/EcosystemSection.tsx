@@ -180,7 +180,7 @@ export const EcosystemSection: React.FC = () => {
           </div>
 
           {/* TELEMETRY BODY */}
-          <div className="pt-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <div key={activePreview} className="pt-6 grid grid-cols-1 lg:grid-cols-12 gap-6 animate-metric">
             
             {/* LEFT: METRICS & FEATURES (7 COLS) */}
             <div className="lg:col-span-7 space-y-6">

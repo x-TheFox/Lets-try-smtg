@@ -62,7 +62,7 @@ export const TeamPage: React.FC<TeamPageProps> = ({ onOpenInquiry }) => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {founders.map((member) => (
-            <DoubleBezel key={member.id} className="h-full group">
+            <DoubleBezel key={member.id} className="h-full group hover-lift">
               <div className="p-6 sm:p-8 flex flex-col justify-between h-full space-y-6">
                 
                 {/* PHOTO & BADGE */}
@@ -71,7 +71,7 @@ export const TeamPage: React.FC<TeamPageProps> = ({ onOpenInquiry }) => {
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 spring-standard transition-all duration-500"
+                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-[filter,transform] duration-500 ease-out"
                       loading="lazy"
                     />
                     {member.credentials && (
@@ -133,7 +133,7 @@ export const TeamPage: React.FC<TeamPageProps> = ({ onOpenInquiry }) => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {partnersAndLeads.map((member) => (
-            <DoubleBezel key={member.id} className="h-full group">
+            <DoubleBezel key={member.id} className="h-full group hover-lift">
               <div className="p-6 flex flex-col justify-between h-full space-y-6">
                 
                 {/* PHOTO & BADGE */}
@@ -142,7 +142,7 @@ export const TeamPage: React.FC<TeamPageProps> = ({ onOpenInquiry }) => {
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 spring-standard transition-all duration-500"
+                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-[filter,transform] duration-500 ease-out"
                       loading="lazy"
                     />
                     {member.credentials && (

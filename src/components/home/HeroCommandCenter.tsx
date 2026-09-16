@@ -156,58 +156,66 @@ export const HeroCommandCenter: React.FC<HeroCommandCenterProps> = ({
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 pt-6">
               
               {/* METRIC 1: RUNWAY */}
-              <div className="p-5 rounded-2xl bg-agrya-slate-50/80 border border-agrya-slate-100 relative overflow-hidden group hover:border-agrya-teal-200 spring-standard">
+              <div className="p-5 rounded-2xl bg-agrya-slate-50/80 border border-agrya-slate-100 relative overflow-hidden group hover:border-agrya-teal-200 spring-standard hover-lift">
                 <div className="flex items-center justify-between text-agrya-slate-400 mb-2">
                   <span className="text-xs font-mono uppercase">Cash Runway</span>
                   <Activity className="w-4 h-4 text-agrya-teal-600" />
                 </div>
-                <div className="text-3xl font-extrabold font-mono text-agrya-slate-900 tracking-tight">
-                  {current.runway}
-                </div>
-                <div className="text-xs text-emerald-600 font-medium mt-1">
-                  ↑ {current.runwayDelta}
+                <div key={`${activeStage}-runway`} className="animate-metric">
+                  <div className="text-3xl font-extrabold font-mono text-agrya-slate-900 tracking-tight">
+                    {current.runway}
+                  </div>
+                  <div className="text-xs text-emerald-600 font-medium mt-1">
+                    ↑ {current.runwayDelta}
+                  </div>
                 </div>
               </div>
 
               {/* METRIC 2: BURN MULTIPLE */}
-              <div className="p-5 rounded-2xl bg-agrya-slate-50/80 border border-agrya-slate-100 relative overflow-hidden group hover:border-agrya-teal-200 spring-standard">
+              <div className="p-5 rounded-2xl bg-agrya-slate-50/80 border border-agrya-slate-100 relative overflow-hidden group hover:border-agrya-teal-200 spring-standard hover-lift">
                 <div className="flex items-center justify-between text-agrya-slate-400 mb-2">
                   <span className="text-xs font-mono uppercase">Burn Multiple</span>
                   <TrendingUp className="w-4 h-4 text-agrya-teal-600" />
                 </div>
-                <div className="text-3xl font-extrabold font-mono text-agrya-slate-900 tracking-tight">
-                  {current.burn}
-                </div>
-                <div className="text-xs text-emerald-600 font-medium mt-1">
-                  {current.burnLabel}
+                <div key={`${activeStage}-burn`} className="animate-metric">
+                  <div className="text-3xl font-extrabold font-mono text-agrya-slate-900 tracking-tight">
+                    {current.burn}
+                  </div>
+                  <div className="text-xs text-emerald-600 font-medium mt-1">
+                    {current.burnLabel}
+                  </div>
                 </div>
               </div>
 
               {/* METRIC 3: STATUTORY HEALTH */}
-              <div className="p-5 rounded-2xl bg-agrya-slate-50/80 border border-agrya-slate-100 relative overflow-hidden group hover:border-agrya-teal-200 spring-standard">
+              <div className="p-5 rounded-2xl bg-agrya-slate-50/80 border border-agrya-slate-100 relative overflow-hidden group hover:border-agrya-teal-200 spring-standard hover-lift">
                 <div className="flex items-center justify-between text-agrya-slate-400 mb-2">
                   <span className="text-xs font-mono uppercase">Statutory Index</span>
                   <ShieldCheck className="w-4 h-4 text-agrya-teal-600" />
                 </div>
-                <div className="text-3xl font-extrabold font-mono text-agrya-slate-900 tracking-tight">
-                  {current.statutory}
-                </div>
-                <div className="text-xs text-agrya-slate-600 font-medium mt-1">
-                  {current.statutoryLabel}
+                <div key={`${activeStage}-stat`} className="animate-metric">
+                  <div className="text-3xl font-extrabold font-mono text-agrya-slate-900 tracking-tight">
+                    {current.statutory}
+                  </div>
+                  <div className="text-xs text-agrya-slate-600 font-medium mt-1">
+                    {current.statutoryLabel}
+                  </div>
                 </div>
               </div>
 
               {/* METRIC 4: OVERHEAD COMPRESSION */}
-              <div className="p-5 rounded-2xl bg-agrya-slate-50/80 border border-agrya-slate-100 relative overflow-hidden group hover:border-agrya-teal-200 spring-standard">
+              <div className="p-5 rounded-2xl bg-agrya-slate-50/80 border border-agrya-slate-100 relative overflow-hidden group hover:border-agrya-teal-200 spring-standard hover-lift">
                 <div className="flex items-center justify-between text-agrya-slate-400 mb-2">
                   <span className="text-xs font-mono uppercase">Cost Compression</span>
                   <PieChart className="w-4 h-4 text-agrya-teal-600" />
                 </div>
-                <div className="text-3xl font-extrabold font-mono text-agrya-teal-700 tracking-tight">
-                  {current.savings}
-                </div>
-                <div className="text-xs text-agrya-teal-800 font-medium mt-1">
-                  {current.savingsLabel}
+                <div key={`${activeStage}-savings`} className="animate-metric">
+                  <div className="text-3xl font-extrabold font-mono text-agrya-teal-700 tracking-tight">
+                    {current.savings}
+                  </div>
+                  <div className="text-xs text-agrya-teal-800 font-medium mt-1">
+                    {current.savingsLabel}
+                  </div>
                 </div>
               </div>
 

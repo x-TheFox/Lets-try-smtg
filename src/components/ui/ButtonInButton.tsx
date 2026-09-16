@@ -19,7 +19,7 @@ export const ButtonInButton: React.FC<ButtonInButtonProps> = ({
   href,
   ...props
 }) => {
-  const baseStyles = 'group inline-flex items-center gap-3 pl-5 pr-2 py-2 rounded-full text-xs sm:text-sm font-semibold spring-snappy active:scale-[0.98] transition-all focus:outline-none focus:ring-2 focus:ring-agrya-teal-500 focus:ring-offset-2';
+  const baseStyles = 'group inline-flex items-center gap-3 pl-5 pr-2 py-2 rounded-full text-xs sm:text-sm font-semibold spring-snappy active:scale-[0.97] transition-[transform,background-color,border-color,box-shadow] focus:outline-none focus:ring-2 focus:ring-agrya-teal-500 focus:ring-offset-2 select-none cursor-pointer';
   
   const variantStyles = {
     primary: 'bg-agrya-teal-700 hover:bg-agrya-teal-800 text-white shadow-sm',

@@ -111,7 +111,9 @@ export function App() {
 
       {/* DYNAMIC ROUTE CONTAINER */}
       <main className="flex-1 w-full" id="main-content">
-        {renderRoute()}
+        <div key={currentPath} className="animate-page-entrance">
+          {renderRoute()}
+        </div>
       </main>
 
       {/* FOOTER */}

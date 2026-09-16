@@ -61,44 +61,49 @@ export const Navbar: React.FC<NavbarProps> = ({
               <ChevronDown className={clsx("w-3.5 h-3.5 spring-snappy transition-transform", isServicesOpen && "rotate-180")} />
             </button>
 
-            {isServicesOpen && (
-              <div className="absolute top-full left-0 pt-2 w-64 z-50">
-                <div className="bg-white border border-agrya-slate-200 rounded-2xl p-2 shadow-card-elevated space-y-1">
-                  <button
-                    onClick={() => handleNavClick('/accounting-hub')}
-                    className={clsx(
-                      "w-full text-left px-3 py-2.5 rounded-xl hover:bg-agrya-slate-50 spring-snappy transition-colors group",
-                      currentPath === '/accounting-hub' && "bg-agrya-teal-50"
-                    )}
-                  >
-                    <div className="font-bold text-xs text-agrya-slate-900 group-hover:text-agrya-teal-800">Accounting Hub</div>
-                    <div className="text-[11px] text-agrya-slate-500 line-clamp-1">Bookkeeping, compliance & MIS</div>
-                  </button>
+            <div 
+              className={clsx(
+                "absolute top-full left-0 pt-2 w-64 z-50 origin-top-left transition-all duration-200 ease-out",
+                isServicesOpen 
+                  ? "opacity-100 scale-100 translate-y-0 pointer-events-auto" 
+                  : "opacity-0 scale-95 -translate-y-1 pointer-events-none"
+              )}
+            >
+              <div className="bg-white border border-agrya-slate-200 rounded-2xl p-2 shadow-card-elevated space-y-1">
+                <button
+                  onClick={() => handleNavClick('/accounting-hub')}
+                  className={clsx(
+                    "w-full text-left px-3 py-2.5 rounded-xl hover:bg-agrya-slate-50 spring-snappy transition-colors group",
+                    currentPath === '/accounting-hub' && "bg-agrya-teal-50"
+                  )}
+                >
+                  <div className="font-bold text-xs text-agrya-slate-900 group-hover:text-agrya-teal-800">Accounting Hub</div>
+                  <div className="text-[11px] text-agrya-slate-500 line-clamp-1">Bookkeeping, compliance & MIS</div>
+                </button>
 
-                  <button
-                    onClick={() => handleNavClick('/cfo')}
-                    className={clsx(
-                      "w-full text-left px-3 py-2.5 rounded-xl hover:bg-agrya-slate-50 spring-snappy transition-colors group",
-                      currentPath === '/cfo' && "bg-agrya-teal-800 group-hover:text-agrya-teal-800"
-                    )}
-                  >
-                    <div className="font-bold text-xs text-agrya-slate-900 group-hover:text-agrya-teal-800">Virtual CFO</div>
-                    <div className="text-[11px] text-agrya-slate-500 line-clamp-1">FP&A, fundraising & unit economics</div>
-                  </button>
+                <button
+                  onClick={() => handleNavClick('/cfo')}
+                  className={clsx(
+                    "w-full text-left px-3 py-2.5 rounded-xl hover:bg-agrya-slate-50 spring-snappy transition-colors group",
+                    currentPath === '/cfo' && "bg-agrya-teal-800 group-hover:text-agrya-teal-800"
+                  )}
+                >
+                  <div className="font-bold text-xs text-agrya-slate-900 group-hover:text-agrya-teal-800">Virtual CFO</div>
+                  <div className="text-[11px] text-agrya-slate-500 line-clamp-1">FP&A, fundraising & unit economics</div>
+                </button>
 
-                  <button
-                    onClick={() => handleNavClick('/cfo-support')}
-                    className={clsx(
-                      "w-full text-left px-3 py-2.5 rounded-xl hover:bg-agrya-slate-50 spring-snappy transition-colors group",
-                      currentPath === '/cfo-support' && "bg-agrya-teal-50"
-                    )}
-                  >
-                    <div className="font-bold text-xs text-agrya-slate-900 group-hover:text-agrya-teal-800">CFO Support</div>
-                    <div className="text-[11px] text-agrya-slate-500 line-clamp-1">Force-multiplying in-house teams</div>
-                  </button>
-                </div>
+                <button
+                  onClick={() => handleNavClick('/cfo-support')}
+                  className={clsx(
+                    "w-full text-left px-3 py-2.5 rounded-xl hover:bg-agrya-slate-50 spring-snappy transition-colors group",
+                    currentPath === '/cfo-support' && "bg-agrya-teal-50"
+                  )}
+                >
+                  <div className="font-bold text-xs text-agrya-slate-900 group-hover:text-agrya-teal-800">CFO Support</div>
+                  <div className="text-[11px] text-agrya-slate-500 line-clamp-1">Force-multiplying in-house teams</div>
+                </button>
               </div>
-            )}
+            </div>
           </div>
 
           <button
@@ -146,8 +151,15 @@ export const Navbar: React.FC<NavbarProps> = ({
       </nav>
 
       {/* MOBILE COLLAPSED DRAWER */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden mt-2 bg-white/98 backdrop-blur-2xl border border-agrya-slate-200 rounded-3xl p-5 shadow-card-elevated space-y-4">
+      <div 
+        className={clsx(
+          "md:hidden overflow-hidden transition-all duration-300 ease-out origin-top",
+          isMobileMenuOpen 
+            ? "max-h-[500px] opacity-100 mt-2 pointer-events-auto scale-100" 
+            : "max-h-0 opacity-0 mt-0 pointer-events-none scale-98"
+        )}
+      >
+        <div className="bg-white/98 backdrop-blur-2xl border border-agrya-slate-200 rounded-3xl p-5 shadow-card-elevated space-y-4">
           <div className="space-y-1">
             <div className="text-[10px] font-mono font-semibold uppercase text-agrya-slate-400 px-3 py-1">Services</div>
             <button
@@ -213,7 +225,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
           </div>
         </div>
-      )}
+      </div>
     </header>
   );
 };

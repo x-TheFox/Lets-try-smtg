@@ -4,6 +4,7 @@ import { DoubleBezel } from '../components/ui/DoubleBezel';
 import { Badge } from '../components/ui/Badge';
 import { ButtonInButton } from '../components/ui/ButtonInButton';
 import { Cpu, CheckCircle2, Sliders } from 'lucide-react';
+import { clsx } from 'clsx';
 
 interface CfoPageProps {
   onOpenInquiry: () => void;
@@ -110,13 +111,43 @@ export const CfoPage: React.FC<CfoPageProps> = ({ onOpenInquiry }) => {
               </div>
 
               {/* SIMULATION TELEMETRY OUTPUT (5 COLS) */}
-              <div className="lg:col-span-5 p-6 rounded-2xl bg-agrya-slate-900 text-white space-y-4">
-                <div className="text-xs font-mono text-agrya-teal-400 uppercase tracking-wider">
-                  Modeled Cash Runway
+              <div className="lg:col-span-5 p-6 rounded-2xl bg-agrya-slate-900 text-white space-y-4 flex flex-col justify-between">
+                <div>
+                  <div className="text-xs font-mono text-agrya-teal-400 uppercase tracking-wider mb-1">
+                    Modeled Cash Runway
+                  </div>
+                  <div className="text-4xl sm:text-5xl font-extrabold font-mono text-white tracking-tight">
+                    {runwayMonths} <span className="text-xl font-normal text-agrya-slate-400">Months</span>
+                  </div>
+
+                  {/* INTERACTIVE RUNWAY HORIZON GAUGE */}
+                  <div className="space-y-1.5 pt-4">
+                    <div className="flex justify-between text-[10px] font-mono text-agrya-slate-400">
+                      <span>Horizon Scale</span>
+                      <span>{Number(runwayMonths) >= 36 ? '36+ Mo (Extended)' : `${runwayMonths} Mo Target`}</span>
+                    </div>
+                    <div className="h-2.5 w-full bg-agrya-slate-800 rounded-full overflow-hidden p-0.5 border border-agrya-slate-700/80">
+                      <div
+                        style={{ width: `${Math.min(100, Math.max(6, (Number(runwayMonths) / 36) * 100))}%` }}
+                        className={clsx(
+                          "h-full rounded-full transition-all duration-300 ease-out",
+                          Number(runwayMonths) < 12 
+                            ? "bg-amber-400 shadow-[0_0_12px_rgba(251,191,36,0.6)]" 
+                            : Number(runwayMonths) < 24 
+                              ? "bg-agrya-teal-400 shadow-[0_0_12px_rgba(45,212,191,0.4)]" 
+                              : "bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.5)]"
+                        )}
+                      />
+                    </div>
+                    <div className="flex justify-between text-[9px] font-mono text-agrya-slate-500 px-0.5">
+                      <span>0 Mo</span>
+                      <span className="text-amber-400/80">12 Mo Safety</span>
+                      <span className="text-emerald-400/80">24 Mo Growth</span>
+                      <span>36 Mo</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="text-4xl sm:text-5xl font-extrabold font-mono text-white tracking-tight">
-                  {runwayMonths} <span className="text-xl font-normal text-agrya-slate-400">Months</span>
-                </div>
+
                 <p className="text-xs text-agrya-slate-300 leading-relaxed border-t border-agrya-slate-800 pt-3">
                   {Number(runwayMonths) < 12 ? (
                     <span className="text-amber-400 font-semibold">

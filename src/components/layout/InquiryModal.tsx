@@ -49,9 +49,9 @@ export const InquiryModal: React.FC<InquiryModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-agrya-slate-950/70 backdrop-blur-sm animate-fade-in">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-agrya-slate-950/70 backdrop-blur-sm transition-opacity duration-200">
       <div 
-        className="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-agrya-slate-200 relative overflow-hidden"
+        className="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-agrya-slate-200 relative overflow-hidden animate-modal-in"
         role="dialog"
         aria-modal="true"
         aria-labelledby="inquiry-title"
