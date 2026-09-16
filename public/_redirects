@@ -1,0 +1,7 @@
+# Canonical Domain Redirects
+https://agrya.in/* https://www.agrya.in/:splat 301!
+http://agrya.in/* https://www.agrya.in/:splat 301!
+http://www.agrya.in/* https://www.agrya.in/:splat 301!
+
+# SPA Client-Side Routing Fallback
+/* /index.html 200

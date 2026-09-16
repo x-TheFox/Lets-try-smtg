@@ -5,9 +5,10 @@ import { Mail } from 'lucide-react';
 
 interface CtaBannerProps {
   onOpenInquiry: () => void;
+  onOpenDiagnostic?: () => void;
 }
 
-export const CtaBanner: React.FC<CtaBannerProps> = ({ onOpenInquiry }) => {
+export const CtaBanner: React.FC<CtaBannerProps> = ({ onOpenInquiry, onOpenDiagnostic }) => {
   return (
     <section className="max-w-6xl mx-auto px-6 py-20">
       <DoubleBezel className="w-full">
@@ -27,7 +28,7 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({ onOpenInquiry }) => {
             Book a consultation with our senior partners to explore how Agrya can support your growth.
           </p>
 
-          <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
+          <div className="pt-4 flex flex-wrap items-center justify-center gap-3">
             <ButtonInButton
               variant="dark"
               iconType="arrow-right"
@@ -36,9 +37,18 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({ onOpenInquiry }) => {
               Schedule a Discovery Call
             </ButtonInButton>
 
+            {onOpenDiagnostic && (
+              <button
+                onClick={onOpenDiagnostic}
+                className="inline-flex items-center gap-2 bg-agrya-teal-50 hover:bg-agrya-teal-100 border border-agrya-teal-200 text-agrya-teal-800 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold spring-snappy shadow-sm"
+              >
+                <span>Assess Financial Maturity (2 Min)</span>
+              </button>
+            )}
+
             <a
               href="mailto:hello@agrya.in"
-              className="inline-flex items-center gap-2 bg-white hover:bg-agrya-slate-50 border border-agrya-slate-200 text-agrya-slate-800 px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold spring-snappy shadow-sm"
+              className="inline-flex items-center gap-2 bg-white hover:bg-agrya-slate-50 border border-agrya-slate-200 text-agrya-slate-800 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold spring-snappy shadow-sm"
             >
               <Mail className="w-4 h-4 text-agrya-slate-500" />
               <span>Direct Email: hello@agrya.in</span>

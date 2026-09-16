@@ -49,17 +49,17 @@ export const StoryPage: React.FC<StoryPageProps> = ({ onOpenInquiry }) => {
                 <Target className="w-5 h-5" />
               </div>
               <h2 className="text-2xl font-bold text-agrya-slate-900 mb-3">
-                The Problem We Set Out to Solve
+                The Gap We Discovered
               </h2>
               <p className="text-agrya-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
-                Founders spend up to 40% of their mental bandwidth managing back-office friction—chasing delayed monthly statements, worrying over complex GST & TDS filings, and struggling to answer basic questions like: <em>“What is our true cash runway under our current hiring plan?”</em>
+                After 15 years at Deloitte advising multinational corporations on corporate governance, statutory audits, and capital strategy, we saw a recurring breakdown among India’s fastest-growing companies: businesses were scaling rapidly, but their back-offices were drowning in disconnected spreadsheets and delayed compliance filings.
               </p>
               <p className="text-agrya-slate-600 text-xs sm:text-sm leading-relaxed">
-                Traditional CA firms look backwards through a rear-view mirror once a year for compliance. Modern businesses need forward-looking financial navigation in real time.
+                Traditional CA firms looked backwards once a year for tax compliance. Modern founders needed forward-looking financial engineering in real time. We founded Agrya to bring Big-Four pedigree and modern tooling to ambitious builders.
               </p>
             </div>
             <div className="pt-4 border-t border-agrya-slate-100 text-xs font-mono text-agrya-teal-800">
-              The Reality: 82% of startup failures stem from cash flow mismanagement.
+              Founding Philosophy: Rigorous Big-Four discipline paired with startup-velocity execution.
             </div>
           </div>
         </DoubleBezel>
@@ -81,7 +81,7 @@ export const StoryPage: React.FC<StoryPageProps> = ({ onOpenInquiry }) => {
               </p>
             </div>
             <div className="pt-4 border-t border-agrya-slate-100 text-xs font-mono text-agrya-slate-500">
-              The Mission: Total Financial Clarity for Every Growing Enterprise.
+              Priya Raghavan & Jayakumar M • Co-founders & Managing Partners
             </div>
           </div>
         </DoubleBezel>

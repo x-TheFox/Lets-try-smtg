@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
 import { InquiryModal } from './components/layout/InquiryModal';
+import { FinancialMaturityModal } from './components/ui/FinancialMaturityModal';
 
 import { HomePage } from './pages/HomePage';
 import { AccountingHubPage } from './pages/AccountingHubPage';
@@ -9,6 +10,7 @@ import { CfoPage } from './pages/CfoPage';
 import { CfoSupportPage } from './pages/CfoSupportPage';
 import { StoryPage } from './pages/StoryPage';
 import { TeamPage } from './pages/TeamPage';
+import { RunwayCalculatorPage } from './pages/RunwayCalculatorPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
 export function App() {
@@ -16,6 +18,7 @@ export function App() {
     return window.location.pathname || '/';
   });
   const [isInquiryOpen, setIsInquiryOpen] = useState<boolean>(false);
+  const [isMaturityModalOpen, setIsMaturityModalOpen] = useState<boolean>(false);
   const [inquiryService, setInquiryService] = useState<string>('Virtual CFO');
   const [inquiryPartner, setInquiryPartner] = useState<string | undefined>(undefined);
 
@@ -39,6 +42,7 @@ export function App() {
       '/cfo-support': 'CFO Support & Execution Pods | Agrya Consulting',
       '/story': 'Our Story | Agrya Consulting',
       '/team': 'Leadership & Team | Agrya Consulting',
+      '/tools/runway-calculator': 'Runway & Burn Sensitivity Modeling Tool | Agrya Consulting',
     };
 
     const descriptions: Record<string, string> = {
@@ -48,6 +52,7 @@ export function App() {
       '/cfo-support': 'Power your in-house finance team with expert execution. High-velocity financial modeling, compliance audits, and specialized project support.',
       '/story': 'Built by finance leaders for founders who build. The origin story and philosophy of Agrya Consulting.',
       '/team': 'Meet the experienced Fellows and Associates of ICAI leading Agrya’s Virtual CFO and accounting advisory practice.',
+      '/tools/runway-calculator': 'Simulate cash runway, burn multiples, and revenue sensitivity scenarios for venture-backed and growth-stage companies.',
     };
 
     const targetTitle = titles[currentPath] || 'Agrya | The Financial OS for Modern Business';
@@ -67,9 +72,9 @@ export function App() {
     }
   };
 
-  const openInquiryForService = (serviceName: string) => {
+  const openInquiryForService = (serviceName: string, partnerName?: string) => {
     setInquiryService(serviceName);
-    setInquiryPartner(undefined);
+    setInquiryPartner(partnerName);
     setIsInquiryOpen(true);
   };
 
@@ -79,21 +84,51 @@ export function App() {
     setIsInquiryOpen(true);
   };
 
+  const handleDiagnosticComplete = (score: number, grade: string, _rec: string) => {
+    setIsMaturityModalOpen(false);
+    setInquiryService(`Financial Maturity Review (${grade} - Score ${score}/100)`);
+    setInquiryPartner(undefined);
+    setIsInquiryOpen(true);
+  };
+
   // Route Resolver
   const renderRoute = () => {
     switch (currentPath) {
       case '/':
-        return <HomePage onNavigate={navigate} onOpenInquiry={() => { setInquiryPartner(undefined); setIsInquiryOpen(true); }} />;
+        return (
+          <HomePage
+            onNavigate={navigate}
+            onOpenInquiry={() => { setInquiryPartner(undefined); setIsInquiryOpen(true); }}
+            onOpenDiagnostic={() => setIsMaturityModalOpen(true)}
+          />
+        );
       case '/accounting-hub':
-        return <AccountingHubPage onOpenInquiry={() => openInquiryForService('Accounting Hub')} />;
+        return (
+          <AccountingHubPage
+            onNavigate={navigate}
+            onOpenInquiry={() => openInquiryForService('Accounting Hub')}
+          />
+        );
       case '/cfo':
-        return <CfoPage onOpenInquiry={() => openInquiryForService('Virtual CFO')} />;
+        return (
+          <CfoPage
+            onNavigate={navigate}
+            onOpenInquiry={() => openInquiryForService('Virtual CFO')}
+            onOpenDiagnostic={() => setIsMaturityModalOpen(true)}
+          />
+        );
       case '/cfo-support':
         return <CfoSupportPage onOpenInquiry={() => openInquiryForService('CFO Support')} />;
       case '/story':
         return <StoryPage onOpenInquiry={() => { setInquiryPartner(undefined); setIsInquiryOpen(true); }} />;
       case '/team':
         return <TeamPage onOpenInquiry={openInquiryForPartner} />;
+      case '/tools/runway-calculator':
+        return (
+          <RunwayCalculatorPage
+            onOpenInquiry={(service, partner) => openInquiryForService(service || 'Runway Modeling & Advisory', partner)}
+          />
+        );
       default:
         return <NotFoundPage onNavigate={navigate} />;
     }
@@ -107,6 +142,7 @@ export function App() {
         currentPath={currentPath}
         onNavigate={navigate}
         onOpenInquiry={() => { setInquiryPartner(undefined); setIsInquiryOpen(true); }}
+        onOpenDiagnostic={() => setIsMaturityModalOpen(true)}
       />
 
       {/* DYNAMIC ROUTE CONTAINER */}
@@ -125,6 +161,13 @@ export function App() {
         onClose={() => setIsInquiryOpen(false)}
         defaultService={inquiryService}
         partnerName={inquiryPartner}
+      />
+
+      {/* FINANCIAL MATURITY INDEX DIAGNOSTIC MODAL */}
+      <FinancialMaturityModal
+        isOpen={isMaturityModalOpen}
+        onClose={() => setIsMaturityModalOpen(false)}
+        onComplete={handleDiagnosticComplete}
       />
 
     </div>

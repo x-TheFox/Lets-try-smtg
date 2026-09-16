@@ -22,7 +22,7 @@ export const servicesData: Record<string, ServicePillar> = {
     shortDesc: 'Real-time financial clarity. We handle the books so you can handle the business. Cut operational costs by up to 50%.',
     heroDesc: 'Say goodbye to messy books and missed deadlines. Agrya’s Accounting Hub delivers real-time financial tracking, automated reconciliation, and audit-ready books managed by seasoned chartered accountants.',
     metric: 'Up to 50%',
-    metricLabel: 'Operating Cost Reduction',
+    metricLabel: 'Operating Cost Reduction (Modeled)',
     badge: 'Operations & Compliance',
     deliverables: [
       {
@@ -31,11 +31,11 @@ export const servicesData: Record<string, ServicePillar> = {
       },
       {
         title: 'Statutory & Tax Compliance',
-        description: 'Full-cycle GST filings (GSTR-1, 3B, 9C), TDS returns, advance tax computations, and regulatory filings with zero penalty risk.'
+        description: 'Full-cycle GST filings (GSTR-1, 3B, 9C), TDS returns, advance tax computations, and regulatory governance with systematic zero-penalty tracking.'
       },
       {
         title: 'Executive MIS & Reporting',
-        description: 'P&L, Balance Sheet, Cash Flow forecasts, and variance analysis delivered within 5 business days of month-end.'
+        description: 'P&L, Balance Sheet, Cash Flow forecasts, and variance analysis delivered systematically on an accelerated monthly schedule.'
       },
       {
         title: 'Payroll & Treasury Processing',
@@ -55,8 +55,8 @@ export const servicesData: Record<string, ServicePillar> = {
     tagline: 'Strategic financial leadership, on demand.',
     shortDesc: 'Strategic financial leadership without the full-time headcount. Designed for ambitious entrepreneurs focused on growth.',
     heroDesc: 'Get the vision, discipline, and strategic clarity of an experienced Chief Financial Officer at a fraction of the full-time cost. We partner closely with founders to scale capital efficiency, navigate fundraises, and steer board governance.',
-    metric: '10x ROI',
-    metricLabel: 'Capital Efficiency Multiple',
+    metric: '5x Growth',
+    metricLabel: 'Documented Client Revenue Trajectory',
     badge: 'Strategic C-Suite Advisory',
     deliverables: [
       {
@@ -90,24 +90,24 @@ export const servicesData: Record<string, ServicePillar> = {
     shortDesc: 'Force-multiply your finance team. Specialized support for AP/AR, FP&A, payroll, and regulatory compliance.',
     heroDesc: 'High-velocity financial modeling, compliance audits, and specialized execution horsepower when your core in-house finance team is stretched thin during critical growth phases.',
     metric: 'Zero Headcount Delay',
-    metricLabel: 'On-Demand Capacity',
+    metricLabel: 'On-Demand Capacity Target',
     badge: 'Enterprise Execution Pods',
     deliverables: [
       {
-        title: 'Due Diligence & Audit Remediation',
-        description: 'Accelerated audit prep, Big 4 audit coordination, historical reconciliations, and clean transaction verification.'
+        title: 'Audit Preparedness & Defense',
+        description: 'Schedule & financials preparation, auditor query resolution, and managing team transitions during statutory and Big-Four audits.'
       },
       {
-        title: 'Systems & ERP Migration',
-        description: 'Architecting transitions from entry-level software to robust mid-market ERPs with zero downtime.'
+        title: 'Payroll Management & Portals',
+        description: 'Complex taxation management, secure self-service employee portals, Form 16 issuance, and employee tax declarations.'
       },
       {
-        title: 'Specialized FP&A Sprints',
-        description: 'Ad-hoc budgeting models for new business unit expansion, international subsidiary setup, or M&A integration.'
+        title: 'Regulatory & Tax Support',
+        description: 'Monthly tax reviews & memos, GST & withholding tax filings, and systematic eligibility credit optimization.'
       },
       {
-        title: 'Overflow Back-Office Execution',
-        description: 'Scalable burst capacity for peak billing cycles, annual statutory audits, and year-end tax closings.'
+        title: 'Due Diligence & ERP Transitions',
+        description: 'Historical reconciliations, clean transaction verification, and architecting transitions to robust mid-market ERPs.'
       }
     ],
     features: [

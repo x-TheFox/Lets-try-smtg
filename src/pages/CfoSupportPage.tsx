@@ -17,29 +17,29 @@ export const CfoSupportPage: React.FC<CfoSupportPageProps> = ({ onOpenInquiry })
       stream: 'AP/AR Ingestion & Vendor Reconciliation',
       clientInterface: 'In-House Controller / Ops',
       podRole: 'Dedicated Execution Specialist',
-      turnaround: '24 Hours',
+      turnaround: '24 Hours Target',
       protocol: 'Two-way ERP & Bank API Sync'
     },
     {
       stream: 'Dynamic FP&A & Scenario Modeling',
       clientInterface: 'CFO / VP Finance',
       podRole: 'Senior Financial Modeler',
-      turnaround: '48 Hours',
+      turnaround: '48 Hours Target',
       protocol: 'Dynamic Cloud Models & Cohort BI'
     },
     {
       stream: 'Statutory Governance & Audit Defense',
       clientInterface: 'Head of Compliance / Legal',
       podRole: 'ICAI Fellow Partner CA',
-      turnaround: 'Zero Delay',
+      turnaround: 'Prioritized SLA',
       protocol: 'Pre-Audit Workpapers & MCA/GST Filings'
     },
     {
       stream: 'Systems Architecture & ERP Automation',
       clientInterface: 'CTO / Tech & IT Lead',
       podRole: 'Financial Systems Architect',
-      turnaround: 'Continuous',
-      protocol: 'SOC-2 Encrypted Webhook Ingestion'
+      turnaround: 'Ongoing Sprints',
+      protocol: 'Enterprise Encrypted API Ingestion & Strict Protocols'
     }
   ];
 
@@ -119,7 +119,7 @@ export const CfoSupportPage: React.FC<CfoSupportPageProps> = ({ onOpenInquiry })
             Execution Pod Integration Matrix
           </h2>
           <p className="text-agrya-slate-600 text-sm mt-1 max-w-2xl">
-            Clear delineation of in-house team handoffs, dedicated Agrya pod roles, guaranteed turnaround SLAs, and system sync protocols.
+            Clear delineation of in-house team handoffs, dedicated Agrya pod roles, committed turnaround targets, and secure system sync protocols.
           </p>
         </div>
 
@@ -205,12 +205,18 @@ export const CfoSupportPage: React.FC<CfoSupportPageProps> = ({ onOpenInquiry })
       <section className="text-center max-w-xl mx-auto space-y-4 pt-6">
         <h2 className="text-2xl font-bold text-agrya-slate-900">Scale your in-house capacity</h2>
         <p className="text-xs sm:text-sm text-agrya-slate-600">
-          Overcome back-office bottlenecks and ensure institutional compliance. Talk to our partners.
+          Overcome back-office bottlenecks and ensure institutional compliance. Talk to Jayakumar, our partner leading the CFO Support engagements.
         </p>
-        <div className="pt-2">
+        <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
           <ButtonInButton variant="dark" iconType="arrow-right" onClick={onOpenInquiry}>
             Discuss CFO Support Requirements
           </ButtonInButton>
+          <a
+            href="mailto:jk@agrya.in"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-agrya-slate-200 bg-white hover:bg-agrya-slate-50 text-agrya-slate-800 text-xs font-semibold spring-snappy shadow-sm"
+          >
+            Direct: jk@agrya.in
+          </a>
         </div>
       </section>
 

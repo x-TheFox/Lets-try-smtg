@@ -8,9 +8,11 @@ import { clsx } from 'clsx';
 
 interface CfoPageProps {
   onOpenInquiry: () => void;
+  onNavigate?: (path: string) => void;
+  onOpenDiagnostic?: () => void;
 }
 
-export const CfoPage: React.FC<CfoPageProps> = ({ onOpenInquiry }) => {
+export const CfoPage: React.FC<CfoPageProps> = ({ onOpenInquiry, onNavigate, onOpenDiagnostic }) => {
   const data = servicesData['cfo'];
   const [burnRate, setBurnRate] = useState<number>(35); // in Lakhs/mo
   const [cashBalance, setCashBalance] = useState<number>(500); // in Lakhs
@@ -29,11 +31,11 @@ export const CfoPage: React.FC<CfoPageProps> = ({ onOpenInquiry }) => {
           {data.tagline}
         </h1>
 
-        <p className="text-base sm:text-xl text-agrya-slate-600 leading-relaxed font-normal mb-8 max-w-2xl">
+        <p className="text-lg sm:text-xl text-agrya-slate-600 leading-relaxed font-normal mb-8">
           {data.heroDesc}
         </p>
 
-        <div className="flex flex-wrap items-center gap-4">
+        <div className="flex flex-wrap items-center gap-3">
           <ButtonInButton
             variant="primary"
             iconType="arrow-right"
@@ -41,6 +43,16 @@ export const CfoPage: React.FC<CfoPageProps> = ({ onOpenInquiry }) => {
           >
             Hire a Virtual CFO
           </ButtonInButton>
+
+          {onOpenDiagnostic && (
+            <button
+              onClick={onOpenDiagnostic}
+              className="inline-flex items-center gap-2 bg-agrya-teal-50 hover:bg-agrya-teal-100 border border-agrya-teal-200 text-agrya-teal-800 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold spring-snappy shadow-sm"
+            >
+              <span>Assess Financial Maturity (2 Min)</span>
+            </button>
+          )}
+
           <span className="text-xs font-mono text-agrya-slate-500">
             Dedicated Partner CA Assignment
           </span>
@@ -159,6 +171,19 @@ export const CfoPage: React.FC<CfoPageProps> = ({ onOpenInquiry }) => {
                     </span>
                   )}
                 </p>
+
+                {onNavigate && (
+                  <div className="flex items-center justify-between border-t border-agrya-slate-800/80 pt-3 text-xs">
+                    <span className="text-agrya-slate-400">Need hiring & revenue sensitivity?</span>
+                    <button
+                      onClick={() => onNavigate('/tools/runway-calculator')}
+                      className="font-semibold text-agrya-teal-400 hover:text-agrya-teal-300 underline underline-offset-4 flex items-center gap-1"
+                    >
+                      <span>Full Runway Engine</span>
+                      <span>→</span>
+                    </button>
+                  </div>
+                )}
               </div>
 
             </div>
@@ -201,6 +226,138 @@ export const CfoPage: React.FC<CfoPageProps> = ({ onOpenInquiry }) => {
         </div>
       </section>
 
+      {/* OUR RESPONSIBILITIES CHARTER (RESTORED FROM ORIGINAL SPEC) */}
+      <section className="space-y-6">
+        <div className="max-w-2xl">
+          <div className="font-mono text-xs text-agrya-teal-700 font-semibold uppercase tracking-wider mb-2">
+            Engagement Charter
+          </div>
+          <h2 className="text-3xl font-extrabold text-agrya-slate-950 tracking-tight">
+            Our Responsibilities as Your Virtual CFO
+          </h2>
+          <p className="text-agrya-slate-600 text-sm mt-1">
+            Enterprise excellence, accessibly priced. We deliver executive-tier infrastructure and fiduciary leadership at a fraction of full-time C-suite cost.
+          </p>
+        </div>
+
+        <DoubleBezel className="w-full">
+          <div className="p-6 sm:p-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { title: 'Resource Planning & Allocation', desc: 'Optimizing capital deployment, headcount velocity, and departmental budget ceilings.' },
+                { title: 'Stakeholder Financial Reporting', desc: 'Board-ready monthly financial packs, shareholder decks, and lender reporting.' },
+                { title: 'Cost Optimization & Negotiation', desc: 'Vendor spend scrutiny, contract renegotiations, and gross margin protection.' },
+                { title: 'Internal Controls & Operations', desc: 'Segregation of duties, approval hierarchies, and robust financial policy governance.' },
+                { title: 'Regulatory Compliance Management', desc: 'Proactive oversight across MCA, Income Tax, GST, RBI, and FEMA statutory requirements.' },
+                { title: 'Financial Progress Reviews', desc: 'Rigorous monthly budget-vs-actual variance tracking and strategic trend analysis.' },
+                { title: 'Investor & Banker Liaison', desc: 'Primary advisory contact for institutional diligence, banking lines, and fundraising audits.' }
+              ].map((item, i) => (
+                <div key={item.title} className="p-4 rounded-xl bg-agrya-slate-50/70 border border-agrya-slate-100 flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-md bg-agrya-teal-100 text-agrya-teal-800 text-xs font-mono font-bold flex items-center justify-center shrink-0 mt-0.5">
+                    0{i + 1}
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-bold text-agrya-slate-900 mb-1">{item.title}</h4>
+                    <p className="text-xs text-agrya-slate-600 leading-relaxed">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </DoubleBezel>
+      </section>
+
+      {/* PROVEN RESULTS: THE TWO SUBSTANTIATED CASE STUDIES */}
+      <section className="space-y-8">
+        <div className="text-center max-w-2xl mx-auto">
+          <div className="font-mono text-xs text-agrya-teal-700 font-semibold uppercase tracking-wider mb-2">
+            Documented Impact
+          </div>
+          <h2 className="text-3xl font-extrabold text-agrya-slate-950 tracking-tight">
+            Proven Results & Client Trajectories
+          </h2>
+          <p className="text-agrya-slate-600 text-sm mt-1">
+            Real client transformations guided by Agrya Virtual CFO leadership.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          {/* CASE STUDY 1: RAPID SCALING */}
+          <div className="rounded-3xl bg-agrya-slate-900 text-white p-8 sm:p-10 relative overflow-hidden border border-agrya-slate-800 flex flex-col justify-between">
+            <div className="space-y-4 relative z-10">
+              <span className="font-mono text-[11px] px-3 py-1 rounded-full bg-agrya-teal-900/80 text-agrya-teal-300 font-semibold uppercase tracking-wider border border-agrya-teal-500/30">
+                Rapid Scaling • 5x Revenue
+              </span>
+              <h3 className="text-3xl font-extrabold tracking-tight text-white">
+                ₹15 Cr to ₹75 Cr Revenue
+              </h3>
+              <p className="text-sm text-agrya-slate-300 leading-relaxed">
+                Over 4 years of dedicated Virtual CFO engagement, we helped a client expand from 1 to 5 offices and scale headcount from 120 to 800+ employees.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                <div className="flex items-center text-xs text-agrya-slate-300 gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-agrya-teal-400" />
+                  <span>Vendor cost reduction</span>
+                </div>
+                <div className="flex items-center text-xs text-agrya-slate-300 gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-agrya-teal-400" />
+                  <span>Syndicated bank loans</span>
+                </div>
+                <div className="flex items-center text-xs text-agrya-slate-300 gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-agrya-teal-400" />
+                  <span>USD 6mn Equity funding</span>
+                </div>
+                <div className="flex items-center text-xs text-agrya-slate-300 gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-agrya-teal-400" />
+                  <span>M&A due diligence</span>
+                </div>
+              </div>
+            </div>
+            <div className="mt-8 pt-4 border-t border-agrya-slate-800 text-xs font-mono text-agrya-teal-400">
+              Engagement: Virtual CFO Advisory • Retainer Partnership
+            </div>
+          </div>
+
+          {/* CASE STUDY 2: PROCESS OPTIMIZATION */}
+          <div className="rounded-3xl bg-white p-8 sm:p-10 border border-agrya-slate-200/80 shadow-sm flex flex-col justify-between">
+            <div className="space-y-4">
+              <span className="font-mono text-[11px] px-3 py-1 rounded-full bg-blue-50 text-blue-800 font-semibold uppercase tracking-wider border border-blue-200">
+                Process Optimization & Compliance
+              </span>
+              <h3 className="text-3xl font-extrabold tracking-tight text-agrya-slate-900">
+                Compliance Overhaul
+              </h3>
+              <p className="text-sm text-agrya-slate-600 leading-relaxed">
+                We restructured broken compliance and historical reporting processes for an enterprise client, rectifying audit qualifications and positioning them for institutional debt.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                <div className="flex items-center text-xs text-agrya-slate-700 gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-agrya-teal-600" />
+                  <span>Resolved rev-rec issues</span>
+                </div>
+                <div className="flex items-center text-xs text-agrya-slate-700 gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-agrya-teal-600" />
+                  <span>Fixed tax non-compliance</span>
+                </div>
+                <div className="flex items-center text-xs text-agrya-slate-700 gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-agrya-teal-600" />
+                  <span>Raised ₹100Cr+ in debt</span>
+                </div>
+                <div className="flex items-center text-xs text-agrya-slate-700 gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-agrya-teal-600" />
+                  <span>Supported plant expansion</span>
+                </div>
+              </div>
+            </div>
+            <div className="mt-8 pt-4 border-t border-agrya-slate-100 text-xs font-mono text-agrya-slate-500">
+              Result: Clean Big-Four Audit Sign-off • ₹100Cr+ Facilities
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       {/* CREDENTIALS & GOVERNANCE */}
       <section>
         <DoubleBezel className="w-full">
@@ -226,14 +383,20 @@ export const CfoPage: React.FC<CfoPageProps> = ({ onOpenInquiry }) => {
 
       {/* BOTTOM CTA */}
       <section className="text-center max-w-xl mx-auto space-y-4 pt-6">
-        <h2 className="text-2xl font-bold text-agrya-slate-900">Accelerate your growth trajectory.</h2>
+        <h2 className="text-2xl font-bold text-agrya-slate-900">Need strategic direction?</h2>
         <p className="text-xs sm:text-sm text-agrya-slate-600">
-          Gain seasoned financial leadership without full-time headcount overhead. Discuss your Virtual CFO roadmap with us.
+          Gain seasoned financial leadership without full-time headcount overhead. Talk to Jayakumar, our partner leading the Virtual CFO practice.
         </p>
-        <div className="pt-2">
+        <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
           <ButtonInButton variant="dark" iconType="arrow-right" onClick={onOpenInquiry}>
             Initiate VCFO Consultation
           </ButtonInButton>
+          <a
+            href="mailto:jk@agrya.in"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-agrya-slate-200 bg-white hover:bg-agrya-slate-50 text-agrya-slate-800 text-xs font-semibold spring-snappy shadow-sm"
+          >
+            Direct: jk@agrya.in
+          </a>
         </div>
       </section>
 

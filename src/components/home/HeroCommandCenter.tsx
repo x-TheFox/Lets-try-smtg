@@ -22,12 +22,12 @@ export const HeroCommandCenter: React.FC<HeroCommandCenterProps> = ({
     seed: {
       label: 'Early / Seed Stage',
       runway: '18.4 Mo',
-      runwayDelta: '+3.5 Mo extension',
+      runwayDelta: '+3.5 Mo modeled extension',
       burn: '1.1x',
       burnLabel: 'Controlled Seed Burn',
       statutory: '100%',
-      statutoryLabel: 'Zero GST Penalty',
-      savings: '-45%',
+      statutoryLabel: 'Target Zero Penalty Tracking',
+      savings: 'Up to -45%',
       savingsLabel: 'Clean Bookkeeping Pod',
       recommendation: 'Virtual CFO Advisory + Accounting Hub Setup',
       route: '/cfo'
@@ -37,10 +37,10 @@ export const HeroCommandCenter: React.FC<HeroCommandCenterProps> = ({
       runway: '24.2 Mo',
       runwayDelta: '+4.2 Mo modeled runway',
       burn: '0.82x',
-      burnLabel: 'Top 10% Capital Efficiency',
+      burnLabel: 'Target Capital Efficiency',
       statutory: '100%',
-      statutoryLabel: 'Full ROC & Tax Compliance',
-      savings: '-50%',
+      statutoryLabel: 'Full ROC & Tax Governance',
+      savings: 'Up to -50%',
       savingsLabel: 'Accounting Hub Automation',
       recommendation: 'Dynamic FP&A + Investor Data-Room + Full MIS',
       route: '/cfo'
@@ -52,8 +52,8 @@ export const HeroCommandCenter: React.FC<HeroCommandCenterProps> = ({
       burn: '0.45x',
       burnLabel: 'High Operating Leverage',
       statutory: '100%',
-      statutoryLabel: 'Big 4 Audit Ready',
-      savings: '-55%',
+      statutoryLabel: 'Big-Four Audit Readiness',
+      savings: 'Up to -55%',
       savingsLabel: 'In-House Pod Optimization',
       recommendation: 'CFO Support Pods & AP/AR Force Multiplication',
       route: '/cfo-support'
@@ -107,10 +107,15 @@ export const HeroCommandCenter: React.FC<HeroCommandCenterProps> = ({
             
             {/* CONSOLE HEADER & STAGE SWITCHER */}
             <div className="flex flex-col lg:flex-row lg:items-center justify-between pb-6 border-b border-agrya-slate-100 gap-4">
-              <div className="flex items-center gap-3">
-                <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
-                <span className="font-mono text-xs font-semibold uppercase tracking-wider text-agrya-slate-500">
-                  Agrya Financial Telemetry Console
+              <div className="flex flex-wrap items-center gap-3">
+                <div className="flex items-center gap-2">
+                  <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+                  <span className="font-mono text-xs font-semibold uppercase tracking-wider text-agrya-slate-700">
+                    Agrya Financial Telemetry Console
+                  </span>
+                </div>
+                <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-md bg-agrya-teal-50 text-agrya-teal-800 border border-agrya-teal-200/80 font-medium">
+                  Illustrative Telemetry • Modeled Client Archetype
                 </span>
               </div>
 
@@ -158,7 +163,7 @@ export const HeroCommandCenter: React.FC<HeroCommandCenterProps> = ({
               {/* METRIC 1: RUNWAY */}
               <div className="p-5 rounded-2xl bg-agrya-slate-50/80 border border-agrya-slate-100 relative overflow-hidden group hover:border-agrya-teal-200 spring-standard hover-lift">
                 <div className="flex items-center justify-between text-agrya-slate-400 mb-2">
-                  <span className="text-xs font-mono uppercase">Cash Runway</span>
+                  <span className="text-xs font-mono uppercase">Modeled Cash Runway</span>
                   <Activity className="w-4 h-4 text-agrya-teal-600" />
                 </div>
                 <div key={`${activeStage}-runway`} className="animate-metric">
@@ -174,26 +179,26 @@ export const HeroCommandCenter: React.FC<HeroCommandCenterProps> = ({
               {/* METRIC 2: BURN MULTIPLE */}
               <div className="p-5 rounded-2xl bg-agrya-slate-50/80 border border-agrya-slate-100 relative overflow-hidden group hover:border-agrya-teal-200 spring-standard hover-lift">
                 <div className="flex items-center justify-between text-agrya-slate-400 mb-2">
-                  <span className="text-xs font-mono uppercase">Burn Multiple</span>
+                  <span className="text-xs font-mono uppercase">Burn Multiple (Modeled)</span>
                   <TrendingUp className="w-4 h-4 text-agrya-teal-600" />
                 </div>
                 <div key={`${activeStage}-burn`} className="animate-metric">
                   <div className="text-3xl font-extrabold font-mono text-agrya-slate-900 tracking-tight">
                     {current.burn}
                   </div>
-                  <div className="text-xs text-emerald-600 font-medium mt-1">
+                  <div className="text-xs text-agrya-slate-600 font-medium mt-1">
                     {current.burnLabel}
                   </div>
                 </div>
               </div>
 
-              {/* METRIC 3: STATUTORY HEALTH */}
+              {/* METRIC 3: STATUTORY INTEGRITY */}
               <div className="p-5 rounded-2xl bg-agrya-slate-50/80 border border-agrya-slate-100 relative overflow-hidden group hover:border-agrya-teal-200 spring-standard hover-lift">
                 <div className="flex items-center justify-between text-agrya-slate-400 mb-2">
-                  <span className="text-xs font-mono uppercase">Statutory Index</span>
+                  <span className="text-xs font-mono uppercase">Statutory Governance</span>
                   <ShieldCheck className="w-4 h-4 text-agrya-teal-600" />
                 </div>
-                <div key={`${activeStage}-stat`} className="animate-metric">
+                <div key={`${activeStage}-statutory`} className="animate-metric">
                   <div className="text-3xl font-extrabold font-mono text-agrya-slate-900 tracking-tight">
                     {current.statutory}
                   </div>
@@ -206,7 +211,7 @@ export const HeroCommandCenter: React.FC<HeroCommandCenterProps> = ({
               {/* METRIC 4: OVERHEAD COMPRESSION */}
               <div className="p-5 rounded-2xl bg-agrya-slate-50/80 border border-agrya-slate-100 relative overflow-hidden group hover:border-agrya-teal-200 spring-standard hover-lift">
                 <div className="flex items-center justify-between text-agrya-slate-400 mb-2">
-                  <span className="text-xs font-mono uppercase">Cost Compression</span>
+                  <span className="text-xs font-mono uppercase">Cost Compression (Target)</span>
                   <PieChart className="w-4 h-4 text-agrya-teal-600" />
                 </div>
                 <div key={`${activeStage}-savings`} className="animate-metric">
@@ -243,6 +248,11 @@ export const HeroCommandCenter: React.FC<HeroCommandCenterProps> = ({
                 </button>
               </div>
             </div>
+
+            {/* FOOTNOTE DISCLAIMER */}
+            <p className="mt-3 text-[11px] font-mono text-agrya-slate-400 text-center sm:text-left">
+              * Illustrative operator telemetry based on typical Series A/B client financial models. Past performance is modeled; individual outcomes vary by operational velocity.
+            </p>
 
           </div>
         </DoubleBezel>

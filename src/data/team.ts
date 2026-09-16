@@ -69,7 +69,7 @@ export const teamMembers: TeamMember[] = [
     id: 'mrudula',
     name: 'Mrudula',
     role: 'Head of Tax and Compliance',
-    credentials: 'TN Govt & IIT Incubation Advisor',
+    credentials: 'TN Govt & IIT Incubation Projects',
     bio: 'Leading tax and compliance engagements. Spearheads projects with the Tamil Nadu government and IIT Startup Incubation Cell.',
     image: '/assets/original/team/mrudula.jpeg'
   }

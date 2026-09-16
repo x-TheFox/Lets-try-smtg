@@ -6,12 +6,14 @@ interface NavbarProps {
   currentPath: string;
   onNavigate: (path: string) => void;
   onOpenInquiry: () => void;
+  onOpenDiagnostic?: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
   currentPath,
   onNavigate,
   onOpenInquiry,
+  onOpenDiagnostic,
 }) => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -85,7 +87,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   onClick={() => handleNavClick('/cfo')}
                   className={clsx(
                     "w-full text-left px-3 py-2.5 rounded-xl hover:bg-agrya-slate-50 spring-snappy transition-colors group",
-                    currentPath === '/cfo' && "bg-agrya-teal-800 group-hover:text-agrya-teal-800"
+                    currentPath === '/cfo' && "bg-agrya-teal-50"
                   )}
                 >
                   <div className="font-bold text-xs text-agrya-slate-900 group-hover:text-agrya-teal-800">Virtual CFO</div>
@@ -102,6 +104,87 @@ export const Navbar: React.FC<NavbarProps> = ({
                   <div className="font-bold text-xs text-agrya-slate-900 group-hover:text-agrya-teal-800">CFO Support</div>
                   <div className="text-[11px] text-agrya-slate-500 line-clamp-1">Force-multiplying in-house teams</div>
                 </button>
+
+                <div className="border-t border-agrya-slate-100 my-1 pt-1.5 space-y-1">
+                  <div className="text-[10px] font-mono font-bold uppercase text-agrya-slate-400 px-3 py-1">
+                    Interactive Tools
+                  </div>
+                  <button
+                    onClick={() => handleNavClick('/tools/runway-calculator')}
+                    className={clsx(
+                      "w-full text-left px-3 py-2 rounded-xl hover:bg-agrya-slate-50 spring-snappy transition-colors group flex items-center justify-between",
+                      currentPath === '/tools/runway-calculator' && "bg-agrya-teal-50"
+                    )}
+                  >
+                    <div>
+                      <div className="font-bold text-xs text-agrya-slate-900 group-hover:text-agrya-teal-800">Runway Calculator</div>
+                      <div className="text-[10px] text-agrya-slate-500">Scenario & sensitivity modeling</div>
+                    </div>
+                    <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-agrya-teal-50 text-agrya-teal-700 font-semibold border border-agrya-teal-200">Tool</span>
+                  </button>
+
+                  <button
+                    onClick={() => {
+                      setIsServicesOpen(false);
+                      onOpenDiagnostic?.();
+                    }}
+                    className="w-full text-left px-3 py-2 rounded-xl hover:bg-agrya-slate-50 spring-snappy transition-colors group flex items-center justify-between"
+                  >
+                    <div>
+                      <div className="font-bold text-xs text-agrya-slate-900 group-hover:text-agrya-teal-800">Financial Maturity Index</div>
+                      <div className="text-[10px] text-agrya-slate-500">5-question diagnostic & audit score</div>
+                    </div>
+                    <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 font-semibold border border-emerald-200">Audit</span>
+                  </button>
+                </div>
+
+                <div className="border-t border-agrya-slate-100 my-1 pt-1.5">
+                  <div className="text-[10px] font-mono font-bold uppercase text-agrya-slate-400 px-3 py-1">
+                    Ecosystem Platforms
+                  </div>
+                  <a
+                    href="https://goeffortless.ai"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full text-left px-3 py-2 rounded-xl hover:bg-agrya-slate-50 spring-snappy transition-colors group flex items-center justify-between"
+                  >
+                    <div>
+                      <div className="font-bold text-xs text-agrya-slate-900 group-hover:text-agrya-teal-800 flex items-center gap-1.5">
+                        <span>Effortless</span>
+                        <span className="text-agrya-slate-400 text-[10px]">↗</span>
+                      </div>
+                      <div className="text-[10px] text-agrya-slate-500">Automated Tally Sync & Billing</div>
+                    </div>
+                  </a>
+                  <a
+                    href="https://www.myactionboard.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full text-left px-3 py-2 rounded-xl hover:bg-agrya-slate-50 spring-snappy transition-colors group flex items-center justify-between"
+                  >
+                    <div>
+                      <div className="font-bold text-xs text-agrya-slate-900 group-hover:text-agrya-teal-800 flex items-center gap-1.5">
+                        <span>Actionboard Reports</span>
+                        <span className="text-agrya-slate-400 text-[10px]">↗</span>
+                      </div>
+                      <div className="text-[10px] text-agrya-slate-500">AI Finance OS for CFO Office</div>
+                    </div>
+                  </a>
+                  <a
+                    href="https://pulse.myactionboard.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full text-left px-3 py-2 rounded-xl hover:bg-agrya-slate-50 spring-snappy transition-colors group flex items-center justify-between"
+                  >
+                    <div>
+                      <div className="font-bold text-xs text-agrya-slate-900 group-hover:text-agrya-teal-800 flex items-center gap-1.5">
+                        <span>Pulse</span>
+                        <span className="text-agrya-slate-400 text-[10px]">↗</span>
+                      </div>
+                      <div className="text-[10px] text-agrya-slate-500">Project Profitability & Sentinel</div>
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -175,7 +258,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               onClick={() => handleNavClick('/cfo')}
               className={clsx(
                 "w-full text-left px-3 py-2 rounded-xl text-sm font-semibold",
-                currentPath === '/cfo' ? "bg-agrya-teal-800" : "text-agrya-slate-700"
+                currentPath === '/cfo' ? "bg-agrya-teal-50 text-agrya-teal-800" : "text-agrya-slate-700"
               )}
             >
               Virtual CFO
@@ -189,6 +272,58 @@ export const Navbar: React.FC<NavbarProps> = ({
             >
               CFO Support
             </button>
+          </div>
+
+          <div className="border-t border-agrya-slate-100 pt-3 space-y-1">
+            <div className="text-[10px] font-mono font-semibold uppercase text-agrya-slate-400 px-3 py-1">Tools</div>
+            <button
+              onClick={() => handleNavClick('/tools/runway-calculator')}
+              className={clsx(
+                "w-full text-left px-3 py-2 rounded-xl text-sm font-semibold flex items-center justify-between",
+                currentPath === '/tools/runway-calculator' ? "bg-agrya-teal-50 text-agrya-teal-800" : "text-agrya-slate-700"
+              )}
+            >
+              <span>Runway Calculator</span>
+              <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-agrya-teal-50 text-agrya-teal-700">Tool</span>
+            </button>
+            <button
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                onOpenDiagnostic?.();
+              }}
+              className="w-full text-left px-3 py-2 rounded-xl text-sm font-semibold text-agrya-slate-700 hover:text-agrya-teal-800 flex items-center justify-between"
+            >
+              <span>Financial Maturity Index</span>
+              <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700">Audit</span>
+            </button>
+          </div>
+
+          <div className="border-t border-agrya-slate-100 pt-3 space-y-1">
+            <div className="text-[10px] font-mono font-semibold uppercase text-agrya-slate-400 px-3 py-1">Ecosystem</div>
+            <a
+              href="https://goeffortless.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full block px-3 py-2 rounded-xl text-sm font-semibold text-agrya-slate-700 hover:text-agrya-teal-800"
+            >
+              Effortless SaaS ↗
+            </a>
+            <a
+              href="https://www.myactionboard.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full block px-3 py-2 rounded-xl text-sm font-semibold text-agrya-slate-700 hover:text-agrya-teal-800"
+            >
+              Actionboard Reports ↗
+            </a>
+            <a
+              href="https://pulse.myactionboard.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full block px-3 py-2 rounded-xl text-sm font-semibold text-agrya-slate-700 hover:text-agrya-teal-800"
+            >
+              Pulse Profitability ↗
+            </a>
           </div>
 
           <div className="border-t border-agrya-slate-100 pt-3 space-y-1">

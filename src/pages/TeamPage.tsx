@@ -192,9 +192,9 @@ export const TeamPage: React.FC<TeamPageProps> = ({ onOpenInquiry }) => {
                 <Award className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-agrya-slate-900">ICAI Registered & Regulated</h3>
+                <h3 className="text-lg font-bold text-agrya-slate-900">Led by ICAI Registered Fellows & Associates</h3>
                 <p className="text-xs sm:text-sm text-agrya-slate-600">
-                  Our partners adhere strictly to the professional conduct and accounting standards codified by the Institute of Chartered Accountants of India.
+                  Our practice leaders adhere strictly to the professional conduct, ethical standards, and accounting rigor codified by the Institute of Chartered Accountants of India.
                 </p>
               </div>
             </div>
@@ -208,16 +208,45 @@ export const TeamPage: React.FC<TeamPageProps> = ({ onOpenInquiry }) => {
         </DoubleBezel>
       </section>
 
+      {/* JOIN THE TEAM (RESTORED LEGACY SECTION) */}
+      <section className="bg-agrya-slate-900 rounded-3xl p-8 sm:p-12 text-center text-white relative overflow-hidden border border-agrya-slate-800">
+        <div className="relative z-10 max-w-xl mx-auto space-y-4">
+          <span className="font-mono text-xs text-agrya-teal-400 uppercase tracking-wider font-semibold">
+            Careers at Agrya
+          </span>
+          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
+            Join the team
+          </h2>
+          <p className="text-sm text-agrya-slate-400 leading-relaxed">
+            We are always looking for talented and passionate Chartered Accountants, financial analysts, and automation specialists to join our journey.
+          </p>
+          <div className="pt-2">
+            <a
+              href="mailto:hr@agrya.in"
+              className="inline-flex items-center justify-center px-6 py-3 text-xs font-semibold rounded-full text-agrya-slate-900 bg-white hover:bg-agrya-slate-100 transition-all hover:scale-105 shadow-md shadow-white/10"
+            >
+              View Openings • Contact HR (hr@agrya.in)
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* BOTTOM CTA */}
-      <section className="text-center max-w-xl mx-auto space-y-4 pt-6">
+      <section className="text-center max-w-xl mx-auto space-y-4 pt-4">
         <h2 className="text-2xl font-bold text-agrya-slate-900">Work directly with senior leadership</h2>
         <p className="text-xs sm:text-sm text-agrya-slate-600">
           No handoffs to inexperienced junior staff. Every client is assigned a dedicated Partner CA.
         </p>
-        <div className="pt-2">
+        <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
           <ButtonInButton variant="dark" iconType="arrow-right" onClick={() => onOpenInquiry()}>
             Schedule Partner Discovery Call
           </ButtonInButton>
+          <a
+            href="mailto:jk@agrya.in"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-agrya-slate-200 bg-white hover:bg-agrya-slate-50 text-agrya-slate-800 text-xs font-semibold spring-snappy shadow-sm"
+          >
+            Direct: jk@agrya.in
+          </a>
         </div>
       </section>
 
