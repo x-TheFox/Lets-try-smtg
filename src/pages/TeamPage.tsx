@@ -10,8 +10,8 @@ interface TeamPageProps {
 }
 
 export const TeamPage: React.FC<TeamPageProps> = ({ onOpenInquiry }) => {
-  const founders = teamMembers.filter((m) => m.role.includes('Co-Founder'));
-  const partnersAndLeads = teamMembers.filter((m) => !m.role.includes('Co-Founder'));
+  const founders = teamMembers.filter((m) => m.role.toLowerCase().includes('co-founder'));
+  const partnersAndLeads = teamMembers.filter((m) => !m.role.toLowerCase().includes('co-founder'));
 
   return (
     <div className="max-w-6xl mx-auto px-6 pt-12 pb-24 space-y-20">
@@ -19,15 +19,16 @@ export const TeamPage: React.FC<TeamPageProps> = ({ onOpenInquiry }) => {
       {/* HERO SECTION */}
       <section className="max-w-3xl">
         <Badge pulse variant="teal" className="mb-6">
-          Chartered Pedigree • Leadership
+          Our People
         </Badge>
 
         <h1 className="text-4xl sm:text-6xl font-extrabold text-agrya-slate-950 tracking-tight leading-[1.1] mb-6">
-          Leadership & Expertise
+          Built by <span className="text-agrya-teal-700">Experts.</span><br />
+          Driven by Passion.
         </h1>
 
         <p className="text-base sm:text-xl text-agrya-slate-600 leading-relaxed font-normal mb-8 max-w-2xl">
-          Agrya is guided by seasoned Fellows and Associates of the Institute of Chartered Accountants of India (ICAI), uniting decades of audit rigor, strategic M&A advisory, and financial engineering.
+          We are a team of seasoned Chartered Accountants and financial strategists. We bring big-four experience to ambitious growth companies.
         </p>
 
         <div className="flex flex-wrap items-center gap-4">
@@ -39,7 +40,7 @@ export const TeamPage: React.FC<TeamPageProps> = ({ onOpenInquiry }) => {
             Speak with an Agrya Partner
           </ButtonInButton>
           <span className="text-xs font-mono text-agrya-slate-500">
-            FCA • ACA • DISA Certified Leaders
+            FCA • ACS • ACCA London • Big-Four Pedigree
           </span>
         </div>
       </section>
@@ -98,7 +99,7 @@ export const TeamPage: React.FC<TeamPageProps> = ({ onOpenInquiry }) => {
                 </div>
 
                 {/* DIRECT ENGAGEMENT ACTION */}
-                <div className="pt-5 border-t border-agrya-slate-100 flex items-center justify-between">
+                <div className="pt-5 border-t border-agrya-slate-100 flex flex-wrap items-center justify-between gap-2">
                   <button
                     onClick={() => onOpenInquiry(member.name)}
                     className="text-xs font-semibold text-agrya-slate-900 hover:text-agrya-teal-700 flex items-center gap-1.5 transition-colors group-hover:translate-x-0.5 spring-snappy"
