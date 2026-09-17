@@ -129,11 +129,14 @@ export const RunwayCalculatorPage: React.FC<RunwayCalculatorPageProps> = ({ onOp
                 
                 {/* AVAILABLE CASH */}
                 <div>
-                  <div className="flex justify-between text-xs font-semibold text-agrya-slate-800 mb-2">
+                  <label htmlFor="calc-cash-balance" id="calc-cash-label" className="flex justify-between text-xs font-semibold text-agrya-slate-800 mb-2 cursor-pointer">
                     <span>Current Treasury / Cash in Bank</span>
                     <span className="font-mono font-bold text-agrya-slate-900 text-sm">₹{cashBalance} Lakhs ({((cashBalance)/100).toFixed(2)} Cr)</span>
-                  </div>
+                  </label>
                   <input
+                    id="calc-cash-balance"
+                    aria-labelledby="calc-cash-label"
+                    aria-label="Current Treasury / Cash in Bank"
                     type="range"
                     min="50"
                     max="3000"
@@ -151,11 +154,14 @@ export const RunwayCalculatorPage: React.FC<RunwayCalculatorPageProps> = ({ onOp
 
                 {/* MONTHLY GROSS BURN */}
                 <div>
-                  <div className="flex justify-between text-xs font-semibold text-agrya-slate-800 mb-2">
+                  <label htmlFor="calc-gross-burn" id="calc-burn-label" className="flex justify-between text-xs font-semibold text-agrya-slate-800 mb-2 cursor-pointer">
                     <span>Monthly Operating Expenditures (Gross Burn)</span>
                     <span className="font-mono font-bold text-agrya-slate-900 text-sm">₹{monthlyGrossBurn} Lakhs / mo</span>
-                  </div>
+                  </label>
                   <input
+                    id="calc-gross-burn"
+                    aria-labelledby="calc-burn-label"
+                    aria-label="Monthly Operating Expenditures (Gross Burn)"
                     type="range"
                     min="10"
                     max="200"
@@ -173,11 +179,14 @@ export const RunwayCalculatorPage: React.FC<RunwayCalculatorPageProps> = ({ onOp
 
                 {/* MONTHLY REVENUE */}
                 <div>
-                  <div className="flex justify-between text-xs font-semibold text-agrya-slate-800 mb-2">
+                  <label htmlFor="calc-revenue" id="calc-revenue-label" className="flex justify-between text-xs font-semibold text-agrya-slate-800 mb-2 cursor-pointer">
                     <span>Current Monthly Inflows / Revenue</span>
                     <span className="font-mono font-bold text-agrya-slate-900 text-sm">₹{monthlyRevenue} Lakhs / mo</span>
-                  </div>
+                  </label>
                   <input
+                    id="calc-revenue"
+                    aria-labelledby="calc-revenue-label"
+                    aria-label="Current Monthly Inflows / Revenue"
                     type="range"
                     min="0"
                     max="150"
@@ -195,11 +204,14 @@ export const RunwayCalculatorPage: React.FC<RunwayCalculatorPageProps> = ({ onOp
 
                 {/* HIRING HEADCOUNT EXPANSION */}
                 <div>
-                  <div className="flex justify-between text-xs font-semibold text-agrya-slate-800 mb-2">
+                  <label htmlFor="calc-headcount" id="calc-headcount-label" className="flex justify-between text-xs font-semibold text-agrya-slate-800 mb-2 cursor-pointer">
                     <span>Planned Headcount Addition</span>
                     <span className="font-mono font-bold text-agrya-slate-900 text-sm">+{headcountGrowth} Net Hires / mo</span>
-                  </div>
+                  </label>
                   <input
+                    id="calc-headcount"
+                    aria-labelledby="calc-headcount-label"
+                    aria-label="Planned Headcount Addition"
                     type="range"
                     min="0"
                     max="10"

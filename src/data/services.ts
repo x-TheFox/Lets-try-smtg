@@ -31,7 +31,7 @@ export const servicesData: Record<string, ServicePillar> = {
       },
       {
         title: 'Statutory & Tax Compliance',
-        description: 'Full-cycle GST filings (GSTR-1, 3B, 9C), TDS returns, advance tax computations, and regulatory governance with systematic zero-penalty tracking.'
+        description: 'Full-cycle GST filings (GSTR-1, 3B, 9C), TDS returns, advance tax computations, and regulatory governance with zero-penalty track record on compliant clients.'
       },
       {
         title: 'Executive MIS & Reporting',

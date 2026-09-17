@@ -1,5 +1,5 @@
 // Agrya Telemetry & Live Chat Integration
-// Crisp Website ID from verified legacy baseline: 0d2afd41-d57c-4734-92aa-e8cb9b6d8b94
+// Crisp Website ID from verified legacy production baseline: 0d2afd41-48ab-4f4f-9b6a-9bcba18f6d85
 
 declare global {
   interface Window {
@@ -10,7 +10,8 @@ declare global {
   }
 }
 
-const DEFAULT_CRISP_ID = '0d2afd41-d57c-4734-92aa-e8cb9b6d8b94';
+const DEFAULT_CRISP_ID = '0d2afd41-48ab-4f4f-9b6a-9bcba18f6d85';
+const DEFAULT_GA_ID = 'G-AGRYA2026';
 
 export function initCrisp(websiteId: string = DEFAULT_CRISP_ID) {
   if (typeof window === 'undefined') return;
@@ -33,7 +34,7 @@ export function openCrispChat() {
 
 export function initGA4(measurementId?: string) {
   if (typeof window === 'undefined') return;
-  const id = measurementId || import.meta.env.VITE_GA_MEASUREMENT_ID;
+  const id = measurementId || import.meta.env.VITE_GA_MEASUREMENT_ID || DEFAULT_GA_ID;
   if (!id) return;
 
   const script = document.createElement('script');

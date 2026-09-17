@@ -2,7 +2,7 @@ import React from 'react';
 import { DoubleBezel } from '../components/ui/DoubleBezel';
 import { Badge } from '../components/ui/Badge';
 import { ButtonInButton } from '../components/ui/ButtonInButton';
-import { Sparkles, Target } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 
 interface StoryPageProps {
   onOpenInquiry: () => void;
@@ -12,18 +12,18 @@ export const StoryPage: React.FC<StoryPageProps> = ({ onOpenInquiry }) => {
   return (
     <div className="max-w-6xl mx-auto px-6 pt-12 pb-24 space-y-20">
       
-      {/* HERO SECTION */}
+      {/* HERO SECTION (VERBATIM LEGACY ORIGIN) */}
       <section className="max-w-3xl">
         <Badge pulse variant="teal" className="mb-6">
-          The Agrya Origin & Mission
+          Origin Story
         </Badge>
 
         <h1 className="text-4xl sm:text-6xl font-extrabold text-agrya-slate-950 tracking-tight leading-[1.1] mb-6">
-          Built by finance leaders for founders who build.
+          We noticed a <span className="text-transparent bg-clip-text bg-gradient-to-r from-agrya-teal-700 to-agrya-slate-900">gap.</span>
         </h1>
 
-        <p className="text-base sm:text-xl text-agrya-slate-600 leading-relaxed font-normal mb-8 max-w-2xl">
-          Agrya was created by veteran Chartered Accountants who recognized that high-growth businesses were stuck between two flawed worlds: traditional accounting firms that don’t understand tech, and disconnected software that lacks strategic human wisdom.
+        <p className="text-lg sm:text-2xl text-agrya-slate-600 leading-relaxed font-normal mb-8 max-w-2xl">
+          Between what ambitious entrepreneurs needed and what the traditional finance industry provided.
         </p>
 
         <div className="flex flex-wrap items-center gap-4">
@@ -40,91 +40,153 @@ export const StoryPage: React.FC<StoryPageProps> = ({ onOpenInquiry }) => {
         </div>
       </section>
 
-      {/* THE GENESIS & PHILOSOPHY (EDITORIAL SPLIT BENTO) */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <DoubleBezel className="h-full">
-          <div className="p-6 sm:p-10 space-y-4 h-full flex flex-col justify-between">
-            <div>
-              <div className="w-10 h-10 rounded-xl bg-agrya-teal-50 border border-agrya-teal-200 flex items-center justify-center text-agrya-teal-700 mb-6">
-                <Target className="w-5 h-5" />
-              </div>
-              <h2 className="text-2xl font-bold text-agrya-slate-900 mb-3">
-                The Gap We Discovered
-              </h2>
-              <p className="text-agrya-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
-                After 15 years at Deloitte advising multinational corporations on corporate governance, statutory audits, and capital strategy, we saw a recurring breakdown among India’s fastest-growing companies: businesses were scaling rapidly, but their back-offices were drowning in disconnected spreadsheets and delayed compliance filings.
-              </p>
-              <p className="text-agrya-slate-600 text-xs sm:text-sm leading-relaxed">
-                Traditional CA firms looked backwards once a year for tax compliance. Modern founders needed forward-looking financial engineering in real time. We founded Agrya to bring Big-Four pedigree and modern tooling to ambitious builders.
-              </p>
-            </div>
-            <div className="pt-4 border-t border-agrya-slate-100 text-xs font-mono text-agrya-teal-800">
-              Founding Philosophy: Rigorous Big-Four discipline paired with startup-velocity execution.
-            </div>
+      {/* FOUNDER NARRATIVE & DELOITTE FOUNDING QUOTE (VERBATIM RESTORATION - FINDING P1-04) */}
+      <section className="max-w-4xl mx-auto text-center py-4">
+        <div className="p-8 sm:p-12 rounded-3xl bg-white border border-agrya-slate-200/90 shadow-sm relative">
+          <div className="w-12 h-12 rounded-full bg-agrya-teal-50 border border-agrya-teal-200 text-agrya-teal-700 flex items-center justify-center mx-auto mb-6">
+            <Sparkles className="w-6 h-6" />
           </div>
-        </DoubleBezel>
 
-        <DoubleBezel className="h-full">
-          <div className="p-6 sm:p-10 space-y-4 h-full flex flex-col justify-between">
-            <div>
-              <div className="w-10 h-10 rounded-xl bg-agrya-slate-100 border border-agrya-slate-200 flex items-center justify-center text-agrya-slate-800 mb-6">
-                <Sparkles className="w-5 h-5" />
-              </div>
-              <h2 className="text-2xl font-bold text-agrya-slate-900 mb-3">
-                The Financial Operating System
-              </h2>
-              <p className="text-agrya-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
-                We re-engineered the finance function into an integrated operating system. By marrying institutional Chartered Accountancy rigor with proprietary technology platforms like Effortless, Actionboard, and Pulse, we turn messy transaction streams into real-time strategic telemetry.
-              </p>
-              <p className="text-agrya-slate-600 text-xs sm:text-sm leading-relaxed">
-                Our founders and partners don’t just deliver reports; we sit with you in board meetings, model scenario sensitivities, and safeguard your capital.
-              </p>
-            </div>
-            <div className="pt-4 border-t border-agrya-slate-100 text-xs font-mono text-agrya-slate-500">
-              Priya Raghavan & Jayakumar M • Co-founders & Managing Partners
-            </div>
+          <blockquote className="text-xl sm:text-2xl font-serif text-agrya-slate-900 leading-relaxed max-w-2xl mx-auto italic">
+            &ldquo;Hey, we are <span className="font-bold font-sans not-italic text-agrya-slate-950">Priya</span> and <span className="font-bold font-sans not-italic text-agrya-slate-950">Jayakumar</span>. During our 15 years at Deloitte, we worked with massive global corporations. We saw how powerful a well-oiled finance machine could be.&rdquo;
+          </blockquote>
+
+          <div className="mt-8 flex items-center justify-center -space-x-3">
+            <img 
+              src="/assets/team-priya.png" 
+              alt="Priya Raghavan - Co-founder" 
+              className="w-16 h-16 rounded-full border-4 border-white shadow-md object-cover"
+            />
+            <img 
+              src="/assets/team-jayakumar.png" 
+              alt="Jayakumar M - Co-founder" 
+              className="w-16 h-16 rounded-full border-4 border-white shadow-md object-cover"
+            />
           </div>
-        </DoubleBezel>
+
+          <div className="mt-3 text-xs font-mono text-agrya-slate-500">
+            Priya Raghavan & Jayakumar M • Co-founders & Managing Partners
+          </div>
+        </div>
       </section>
 
-      {/* CORE VALUES & PILLARS */}
-      <section>
-        <DoubleBezel className="w-full">
-          <div className="p-6 sm:p-10 space-y-8">
-            <div>
-              <div className="font-mono text-xs text-agrya-teal-700 font-semibold uppercase tracking-wider mb-1">
-                Our Principles
+      {/* THE REALIZATION & 4 CORE PROBLEMS (VERBATIM LEGACY CARDS) */}
+      <section className="space-y-8">
+        <div className="max-w-2xl text-center mx-auto">
+          <div className="font-mono text-xs text-agrya-teal-700 font-semibold uppercase tracking-wider mb-2">
+            The Realization
+          </div>
+          <h2 className="text-3xl font-extrabold text-agrya-slate-950 tracking-tight">
+            The recurring patterns of startup finance.
+          </h2>
+          <p className="text-agrya-slate-600 text-sm mt-2 leading-relaxed">
+            6 years ago, we started working with passionate startups. We quickly realized they were facing the same specific set of problems, over and over again.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <DoubleBezel className="h-full group hover-lift">
+            <div className="p-6 flex flex-col justify-between h-full space-y-4">
+              <div>
+                <div className="text-3xl mb-3">😵‍💫</div>
+                <h3 className="text-lg font-bold text-agrya-slate-900 group-hover:text-agrya-teal-700 transition-colors">
+                  The Distraction Trap
+                </h3>
+                <p className="text-xs text-agrya-slate-600 leading-relaxed mt-2">
+                  Entrepreneurs getting pulled into non-core finance and admin tasks instead of building their product.
+                </p>
               </div>
-              <h3 className="text-2xl font-bold text-agrya-slate-900">How Agrya Operates</h3>
             </div>
+          </DoubleBezel>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-              <div className="space-y-2">
-                <div className="font-mono text-xs font-bold text-agrya-teal-700">01 / MATERIAL HONESTY</div>
-                <h4 className="text-base font-bold text-agrya-slate-900">Zero Vanity Metrics</h4>
-                <p className="text-xs text-agrya-slate-600 leading-relaxed">
-                  We look at the hard truths of your unit economics, burn multiple, and net cash runway. Clarity creates resilience.
+          <DoubleBezel className="h-full group hover-lift">
+            <div className="p-6 flex flex-col justify-between h-full space-y-4">
+              <div>
+                <div className="text-3xl mb-3">⚠️</div>
+                <h3 className="text-lg font-bold text-agrya-slate-900 group-hover:text-agrya-teal-700 transition-colors">
+                  Compliance Blindspots
+                </h3>
+                <p className="text-xs text-agrya-slate-600 leading-relaxed mt-2">
+                  Regulatory issues discovered only during due diligence—often threatening funding rounds.
                 </p>
               </div>
+            </div>
+          </DoubleBezel>
 
-              <div className="space-y-2">
-                <div className="font-mono text-xs font-bold text-agrya-teal-700">02 / INSTITUTIONAL RIGOR</div>
-                <h4 className="text-base font-bold text-agrya-slate-900">Chartered Pedigree</h4>
-                <p className="text-xs text-agrya-slate-600 leading-relaxed">
-                  Every engagement is led by Fellow (FCA) or Associate (ACA) Chartered Accountants. Continuous audit readiness is our baseline.
+          <DoubleBezel className="h-full group hover-lift">
+            <div className="p-6 flex flex-col justify-between h-full space-y-4">
+              <div>
+                <div className="text-3xl mb-3">🌫️</div>
+                <h3 className="text-lg font-bold text-agrya-slate-900 group-hover:text-agrya-teal-700 transition-colors">
+                  Financial Fog
+                </h3>
+                <p className="text-xs text-agrya-slate-600 leading-relaxed mt-2">
+                  Critical data like real-time cash flow availability simply wasn’t available when needed most.
                 </p>
               </div>
+            </div>
+          </DoubleBezel>
 
-              <div className="space-y-2">
-                <div className="font-mono text-xs font-bold text-agrya-teal-700">03 / ECOSYSTEM SYNERGY</div>
-                <h4 className="text-base font-bold text-agrya-slate-900">Software + Wisdom</h4>
-                <p className="text-xs text-agrya-slate-600 leading-relaxed">
-                  We harness automated reconciliation and digital invoice flows to compress operational overhead by up to 50%.
+          <DoubleBezel className="h-full group hover-lift">
+            <div className="p-6 flex flex-col justify-between h-full space-y-4">
+              <div>
+                <div className="text-3xl mb-3">🛑</div>
+                <h3 className="text-lg font-bold text-agrya-slate-900 group-hover:text-agrya-teal-700 transition-colors">
+                  Scaling Ceilings
+                </h3>
+                <p className="text-xs text-agrya-slate-600 leading-relaxed mt-2">
+                  Lack of robust processes preventing the business from growing as fast as the vision.
                 </p>
               </div>
+            </div>
+          </DoubleBezel>
+
+        </div>
+      </section>
+
+      {/* THE SOLUTION / MISSION (VERBATIM RESTORATION) */}
+      <section className="bg-agrya-slate-900 rounded-[2.5rem] p-10 sm:p-16 text-white relative overflow-hidden text-center border border-agrya-slate-800">
+        <div className="relative z-10 max-w-3xl mx-auto space-y-6">
+          <span className="font-mono text-xs font-semibold uppercase tracking-wider text-agrya-teal-400">
+            Our Purpose
+          </span>
+          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
+            So we built Agrya.
+          </h2>
+          <p className="text-base sm:text-xl text-agrya-slate-300 font-light leading-relaxed">
+            We designed our <span className="text-white font-medium border-b border-agrya-teal-400">Virtual CFO</span> service to be the partner we wished we had. A service that relieves founders of the financial burden, so they can focus on changing the world.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 border-t border-agrya-slate-800 pt-10 text-center">
+            <div>
+              <div className="text-4xl font-extrabold font-mono text-agrya-teal-400">500+</div>
+              <div className="text-xs font-mono uppercase tracking-wider text-agrya-slate-400 mt-1">Clients Served</div>
+            </div>
+            <div>
+              <div className="text-4xl font-extrabold font-mono text-agrya-teal-400">15+</div>
+              <div className="text-xs font-mono uppercase tracking-wider text-agrya-slate-400 mt-1">Years of Impact</div>
+            </div>
+            <div>
+              <div className="text-4xl font-extrabold font-mono text-agrya-teal-400">100%</div>
+              <div className="text-xs font-mono uppercase tracking-wider text-agrya-slate-400 mt-1">Founder Focus</div>
             </div>
           </div>
-        </DoubleBezel>
+        </div>
+      </section>
+
+      {/* OUTRO FOUNDER SIGN-OFF (VERBATIM RESTORATION) */}
+      <section className="max-w-2xl mx-auto text-center space-y-6">
+        <blockquote className="text-2xl font-bold text-agrya-slate-900">
+          &ldquo;We believe our success comes entirely from the success of our clients.&rdquo;
+        </blockquote>
+        <p className="text-sm text-agrya-slate-600 leading-relaxed">
+          If you are an entrepreneur looking to leave your mark on this world, we would love to be the ones clearing the path for you.
+        </p>
+        <div className="pt-2">
+          <p className="font-bold text-base text-agrya-slate-900">Priya & Jayakumar</p>
+          <p className="text-xs font-mono text-agrya-slate-500 uppercase tracking-wider mt-0.5">Founders</p>
+        </div>
       </section>
 
       {/* BOTTOM CTA */}
@@ -143,3 +205,4 @@ export const StoryPage: React.FC<StoryPageProps> = ({ onOpenInquiry }) => {
     </div>
   );
 };
+

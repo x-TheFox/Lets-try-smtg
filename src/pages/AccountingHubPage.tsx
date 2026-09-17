@@ -83,6 +83,12 @@ export const AccountingHubPage: React.FC<AccountingHubPageProps> = ({ onOpenInqu
           >
             Schedule Accounting Audit
           </ButtonInButton>
+          <a
+            href="mailto:jk@agrya.in?subject=Accounting%20Hub%20Inquiry%20-%20Agrya"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-agrya-slate-200 bg-white hover:bg-agrya-slate-50 text-agrya-slate-800 text-xs sm:text-sm font-semibold spring-snappy shadow-sm"
+          >
+            <span>Talk to Jayakumar (jk@agrya.in)</span>
+          </a>
           <span className="text-xs font-mono text-agrya-slate-500">
             Cut operating overhead by up to 50% (Modeled)
           </span>

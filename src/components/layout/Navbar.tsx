@@ -101,7 +101,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                     currentPath === '/cfo-support' && "bg-agrya-teal-50"
                   )}
                 >
-                  <div className="font-bold text-xs text-agrya-slate-900 group-hover:text-agrya-teal-800">CFO Support</div>
+                  <div className="font-bold text-xs text-agrya-slate-900 group-hover:text-agrya-teal-800">CFO Support Services</div>
                   <div className="text-[11px] text-agrya-slate-500 line-clamp-1">Force-multiplying in-house teams</div>
                 </button>
 
@@ -143,7 +143,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                     Ecosystem Platforms
                   </div>
                   <a
-                    href="https://goeffortless.ai"
+                    href="https://www.goeffortless.co"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full text-left px-3 py-2 rounded-xl hover:bg-agrya-slate-50 spring-snappy transition-colors group flex items-center justify-between"
@@ -222,11 +222,12 @@ export const Navbar: React.FC<NavbarProps> = ({
             </span>
           </button>
 
-          {/* MOBILE MENU TOGGLE */}
+          {/* MOBILE MENU TOGGLE (WCAG / Apple HIG 44px min touch target) */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 rounded-full hover:bg-agrya-slate-100 text-agrya-slate-700 transition-colors"
+            className="md:hidden min-w-[44px] min-h-[44px] inline-flex items-center justify-center rounded-full hover:bg-agrya-slate-100 text-agrya-slate-700 transition-colors focus:outline-none focus:ring-2 focus:ring-agrya-teal-500"
             aria-label="Toggle menu"
+            aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
@@ -248,7 +249,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <button
               onClick={() => handleNavClick('/accounting-hub')}
               className={clsx(
-                "w-full text-left px-3 py-2 rounded-xl text-sm font-semibold",
+                "w-full text-left px-3 py-2.5 min-h-[44px] flex items-center rounded-xl text-sm font-semibold",
                 currentPath === '/accounting-hub' ? "bg-agrya-teal-50 text-agrya-teal-800" : "text-agrya-slate-700"
               )}
             >
@@ -257,7 +258,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <button
               onClick={() => handleNavClick('/cfo')}
               className={clsx(
-                "w-full text-left px-3 py-2 rounded-xl text-sm font-semibold",
+                "w-full text-left px-3 py-2.5 min-h-[44px] flex items-center rounded-xl text-sm font-semibold",
                 currentPath === '/cfo' ? "bg-agrya-teal-50 text-agrya-teal-800" : "text-agrya-slate-700"
               )}
             >
@@ -266,11 +267,11 @@ export const Navbar: React.FC<NavbarProps> = ({
             <button
               onClick={() => handleNavClick('/cfo-support')}
               className={clsx(
-                "w-full text-left px-3 py-2 rounded-xl text-sm font-semibold",
+                "w-full text-left px-3 py-2.5 min-h-[44px] flex items-center rounded-xl text-sm font-semibold",
                 currentPath === '/cfo-support' ? "bg-agrya-teal-50 text-agrya-teal-800" : "text-agrya-slate-700"
               )}
             >
-              CFO Support
+              CFO Support Services
             </button>
           </div>
 
@@ -301,10 +302,10 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div className="border-t border-agrya-slate-100 pt-3 space-y-1">
             <div className="text-[10px] font-mono font-semibold uppercase text-agrya-slate-400 px-3 py-1">Ecosystem</div>
             <a
-              href="https://goeffortless.ai"
+              href="https://www.goeffortless.co"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full block px-3 py-2 rounded-xl text-sm font-semibold text-agrya-slate-700 hover:text-agrya-teal-800"
+              className="w-full min-h-[44px] flex items-center px-3 py-2 rounded-xl text-sm font-semibold text-agrya-slate-700 hover:text-agrya-teal-800"
             >
               Effortless SaaS ↗
             </a>
@@ -312,7 +313,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               href="https://www.myactionboard.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full block px-3 py-2 rounded-xl text-sm font-semibold text-agrya-slate-700 hover:text-agrya-teal-800"
+              className="w-full min-h-[44px] flex items-center px-3 py-2 rounded-xl text-sm font-semibold text-agrya-slate-700 hover:text-agrya-teal-800"
             >
               Actionboard Reports ↗
             </a>
@@ -320,7 +321,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               href="https://pulse.myactionboard.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full block px-3 py-2 rounded-xl text-sm font-semibold text-agrya-slate-700 hover:text-agrya-teal-800"
+              className="w-full min-h-[44px] flex items-center px-3 py-2 rounded-xl text-sm font-semibold text-agrya-slate-700 hover:text-agrya-teal-800"
             >
               Pulse Profitability ↗
             </a>
@@ -331,7 +332,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <button
               onClick={() => handleNavClick('/story')}
               className={clsx(
-                "w-full text-left px-3 py-2 rounded-xl text-sm font-semibold",
+                "w-full text-left px-3 py-2.5 min-h-[44px] flex items-center rounded-xl text-sm font-semibold",
                 currentPath === '/story' ? "bg-agrya-teal-50 text-agrya-teal-800" : "text-agrya-slate-700"
               )}
             >
@@ -340,7 +341,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <button
               onClick={() => handleNavClick('/team')}
               className={clsx(
-                "w-full text-left px-3 py-2 rounded-xl text-sm font-semibold",
+                "w-full text-left px-3 py-2.5 min-h-[44px] flex items-center rounded-xl text-sm font-semibold",
                 currentPath === '/team' ? "bg-agrya-teal-50 text-agrya-teal-800" : "text-agrya-slate-700"
               )}
             >
@@ -354,7 +355,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 setIsMobileMenuOpen(false);
                 onOpenInquiry();
               }}
-              className="w-full py-3 bg-agrya-slate-900 text-white font-semibold rounded-2xl text-center text-sm shadow-sm"
+              className="w-full min-h-[48px] py-3 bg-agrya-slate-900 text-white font-semibold rounded-2xl text-center text-sm shadow-sm flex items-center justify-center"
             >
               Get in Touch ↗
             </button>

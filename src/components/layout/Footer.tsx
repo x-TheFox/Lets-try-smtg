@@ -38,7 +38,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
             <div className="pt-2 flex items-center gap-3">
               <a 
-                href="https://www.linkedin.com/company/agrya-consulting" 
+                href="https://linkedin.com/company/agrya-consulting" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-8 h-8 rounded-full bg-agrya-slate-800 hover:bg-agrya-teal-600/30 text-agrya-slate-300 hover:text-agrya-teal-300 border border-agrya-slate-700/60 flex items-center justify-center transition-colors"
@@ -70,6 +70,16 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <li>
                 <button onClick={() => onNavigate('/team')} className="hover:text-white transition-colors">
                   Leadership & Partners
+                </button>
+              </li>
+              <li>
+                <button onClick={() => onNavigate('/terms')} className="hover:text-white transition-colors">
+                  Terms of Service
+                </button>
+              </li>
+              <li>
+                <button onClick={() => onNavigate('/privacy')} className="hover:text-white transition-colors">
+                  Privacy Policy
                 </button>
               </li>
               <li>
@@ -143,14 +153,22 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         </div>
 
         {/* BOTTOM LEGAL & COPYRIGHT */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-agrya-slate-500 font-mono gap-4">
-          <div>
-            © {new Date().getFullYear()} Agrya Consulting Private Limited. All rights reserved.
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between text-[11px] text-agrya-slate-500 font-mono gap-4 border-t border-agrya-slate-800/40">
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
+            <span>© 2026 Agrya Consulting Private Limited</span>
+            <span className="hidden sm:inline">•</span>
+            <span className="text-agrya-slate-400">Led by Fellows (FCA) & Associates (ACA) of the Institute of Chartered Accountants of India</span>
           </div>
-          <div className="flex items-center gap-4">
-            <span>Chennai • Bengaluru • Hyderabad • Mumbai</span>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <button onClick={() => onNavigate('/terms')} className="hover:text-white transition-colors">
+              Terms
+            </button>
             <span>•</span>
-            <span className="text-agrya-teal-400">SOC-2 & Statutory Rigor</span>
+            <button onClick={() => onNavigate('/privacy')} className="hover:text-white transition-colors">
+              Privacy
+            </button>
+            <span>•</span>
+            <span className="text-agrya-teal-400">Encrypted Form Handling & Statutory Rigor</span>
           </div>
         </div>
 

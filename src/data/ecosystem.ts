@@ -12,7 +12,7 @@ export const ecosystemTools: EcosystemTool[] = [
   {
     name: 'Effortless',
     tagline: 'The All-In-One Growth Platform for Indian SMBs',
-    description: 'Automating billing, expenses, 100% bi-directional Tally sync, AI-powered 3-way reconciliation (PO + GRN + Vendor Bills), and cashflow control.',
+    description: 'Automating billing, expenses, Tally Prime-connected sync (bi-directional on ledger classes A-D), AI-powered 3-way reconciliation (PO + GRN + Vendor Bills), and cashflow control.',
     url: 'https://www.goeffortless.co',
     logo: '/assets/original/effortless-logo.png',
     category: 'Financial Operations'

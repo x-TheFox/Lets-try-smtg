@@ -29,35 +29,35 @@ const routes = [
   },
   {
     path: '/accounting-hub',
-    title: 'Accounting Hub | Agrya Consulting',
+    title: 'Accounting Hub | Modern Bookkeeping & Payroll',
     description: 'Agrya’s Accounting Hub delivers real-time financial tracking, automated reconciliation, and audit-ready books.',
     canonical: 'https://www.agrya.in/accounting-hub',
     ogImage: 'https://www.agrya.in/assets/og-image.png'
   },
   {
     path: '/cfo',
-    title: 'Virtual CFO Services | Agrya Consulting',
+    title: 'Virtual CFO Services | Agrya',
     description: 'Get the vision, discipline, and strategic clarity of an experienced Chief Financial Officer at a fraction of the cost.',
     canonical: 'https://www.agrya.in/cfo',
     ogImage: 'https://www.agrya.in/assets/og-image.png'
   },
   {
     path: '/cfo-support',
-    title: 'CFO Support & Execution Pods | Agrya Consulting',
+    title: 'CFO Support Services | Agrya',
     description: 'Power your in-house finance team with expert execution. High-velocity financial modeling, compliance audits, and specialized project support.',
     canonical: 'https://www.agrya.in/cfo-support',
     ogImage: 'https://www.agrya.in/assets/og-image.png'
   },
   {
     path: '/story',
-    title: 'Our Story | Agrya Consulting',
+    title: 'Our Story | The Agrya Journey',
     description: 'Built by finance leaders for founders who build. The origin story and philosophy of Agrya Consulting.',
     canonical: 'https://www.agrya.in/story',
     ogImage: 'https://www.agrya.in/assets/og-image.png'
   },
   {
     path: '/team',
-    title: 'Leadership & Team | Agrya Consulting',
+    title: 'Our Team | Expert CAs & Financial Advisors | Agrya',
     description: 'Meet the experienced Fellows and Associates of ICAI leading Agrya’s Virtual CFO and accounting advisory practice.',
     canonical: 'https://www.agrya.in/team',
     ogImage: 'https://www.agrya.in/assets/og-image.png'
@@ -70,9 +70,23 @@ const routes = [
     ogImage: 'https://www.agrya.in/assets/og-image.png'
   },
   {
+    path: '/terms',
+    title: 'Terms of Service | Agrya Consulting',
+    description: 'Terms of Service, fiduciary engagement guidelines, and statutory disclaimers for Agrya Consulting Private Limited.',
+    canonical: 'https://www.agrya.in/terms',
+    ogImage: 'https://www.agrya.in/assets/og-image.png'
+  },
+  {
+    path: '/privacy',
+    title: 'Privacy Policy | Agrya Consulting',
+    description: 'Data protection and confidentiality policy of Agrya Consulting Private Limited in accordance with DPDP Act 2023.',
+    canonical: 'https://www.agrya.in/privacy',
+    ogImage: 'https://www.agrya.in/assets/og-image.png'
+  },
+  {
     path: '/404',
-    title: 'Page Not Found | Agrya Consulting',
-    description: 'The requested page could not be found. Return to Agrya Consulting home.',
+    title: 'The requested financial ledger does not exist | Agrya Consulting',
+    description: 'The requested financial ledger or advisory page could not be found. Return to Agrya Consulting home.',
     canonical: 'https://www.agrya.in/404',
     ogImage: 'https://www.agrya.in/assets/og-image.png',
     is404: true

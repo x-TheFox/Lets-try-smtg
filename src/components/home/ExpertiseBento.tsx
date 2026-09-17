@@ -88,7 +88,7 @@ export const ExpertiseBento: React.FC<ExpertiseBentoProps> = ({ onNavigate }) =>
                   <span className="font-mono text-xs px-2.5 py-1 rounded-md bg-agrya-slate-100 text-agrya-slate-800 font-semibold border border-agrya-slate-200">
                     Strategic C-Suite • 02
                   </span>
-                  <span className="font-mono text-xs text-agrya-teal-700 font-semibold">10x Multiplier</span>
+                  <span className="font-mono text-xs text-agrya-teal-700 font-semibold">Strategic Leverage</span>
                 </div>
 
                 <h3 className="text-2xl font-bold text-agrya-slate-900 mb-3 group-hover:text-agrya-teal-700 spring-standard transition-colors">

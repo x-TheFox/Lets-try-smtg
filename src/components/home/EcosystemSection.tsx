@@ -16,13 +16,13 @@ export const EcosystemSection: React.FC = () => {
   const previewTelemetry = {
     Effortless: {
       title: 'Effortless — The All-In-One Growth Platform for Indian SMBs',
-      tagline: 'Automating billing, expenses, and cashflow with 100% bi-directional Tally sync',
+      tagline: 'Automating billing, expenses, and cashflow with Tally Prime sync (bi-directional on ledger classes A-D)',
       badge: 'Integrated Partner Platform',
       stat1: { label: '3-Way Match', value: 'PO+GRN+Bill' },
       stat2: { label: 'Tally Sync', value: 'Bi-Directional' },
       stat3: { label: 'AI Tax Guard', value: 'ITC / TDS Validated' },
       features: [
-        '100% automated bi-directional Tally sync — create in Effortless, reflected in Tally instantly',
+        'Automated bi-directional Tally sync — create in Effortless, reflected in Tally Prime across core ledgers',
         'AI-powered 3-way reconciliation automatically matching POs, GRNs, and vendor bills',
         'AI Tax Guard preventing expense leakages with structured governance & approvals',
         'The CFO’s Consolidated Payment Deck with real-time cashflow, payables, and WhatsApp snapshots'
@@ -265,7 +265,7 @@ export const EcosystemSection: React.FC = () => {
                   <div className="p-3 rounded-xl bg-agrya-slate-800/50 border border-agrya-slate-700/40 text-xs text-agrya-slate-300 space-y-1">
                     <div className="flex justify-between text-[11px] text-agrya-slate-400 font-mono">
                       <span>Architecture Note</span>
-                      <span className="text-agrya-teal-400">ICAI Verified</span>
+                      <span className="text-agrya-teal-400">ICAI Fellows on Staff</span>
                     </div>
                     <div className="text-[11px] text-agrya-slate-300 leading-relaxed font-mono">
                       {currentPreview.subnote}

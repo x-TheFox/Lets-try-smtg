@@ -24,7 +24,7 @@ export const officeLocations: OfficeLocation[] = [
     city: 'Hyderabad',
     state: 'Telangana',
     pincode: '500073',
-    address: 'Unit no 824 7th Floor, Vasavi MPM Grand Beside Ameerpet Metro, Ameerpet'
+    address: 'Unit no 824 7th Floor, Vasavi MPM Grand Beside Ameerpet Metro Ameerpet'
   },
   {
     city: 'Mumbai',

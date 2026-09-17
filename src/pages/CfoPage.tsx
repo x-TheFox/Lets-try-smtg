@@ -16,7 +16,33 @@ export const CfoPage: React.FC<CfoPageProps> = ({ onOpenInquiry, onNavigate, onO
   const data = servicesData['cfo'];
   const [burnRate, setBurnRate] = useState<number>(35); // in Lakhs/mo
   const [cashBalance, setCashBalance] = useState<number>(500); // in Lakhs
-  const runwayMonths = (cashBalance / burnRate).toFixed(1);
+  const rawMonths = cashBalance / burnRate;
+  const isCapped = rawMonths >= 36;
+  const displayMonths = isCapped ? '36+' : rawMonths.toFixed(1);
+
+  const getRunwayAdvisory = () => {
+    if (rawMonths < 12) {
+      return {
+        band: 'Action Required (High Burn)',
+        color: 'text-amber-400',
+        desc: 'Runway under 12 months. Agrya VCFO models bridge financing, burn compression & strategic cost containment.'
+      };
+    } else if (rawMonths <= 24) {
+      return {
+        band: 'Stable Runway (12–24 Months)',
+        color: 'text-agrya-teal-400',
+        desc: 'Healthy operating posture. Ideal window for milestone delivery and unit economics optimization before next round.'
+      };
+    } else {
+      return {
+        band: 'Extended Growth Treasury (24+ Months)',
+        color: 'text-emerald-400',
+        desc: 'Substantial capital buffer. Focus on capital allocation discipline, cash yield management, and selective market expansion.'
+      };
+    }
+  };
+
+  const advisory = getRunwayAdvisory();
 
   return (
     <div className="max-w-6xl mx-auto px-6 pt-12 pb-24 space-y-20">
@@ -43,6 +69,13 @@ export const CfoPage: React.FC<CfoPageProps> = ({ onOpenInquiry, onNavigate, onO
           >
             Hire a Virtual CFO
           </ButtonInButton>
+
+          <a
+            href="mailto:jk@agrya.in?subject=Virtual%20CFO%20Advisory%20Inquiry%20-%20Agrya"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-agrya-slate-200 bg-white hover:bg-agrya-slate-50 text-agrya-slate-800 text-xs sm:text-sm font-semibold spring-snappy shadow-sm"
+          >
+            <span>Talk to Jayakumar (jk@agrya.in)</span>
+          </a>
 
           {onOpenDiagnostic && (
             <button
@@ -80,11 +113,14 @@ export const CfoPage: React.FC<CfoPageProps> = ({ onOpenInquiry, onNavigate, onO
               {/* SLIDERS (7 COLS) */}
               <div className="lg:col-span-7 space-y-6">
                 <div>
-                  <div className="flex justify-between text-xs font-semibold text-agrya-slate-800 mb-2">
+                  <label htmlFor="cfo-cash-balance" id="cfo-cash-label" className="flex justify-between text-xs font-semibold text-agrya-slate-800 mb-2 cursor-pointer">
                     <span>Available Treasury / Cash Reserve</span>
                     <span className="font-mono font-bold text-agrya-slate-900">₹{cashBalance} Lakhs</span>
-                  </div>
+                  </label>
                   <input
+                    id="cfo-cash-balance"
+                    aria-labelledby="cfo-cash-label"
+                    aria-label="Available Treasury / Cash Reserve"
                     type="range"
                     min="100"
                     max="2000"
@@ -101,11 +137,14 @@ export const CfoPage: React.FC<CfoPageProps> = ({ onOpenInquiry, onNavigate, onO
                 </div>
 
                 <div>
-                  <div className="flex justify-between text-xs font-semibold text-agrya-slate-800 mb-2">
+                  <label htmlFor="cfo-burn-rate" id="cfo-burn-label" className="flex justify-between text-xs font-semibold text-agrya-slate-800 mb-2 cursor-pointer">
                     <span>Net Monthly Cash Burn</span>
                     <span className="font-mono font-bold text-agrya-slate-900">₹{burnRate} Lakhs / mo</span>
-                  </div>
+                  </label>
                   <input
+                    id="cfo-burn-rate"
+                    aria-labelledby="cfo-burn-label"
+                    aria-label="Net Monthly Cash Burn"
                     type="range"
                     min="10"
                     max="150"
@@ -128,24 +167,24 @@ export const CfoPage: React.FC<CfoPageProps> = ({ onOpenInquiry, onNavigate, onO
                   <div className="text-xs font-mono text-agrya-teal-400 uppercase tracking-wider mb-1">
                     Modeled Cash Runway
                   </div>
-                  <div className="text-4xl sm:text-5xl font-extrabold font-mono text-white tracking-tight">
-                    {runwayMonths} <span className="text-xl font-normal text-agrya-slate-400">Months</span>
+                  <div className="text-4xl sm:text-5xl font-extrabold font-mono text-white tracking-tight tabular-nums">
+                    {displayMonths} <span className="text-xl font-normal text-agrya-slate-400">Months</span>
                   </div>
 
                   {/* INTERACTIVE RUNWAY HORIZON GAUGE */}
                   <div className="space-y-1.5 pt-4">
                     <div className="flex justify-between text-[10px] font-mono text-agrya-slate-400">
                       <span>Horizon Scale</span>
-                      <span>{Number(runwayMonths) >= 36 ? '36+ Mo (Extended)' : `${runwayMonths} Mo Target`}</span>
+                      <span>{isCapped ? '36+ Mo (Extended Growth)' : `${rawMonths.toFixed(1)} Mo Target`}</span>
                     </div>
                     <div className="h-2.5 w-full bg-agrya-slate-800 rounded-full overflow-hidden p-0.5 border border-agrya-slate-700/80">
                       <div
-                        style={{ width: `${Math.min(100, Math.max(6, (Number(runwayMonths) / 36) * 100))}%` }}
+                        style={{ width: `${Math.min(100, Math.max(6, (Math.min(36, rawMonths) / 36) * 100))}%` }}
                         className={clsx(
                           "h-full rounded-full transition-all duration-300 ease-out",
-                          Number(runwayMonths) < 12 
+                          rawMonths < 12 
                             ? "bg-amber-400 shadow-[0_0_12px_rgba(251,191,36,0.6)]" 
-                            : Number(runwayMonths) < 24 
+                            : rawMonths <= 24 
                               ? "bg-agrya-teal-400 shadow-[0_0_12px_rgba(45,212,191,0.4)]" 
                               : "bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.5)]"
                         )}
@@ -154,23 +193,20 @@ export const CfoPage: React.FC<CfoPageProps> = ({ onOpenInquiry, onNavigate, onO
                     <div className="flex justify-between text-[9px] font-mono text-agrya-slate-500 px-0.5">
                       <span>0 Mo</span>
                       <span className="text-amber-400/80">12 Mo Safety</span>
-                      <span className="text-emerald-400/80">24 Mo Growth</span>
-                      <span>36 Mo</span>
+                      <span className="text-agrya-teal-400/80">24 Mo Stable</span>
+                      <span className="text-emerald-400/80">36+ Mo Treasury</span>
                     </div>
                   </div>
                 </div>
 
-                <p className="text-xs text-agrya-slate-300 leading-relaxed border-t border-agrya-slate-800 pt-3">
-                  {Number(runwayMonths) < 12 ? (
-                    <span className="text-amber-400 font-semibold">
-                      Action Required: Runway under 12 months. Agrya VCFO models bridge financing & cost containment.
-                    </span>
-                  ) : (
-                    <span className="text-emerald-400 font-semibold">
-                      Healthy Capital Runway: Optimal posture for strategic hires or next equity fundraise pacing.
-                    </span>
-                  )}
-                </p>
+                <div className="border-t border-agrya-slate-800 pt-3 space-y-1">
+                  <div className={clsx("text-xs font-semibold flex items-center gap-1.5", advisory.color)}>
+                    <span>{advisory.band}</span>
+                  </div>
+                  <p className="text-[11px] text-agrya-slate-300 leading-relaxed">
+                    {advisory.desc}
+                  </p>
+                </div>
 
                 {onNavigate && (
                   <div className="flex items-center justify-between border-t border-agrya-slate-800/80 pt-3 text-xs">

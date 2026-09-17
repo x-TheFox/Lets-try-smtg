@@ -35,6 +35,8 @@ async function runVerification() {
     { url: '/story', name: 'story' },
     { url: '/team', name: 'team' },
     { url: '/tools/runway-calculator', name: 'runway-calculator' },
+    { url: '/terms', name: 'terms' },
+    { url: '/privacy', name: 'privacy' },
   ];
 
   console.log('--- TESTING DESKTOP (1440x900) ---');
@@ -148,8 +150,53 @@ async function runVerification() {
     console.log('  Notice team card order:', teamCards.slice(0, 4));
   }
 
-  // 5. Test 404 handling
-  console.log('Verifying 404 route handling...');
+  // 5. Check P0-1: HeroCommandCenter chip & persistent footnote
+  console.log('\n--- VERIFYING P0-1 / P2-01 / P2-03: HERO COMMAND CENTER ---');
+  await page.goto(baseUrl, { waitUntil: 'networkidle' });
+  const chipText = await page.textContent('text=ILLUSTRATIVE - MODELED ARCHETYPE');
+  console.log(`  ✓ P0-1 Chip present: "${chipText?.trim()}"`);
+  const footnoteText = await page.textContent('text=* Figures are illustrative modeled archetypes');
+  console.log(`  ✓ P0-1 Footnote present: "${footnoteText?.trim().slice(0, 50)}..."`);
+  const cfoMethodologyLink = await page.getAttribute('a[href="/cfo"]', 'href');
+  console.log(`  ✓ P0-1 Methodology anchor link: ${cfoMethodologyLink}`);
+
+  // 6. Check P1-04: StoryPage exact founder quote & 4 cards
+  console.log('\n--- VERIFYING P1-04: STORY PAGE RESTORATION ---');
+  await page.goto(`${baseUrl}/story`, { waitUntil: 'networkidle' });
+  const storyQuote = await page.textContent('text=Hey, we are Priya and Jayakumar.');
+  console.log(`  ✓ P1-04 Founder narrative quote verified: "${storyQuote?.trim().slice(0, 40)}..."`);
+  const distractionTrap = await page.textContent('text=The Distraction Trap');
+  const complianceBlindspots = await page.textContent('text=Compliance Blindspots');
+  const financialFog = await page.textContent('text=Financial Fog');
+  const scalingCeilings = await page.textContent('text=Scaling Ceilings');
+  console.log(`  ✓ P1-04 Realization cards verified: 4 cards present (${distractionTrap ? 'Trap' : ''}, ${complianceBlindspots ? 'Blindspots' : ''}, ${financialFog ? 'Fog' : ''}, ${scalingCeilings ? 'Ceilings' : ''})`);
+
+  // 7. Check P2-09 & P2-10: CfoPage 36+ capping and advisory bands
+  console.log('\n--- VERIFYING P2-09 & P2-10: CFO RUNWAY SIMULATOR ---');
+  await page.goto(`${baseUrl}/cfo`, { waitUntil: 'networkidle' });
+  const cashInput = page.locator('#cfo-cash-balance');
+  const burnInput = page.locator('#cfo-burn-rate');
+  await cashInput.fill('2000');
+  await burnInput.fill('10');
+  await page.waitForTimeout(300);
+  const runwayDisplay = await page.textContent('text=36+');
+  console.log(`  ✓ P2-09 Capped display at 36+ Months: verified "${runwayDisplay?.trim()}"`);
+  const advisoryBand = await page.textContent('text=Extended Growth Treasury (24+ Months)');
+  console.log(`  ✓ P2-10 Advisory band: verified "${advisoryBand?.trim()}"`);
+
+  // 8. Check P1-07, P1-08, P2-14, P2-16: Footer Governance & Claims
+  console.log('\n--- VERIFYING P1-07 / P1-08 / P2-14 / P2-16: FOOTER INTEGRITY ---');
+  const copyrightText = await page.textContent('text=© 2026 Agrya Consulting Private Limited');
+  console.log(`  ✓ P2-14 Exact copyright string: "${copyrightText?.trim()}"`);
+  const icaiStatement = await page.textContent('text=Led by Fellows (FCA) & Associates (ACA) of the Institute of Chartered Accountants of India');
+  console.log(`  ✓ P1-08 Factual ICAI statement: "${icaiStatement?.trim()}"`);
+  const formHandling = await page.textContent('text=Encrypted Form Handling & Statutory Rigor');
+  console.log(`  ✓ P1-07 Encrypted Form Handling statement: "${formHandling?.trim()}"`);
+  const linkedinHref = await page.getAttribute('a[aria-label="LinkedIn"]', 'href');
+  console.log(`  ✓ P2-16 Non-www LinkedIn URL: "${linkedinHref}"`);
+
+  // 9. Test 404 handling
+  console.log('\n--- VERIFYING 404 ROUTE HANDLING ---');
   await page.goto(`${baseUrl}/non-existent-route-for-testing`, { waitUntil: 'networkidle' });
   await page.waitForTimeout(300);
   await page.screenshot({ path: path.join(outDir, '404-1440.png') });

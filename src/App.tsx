@@ -11,6 +11,8 @@ import { CfoSupportPage } from './pages/CfoSupportPage';
 import { StoryPage } from './pages/StoryPage';
 import { TeamPage } from './pages/TeamPage';
 import { RunwayCalculatorPage } from './pages/RunwayCalculatorPage';
+import { TermsPage } from './pages/TermsPage';
+import { PrivacyPage } from './pages/PrivacyPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
 export function App() {
@@ -37,12 +39,14 @@ export function App() {
 
     const titles: Record<string, string> = {
       '/': 'Agrya | The Financial OS for Modern Business',
-      '/accounting-hub': 'Accounting Hub | Agrya Consulting',
-      '/cfo': 'Virtual CFO Services | Agrya Consulting',
-      '/cfo-support': 'CFO Support & Execution Pods | Agrya Consulting',
-      '/story': 'Our Story | Agrya Consulting',
-      '/team': 'Leadership & Team | Agrya Consulting',
+      '/accounting-hub': 'Accounting Hub | Modern Bookkeeping & Payroll',
+      '/cfo': 'Virtual CFO Services | Agrya',
+      '/cfo-support': 'CFO Support Services | Agrya',
+      '/story': 'Our Story | The Agrya Journey',
+      '/team': 'Our Team | Expert CAs & Financial Advisors | Agrya',
       '/tools/runway-calculator': 'Runway & Burn Sensitivity Modeling Tool | Agrya Consulting',
+      '/terms': 'Terms of Service | Agrya Consulting',
+      '/privacy': 'Privacy Policy | Agrya Consulting',
     };
 
     const descriptions: Record<string, string> = {
@@ -53,9 +57,11 @@ export function App() {
       '/story': 'Built by finance leaders for founders who build. The origin story and philosophy of Agrya Consulting.',
       '/team': 'Meet the experienced Fellows and Associates of ICAI leading Agrya’s Virtual CFO and accounting advisory practice.',
       '/tools/runway-calculator': 'Simulate cash runway, burn multiples, and revenue sensitivity scenarios for venture-backed and growth-stage companies.',
+      '/terms': 'Terms of Service, fiduciary engagement guidelines, and statutory disclaimers for Agrya Consulting Private Limited.',
+      '/privacy': 'Data protection and confidentiality policy of Agrya Consulting Private Limited in accordance with DPDP Act 2023.',
     };
 
-    const targetTitle = titles[currentPath] || 'Agrya | The Financial OS for Modern Business';
+    const targetTitle = titles[currentPath] || 'The requested financial ledger does not exist | Agrya Consulting';
     const targetDesc = descriptions[currentPath] || descriptions['/'];
 
     document.title = targetTitle;
@@ -129,6 +135,10 @@ export function App() {
             onOpenInquiry={(service, partner) => openInquiryForService(service || 'Runway Modeling & Advisory', partner)}
           />
         );
+      case '/terms':
+        return <TermsPage onOpenInquiry={() => { setInquiryPartner(undefined); setIsInquiryOpen(true); }} />;
+      case '/privacy':
+        return <PrivacyPage onOpenInquiry={() => { setInquiryPartner(undefined); setIsInquiryOpen(true); }} />;
       default:
         return <NotFoundPage onNavigate={navigate} />;
     }

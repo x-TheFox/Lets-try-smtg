@@ -30,7 +30,7 @@ export const CfoSupportPage: React.FC<CfoSupportPageProps> = ({ onOpenInquiry })
     {
       stream: 'Statutory Governance & Audit Defense',
       clientInterface: 'Head of Compliance / Legal',
-      podRole: 'ICAI Fellow Partner CA',
+      podRole: 'Partner Chartered Accountant (FCA on Staff)',
       turnaround: 'Prioritized SLA',
       protocol: 'Pre-Audit Workpapers & MCA/GST Filings'
     },
@@ -68,8 +68,14 @@ export const CfoSupportPage: React.FC<CfoSupportPageProps> = ({ onOpenInquiry })
           >
             Request Support Proposal
           </ButtonInButton>
+          <a
+            href="mailto:jk@agrya.in?subject=CFO%20Support%20Pods%20Inquiry%20-%20Agrya"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-agrya-slate-200 bg-white hover:bg-agrya-slate-50 text-agrya-slate-800 text-xs sm:text-sm font-semibold spring-snappy shadow-sm"
+          >
+            <span>Talk to Jayakumar (jk@agrya.in)</span>
+          </a>
           <span className="text-xs font-mono text-agrya-slate-500">
-            Elastic Team Capacity • Zero Delay
+            Elastic Team Capacity • Rapid Pod Onboarding
           </span>
         </div>
       </section>
@@ -131,7 +137,7 @@ export const CfoSupportPage: React.FC<CfoSupportPageProps> = ({ onOpenInquiry })
                   <th className="pb-3 pr-4 font-bold">Operational Stream</th>
                   <th className="pb-3 px-4 font-bold">In-House Interface</th>
                   <th className="pb-3 px-4 font-bold">Agrya Pod Specialist</th>
-                  <th className="pb-3 px-4 font-bold">Turnaround SLA</th>
+                  <th className="pb-3 px-4 font-bold">Target Turnaround Benchmark</th>
                   <th className="pb-3 pl-4 font-bold">Data Protocol</th>
                 </tr>
               </thead>

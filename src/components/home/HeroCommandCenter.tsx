@@ -109,25 +109,25 @@ export const HeroCommandCenter: React.FC<HeroCommandCenterProps> = ({
             <div className="flex flex-col lg:flex-row lg:items-center justify-between pb-6 border-b border-agrya-slate-100 gap-4">
               <div className="flex flex-wrap items-center gap-3">
                 <div className="flex items-center gap-2">
-                  <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+                  <div className="w-2 h-2 rounded-full bg-agrya-slate-400" aria-hidden="true" />
                   <span className="font-mono text-xs font-semibold uppercase tracking-wider text-agrya-slate-700">
                     Agrya Financial Telemetry Console
                   </span>
                 </div>
-                <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-md bg-agrya-teal-50 text-agrya-teal-800 border border-agrya-teal-200/80 font-medium">
-                  Illustrative Telemetry • Modeled Client Archetype
+                <span className="text-[10px] font-mono px-2.5 py-1 rounded-md bg-agrya-teal-50 text-agrya-teal-800 border border-agrya-teal-200/80 font-bold uppercase tracking-wider">
+                  ILLUSTRATIVE - MODELED ARCHETYPE
                 </span>
               </div>
 
-              {/* STAGE TOGGLES */}
+              {/* STAGE TOGGLES (44px HIG TOUCH TARGETS) */}
               <div className="flex items-center p-1 rounded-xl bg-agrya-slate-100 border border-agrya-slate-200 text-xs font-semibold overflow-x-auto">
                 <button
                   onClick={() => setActiveStage('seed')}
                   className={clsx(
-                    "px-3 py-1.5 rounded-lg spring-snappy transition-all whitespace-nowrap",
+                    "min-h-[44px] px-4 py-2 rounded-lg spring-snappy transition-all whitespace-nowrap flex items-center justify-center",
                     activeStage === 'seed' 
-                      ? "bg-white text-agrya-slate-900 shadow-sm" 
-                      : "text-agrya-slate-500 hover:text-agrya-slate-900"
+                      ? "bg-white text-agrya-slate-900 shadow-sm font-bold" 
+                      : "text-agrya-slate-600 hover:text-agrya-slate-900"
                   )}
                 >
                   Seed Stage
@@ -135,10 +135,10 @@ export const HeroCommandCenter: React.FC<HeroCommandCenterProps> = ({
                 <button
                   onClick={() => setActiveStage('growth')}
                   className={clsx(
-                    "px-3 py-1.5 rounded-lg spring-snappy transition-all whitespace-nowrap",
+                    "min-h-[44px] px-4 py-2 rounded-lg spring-snappy transition-all whitespace-nowrap flex items-center justify-center",
                     activeStage === 'growth' 
-                      ? "bg-white text-agrya-slate-900 shadow-sm" 
-                      : "text-agrya-slate-500 hover:text-agrya-slate-900"
+                      ? "bg-white text-agrya-slate-900 shadow-sm font-bold" 
+                      : "text-agrya-slate-600 hover:text-agrya-slate-900"
                   )}
                 >
                   Series A/B Growth
@@ -146,10 +146,10 @@ export const HeroCommandCenter: React.FC<HeroCommandCenterProps> = ({
                 <button
                   onClick={() => setActiveStage('enterprise')}
                   className={clsx(
-                    "px-3 py-1.5 rounded-lg spring-snappy transition-all whitespace-nowrap",
+                    "min-h-[44px] px-4 py-2 rounded-lg spring-snappy transition-all whitespace-nowrap flex items-center justify-center",
                     activeStage === 'enterprise' 
-                      ? "bg-white text-agrya-slate-900 shadow-sm" 
-                      : "text-agrya-slate-500 hover:text-agrya-slate-900"
+                      ? "bg-white text-agrya-slate-900 shadow-sm font-bold" 
+                      : "text-agrya-slate-600 hover:text-agrya-slate-900"
                   )}
                 >
                   Enterprise Pods
@@ -157,20 +157,20 @@ export const HeroCommandCenter: React.FC<HeroCommandCenterProps> = ({
               </div>
             </div>
 
-            {/* TELEMETRY CARDS (4 METRICS) */}
+            {/* TELEMETRY CARDS (4 METRICS, TABULAR NUMS, WCAG AA SLATE-600 LABELS) */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 pt-6">
               
               {/* METRIC 1: RUNWAY */}
               <div className="p-5 rounded-2xl bg-agrya-slate-50/80 border border-agrya-slate-100 relative overflow-hidden group hover:border-agrya-teal-200 spring-standard hover-lift">
-                <div className="flex items-center justify-between text-agrya-slate-400 mb-2">
-                  <span className="text-xs font-mono uppercase">Modeled Cash Runway</span>
-                  <Activity className="w-4 h-4 text-agrya-teal-600" />
+                <div className="flex items-center justify-between text-agrya-slate-600 mb-2">
+                  <span className="text-xs font-mono font-semibold uppercase tracking-wider">Modeled Cash Runway</span>
+                  <Activity className="w-4 h-4 text-agrya-teal-700" />
                 </div>
                 <div key={`${activeStage}-runway`} className="animate-metric">
-                  <div className="text-3xl font-extrabold font-mono text-agrya-slate-900 tracking-tight">
+                  <div className="text-3xl font-extrabold font-mono tabular-nums text-agrya-slate-900 tracking-tight">
                     {current.runway}
                   </div>
-                  <div className="text-xs text-emerald-600 font-medium mt-1">
+                  <div className="text-xs text-emerald-700 font-semibold mt-1">
                     ↑ {current.runwayDelta}
                   </div>
                 </div>
@@ -178,12 +178,12 @@ export const HeroCommandCenter: React.FC<HeroCommandCenterProps> = ({
 
               {/* METRIC 2: BURN MULTIPLE */}
               <div className="p-5 rounded-2xl bg-agrya-slate-50/80 border border-agrya-slate-100 relative overflow-hidden group hover:border-agrya-teal-200 spring-standard hover-lift">
-                <div className="flex items-center justify-between text-agrya-slate-400 mb-2">
-                  <span className="text-xs font-mono uppercase">Burn Multiple (Modeled)</span>
-                  <TrendingUp className="w-4 h-4 text-agrya-teal-600" />
+                <div className="flex items-center justify-between text-agrya-slate-600 mb-2">
+                  <span className="text-xs font-mono font-semibold uppercase tracking-wider">Burn Multiple (Modeled)</span>
+                  <TrendingUp className="w-4 h-4 text-agrya-teal-700" />
                 </div>
                 <div key={`${activeStage}-burn`} className="animate-metric">
-                  <div className="text-3xl font-extrabold font-mono text-agrya-slate-900 tracking-tight">
+                  <div className="text-3xl font-extrabold font-mono tabular-nums text-agrya-slate-900 tracking-tight">
                     {current.burn}
                   </div>
                   <div className="text-xs text-agrya-slate-600 font-medium mt-1">
@@ -194,12 +194,12 @@ export const HeroCommandCenter: React.FC<HeroCommandCenterProps> = ({
 
               {/* METRIC 3: STATUTORY INTEGRITY */}
               <div className="p-5 rounded-2xl bg-agrya-slate-50/80 border border-agrya-slate-100 relative overflow-hidden group hover:border-agrya-teal-200 spring-standard hover-lift">
-                <div className="flex items-center justify-between text-agrya-slate-400 mb-2">
-                  <span className="text-xs font-mono uppercase">Statutory Governance</span>
-                  <ShieldCheck className="w-4 h-4 text-agrya-teal-600" />
+                <div className="flex items-center justify-between text-agrya-slate-600 mb-2">
+                  <span className="text-xs font-mono font-semibold uppercase tracking-wider">Statutory Governance</span>
+                  <ShieldCheck className="w-4 h-4 text-agrya-teal-700" />
                 </div>
                 <div key={`${activeStage}-statutory`} className="animate-metric">
-                  <div className="text-3xl font-extrabold font-mono text-agrya-slate-900 tracking-tight">
+                  <div className="text-3xl font-extrabold font-mono tabular-nums text-agrya-slate-900 tracking-tight">
                     {current.statutory}
                   </div>
                   <div className="text-xs text-agrya-slate-600 font-medium mt-1">
@@ -210,12 +210,12 @@ export const HeroCommandCenter: React.FC<HeroCommandCenterProps> = ({
 
               {/* METRIC 4: OVERHEAD COMPRESSION */}
               <div className="p-5 rounded-2xl bg-agrya-slate-50/80 border border-agrya-slate-100 relative overflow-hidden group hover:border-agrya-teal-200 spring-standard hover-lift">
-                <div className="flex items-center justify-between text-agrya-slate-400 mb-2">
-                  <span className="text-xs font-mono uppercase">Cost Compression (Target)</span>
-                  <PieChart className="w-4 h-4 text-agrya-teal-600" />
+                <div className="flex items-center justify-between text-agrya-slate-600 mb-2">
+                  <span className="text-xs font-mono font-semibold uppercase tracking-wider">Cost Compression (Target)</span>
+                  <PieChart className="w-4 h-4 text-agrya-teal-700" />
                 </div>
                 <div key={`${activeStage}-savings`} className="animate-metric">
-                  <div className="text-3xl font-extrabold font-mono text-agrya-teal-700 tracking-tight">
+                  <div className="text-3xl font-extrabold font-mono tabular-nums text-agrya-teal-700 tracking-tight">
                     {current.savings}
                   </div>
                   <div className="text-xs text-agrya-teal-800 font-medium mt-1">
@@ -235,24 +235,36 @@ export const HeroCommandCenter: React.FC<HeroCommandCenterProps> = ({
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => onNavigate(current.route)}
-                  className="px-4 py-2 bg-agrya-teal-700 hover:bg-agrya-teal-800 text-white rounded-xl text-xs font-semibold spring-snappy flex items-center gap-1.5"
+                  className="min-h-[44px] px-4 py-2.5 bg-agrya-teal-700 hover:bg-agrya-teal-800 text-white rounded-xl text-xs font-semibold spring-snappy flex items-center gap-1.5 shadow-sm"
                 >
                   <span>Explore Architecture</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </button>
                 <button
                   onClick={onOpenInquiry}
-                  className="px-4 py-2 bg-white hover:bg-agrya-slate-50 border border-agrya-slate-200 text-agrya-slate-800 rounded-xl text-xs font-semibold spring-snappy"
+                  className="min-h-[44px] px-4 py-2.5 bg-white hover:bg-agrya-slate-50 border border-agrya-slate-200 text-agrya-slate-800 rounded-xl text-xs font-semibold spring-snappy shadow-sm"
                 >
                   Consult Partner
                 </button>
               </div>
             </div>
 
-            {/* FOOTNOTE DISCLAIMER */}
-            <p className="mt-3 text-[11px] font-mono text-agrya-slate-400 text-center sm:text-left">
-              * Illustrative operator telemetry based on typical Series A/B client financial models. Past performance is modeled; individual outcomes vary by operational velocity.
-            </p>
+            {/* FOOTNOTE DISCLAIMER & METHODOLOGY LINK (P0-1 REQUIREMENT) */}
+            <div className="mt-4 pt-3 border-t border-agrya-slate-100 flex flex-col sm:flex-row sm:items-center justify-between text-[11px] font-mono text-agrya-slate-500 gap-2">
+              <p>
+                * Figures are illustrative modeled archetypes drawn from Agrya engagement patterns. They are not client results, projections or guarantees.
+              </p>
+              <a
+                href="/cfo"
+                onClick={(e) => {
+                  e.preventDefault();
+                  onNavigate('/cfo');
+                }}
+                className="text-agrya-teal-700 hover:text-agrya-teal-800 font-semibold underline underline-offset-4 shrink-0"
+              >
+                Model Assumptions & Methodology →
+              </a>
+            </div>
 
           </div>
         </DoubleBezel>
