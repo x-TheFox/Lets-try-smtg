@@ -4,13 +4,32 @@ import App from './App';
 import './index.css';
 import { initCrisp, initGA4 } from './utils/analytics';
 
-// Lazy bootstrap tracking channels without blocking critical paint
+// Defer third-party telemetry (Crisp, GA4) to avoid blocking FCP/LCP and forced reflows
 if (typeof window !== 'undefined') {
-  // Defer tracking slightly to prioritize initial content rendering
-  setTimeout(() => {
+  let loaded = false;
+  const loadTracking = () => {
+    if (loaded) return;
+    loaded = true;
     initCrisp();
     initGA4();
-  }, 1200);
+    window.removeEventListener('scroll', loadTracking);
+    window.removeEventListener('pointerdown', loadTracking);
+    window.removeEventListener('keydown', loadTracking);
+  };
+
+  // Trigger on user engagement
+  window.addEventListener('scroll', loadTracking, { passive: true, once: true });
+  window.addEventListener('pointerdown', loadTracking, { passive: true, once: true });
+  window.addEventListener('keydown', loadTracking, { passive: true, once: true });
+
+  // Idle timeout fallback
+  if ('requestIdleCallback' in window) {
+    (window as any).requestIdleCallback(() => {
+      setTimeout(loadTracking, 3000);
+    });
+  } else {
+    setTimeout(loadTracking, 4000);
+  }
 }
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(

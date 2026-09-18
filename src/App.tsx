@@ -1,19 +1,20 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
 import { InquiryModal } from './components/layout/InquiryModal';
 import { FinancialMaturityModal } from './components/ui/FinancialMaturityModal';
 
 import { HomePage } from './pages/HomePage';
-import { AccountingHubPage } from './pages/AccountingHubPage';
-import { CfoPage } from './pages/CfoPage';
-import { CfoSupportPage } from './pages/CfoSupportPage';
-import { StoryPage } from './pages/StoryPage';
-import { TeamPage } from './pages/TeamPage';
-import { RunwayCalculatorPage } from './pages/RunwayCalculatorPage';
-import { TermsPage } from './pages/TermsPage';
-import { PrivacyPage } from './pages/PrivacyPage';
-import { NotFoundPage } from './pages/NotFoundPage';
+
+const AccountingHubPage = lazy(() => import('./pages/AccountingHubPage').then(m => ({ default: m.AccountingHubPage })));
+const CfoPage = lazy(() => import('./pages/CfoPage').then(m => ({ default: m.CfoPage })));
+const CfoSupportPage = lazy(() => import('./pages/CfoSupportPage').then(m => ({ default: m.CfoSupportPage })));
+const StoryPage = lazy(() => import('./pages/StoryPage').then(m => ({ default: m.StoryPage })));
+const TeamPage = lazy(() => import('./pages/TeamPage').then(m => ({ default: m.TeamPage })));
+const RunwayCalculatorPage = lazy(() => import('./pages/RunwayCalculatorPage').then(m => ({ default: m.RunwayCalculatorPage })));
+const TermsPage = lazy(() => import('./pages/TermsPage').then(m => ({ default: m.TermsPage })));
+const PrivacyPage = lazy(() => import('./pages/PrivacyPage').then(m => ({ default: m.PrivacyPage })));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(m => ({ default: m.NotFoundPage })));
 
 export function App() {
   const [currentPath, setCurrentPath] = useState<string>(() => {
@@ -168,7 +169,9 @@ export function App() {
       {/* DYNAMIC ROUTE CONTAINER */}
       <main className="flex-1 w-full" id="main-content">
         <div key={currentPath} className="animate-page-entrance">
-          {renderRoute()}
+          <Suspense fallback={<div className="min-h-[50vh]" />}>
+            {renderRoute()}
+          </Suspense>
         </div>
       </main>
 

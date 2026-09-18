@@ -104,7 +104,7 @@ export const EcosystemSection: React.FC = () => {
                       Agrya Tech Subsidiary
                     </span>
                   ) : (
-                    <span className="font-mono text-[11px] text-agrya-slate-400 font-medium">
+                    <span className="font-mono text-[11px] text-agrya-slate-600 font-semibold">
                       {tool.category}
                     </span>
                   )}
@@ -132,9 +132,9 @@ export const EcosystemSection: React.FC = () => {
                   className="text-xs font-semibold text-agrya-slate-900 hover:text-agrya-teal-700 flex items-center gap-1.5 transition-colors group-hover:translate-x-0.5 spring-snappy"
                 >
                   <span>Launch Platform</span>
-                  <ExternalLink className="w-3.5 h-3.5 text-agrya-slate-400 group-hover:text-agrya-teal-700" />
+                  <ExternalLink className="w-3.5 h-3.5 text-agrya-slate-500 group-hover:text-agrya-teal-700" />
                 </a>
-                <span className="text-[10px] font-mono text-agrya-slate-400">
+                <span className="text-[10px] font-mono text-agrya-slate-600 font-semibold">
                   {tool.isSubsidiary ? 'Agrya Proprietary' : 'Integrated Partner'}
                 </span>
               </div>
@@ -143,10 +143,11 @@ export const EcosystemSection: React.FC = () => {
         ))}
       </div>
 
-      {/* INTERACTIVE ECOSYSTEM SIMULATOR CONSOLE */}
+      {/* DETAILED INTERACTIVE PLATFORM SIMULATOR & WORKFLOW PREVIEW */}
       <DoubleBezel className="w-full">
         <div className="p-6 sm:p-8">
           
+          {/* HEADER ROW */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-agrya-slate-100 gap-4">
             <div>
               <div className="flex items-center gap-2 mb-1">
@@ -155,7 +156,7 @@ export const EcosystemSection: React.FC = () => {
                   Authentic Platform Architecture Simulator
                 </span>
               </div>
-              <p className="text-xs text-agrya-slate-500">
+              <p className="text-xs text-agrya-slate-600">
                 Explore real capabilities, modules, and data protocols extracted directly from each platform.
               </p>
             </div>
@@ -170,7 +171,7 @@ export const EcosystemSection: React.FC = () => {
                     "px-3.5 py-1.5 rounded-lg spring-snappy transition-all",
                     activePreview === tab
                       ? "bg-white text-agrya-slate-900 shadow-sm"
-                      : "text-agrya-slate-500 hover:text-agrya-slate-900"
+                      : "text-agrya-slate-700 hover:text-agrya-slate-950 font-medium"
                   )}
                 >
                   {tab}
@@ -199,19 +200,19 @@ export const EcosystemSection: React.FC = () => {
               {/* 3 STAT TILES */}
               <div className="grid grid-cols-3 gap-3">
                 <div className="p-3.5 rounded-xl bg-agrya-slate-50 border border-agrya-slate-200/70">
-                  <div className="text-[10px] font-mono text-agrya-slate-400 uppercase">{currentPreview.stat1.label}</div>
+                  <div className="text-[10px] font-mono text-agrya-slate-600 font-bold uppercase">{currentPreview.stat1.label}</div>
                   <div className="text-sm sm:text-base font-mono font-extrabold text-agrya-slate-900 mt-0.5">
                     {currentPreview.stat1.value}
                   </div>
                 </div>
                 <div className="p-3.5 rounded-xl bg-agrya-slate-50 border border-agrya-slate-200/70">
-                  <div className="text-[10px] font-mono text-agrya-slate-400 uppercase">{currentPreview.stat2.label}</div>
+                  <div className="text-[10px] font-mono text-agrya-slate-600 font-bold uppercase">{currentPreview.stat2.label}</div>
                   <div className="text-sm sm:text-base font-mono font-extrabold text-agrya-teal-700 mt-0.5">
                     {currentPreview.stat2.value}
                   </div>
                 </div>
                 <div className="p-3.5 rounded-xl bg-agrya-slate-50 border border-agrya-slate-200/70">
-                  <div className="text-[10px] font-mono text-agrya-slate-400 uppercase">{currentPreview.stat3.label}</div>
+                  <div className="text-[10px] font-mono text-agrya-slate-600 font-bold uppercase">{currentPreview.stat3.label}</div>
                   <div className="text-sm sm:text-base font-mono font-extrabold text-agrya-slate-900 mt-0.5">
                     {currentPreview.stat3.value}
                   </div>
@@ -256,14 +257,14 @@ export const EcosystemSection: React.FC = () => {
 
                 <div className="pt-5 space-y-4">
                   <div className="p-3 rounded-xl bg-agrya-slate-800/80 border border-agrya-slate-700/60 font-mono text-xs">
-                    <div className="text-[10px] text-agrya-slate-400 uppercase">Live Engine Telemetry</div>
+                    <div className="text-[10px] text-agrya-slate-300 font-semibold uppercase">Live Engine Telemetry</div>
                     <div className="text-emerald-400 font-semibold mt-0.5 text-xs">
                       {currentPreview.mockupStatus}
                     </div>
                   </div>
 
                   <div className="p-3 rounded-xl bg-agrya-slate-800/50 border border-agrya-slate-700/40 text-xs text-agrya-slate-300 space-y-1">
-                    <div className="flex justify-between text-[11px] text-agrya-slate-400 font-mono">
+                    <div className="flex justify-between text-[11px] text-agrya-slate-300 font-mono">
                       <span>Architecture Note</span>
                       <span className="text-agrya-teal-400">ICAI Fellows on Staff</span>
                     </div>
@@ -275,7 +276,7 @@ export const EcosystemSection: React.FC = () => {
               </div>
 
               <div className="pt-6 relative z-10">
-                <div className="text-[10px] font-mono text-agrya-slate-500 uppercase tracking-wider">
+                <div className="text-[10px] font-mono text-agrya-slate-300 font-semibold uppercase tracking-wider">
                   Verified Against Official Product Documentation
                 </div>
               </div>

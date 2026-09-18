@@ -36,11 +36,18 @@ export const Navbar: React.FC<NavbarProps> = ({
           className="flex items-center gap-3 group text-left focus:outline-none focus:ring-2 focus:ring-agrya-teal-500 rounded-xl p-1 transition-transform group-hover:scale-[1.02]"
           aria-label="Agrya Consulting Home"
         >
-          <img
-            src="/assets/logo-agrya.png"
-            alt="Agrya Consulting"
-            className="h-8 w-auto object-contain"
-          />
+          <picture>
+            <source srcSet="/assets/logo-agrya.webp" type="image/webp" />
+            <img
+              src="/assets/logo-agrya.png"
+              alt="Agrya Consulting"
+              width="131"
+              height="32"
+              fetchPriority="high"
+              decoding="async"
+              className="h-8 w-auto object-contain"
+            />
+          </picture>
         </button>
 
         {/* DESKTOP LINKS */}

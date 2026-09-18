@@ -44,7 +44,7 @@ export const ExpertiseBento: React.FC<ExpertiseBentoProps> = ({ onNavigate }) =>
                   <span className="font-mono text-xs px-2.5 py-1 rounded-md bg-agrya-teal-50 text-agrya-teal-800 font-semibold border border-agrya-teal-200/60">
                     Daily Operations • 01
                   </span>
-                  <span className="font-mono text-xs text-agrya-slate-400">Save up to 50%</span>
+                  <span className="font-mono text-xs text-agrya-slate-600 font-semibold">Save up to 50%</span>
                 </div>
 
                 <h3 className="text-2xl font-bold text-agrya-slate-900 mb-3 group-hover:text-agrya-teal-700 spring-standard transition-colors">
@@ -73,7 +73,7 @@ export const ExpertiseBento: React.FC<ExpertiseBentoProps> = ({ onNavigate }) =>
                   <span>Explore Accounting Hub</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </button>
-                <span className="text-xs font-mono text-agrya-slate-400">Audit-Ready Books</span>
+                <span className="text-xs font-mono text-agrya-slate-600 font-semibold">Audit-Ready Books</span>
               </div>
             </div>
           </DoubleBezel>
@@ -123,7 +123,7 @@ export const ExpertiseBento: React.FC<ExpertiseBentoProps> = ({ onNavigate }) =>
                   <span>Explore Virtual CFO</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </button>
-                <span className="text-xs font-mono text-agrya-slate-400">On-Demand Advisory</span>
+                <span className="text-xs font-mono text-agrya-slate-600 font-semibold">On-Demand Advisory</span>
               </div>
             </div>
           </DoubleBezel>
@@ -138,7 +138,7 @@ export const ExpertiseBento: React.FC<ExpertiseBentoProps> = ({ onNavigate }) =>
                   <span className="font-mono text-xs px-2.5 py-1 rounded-md bg-blue-50 text-blue-800 font-semibold border border-blue-200/60">
                     Execution Pods • 03
                   </span>
-                  <span className="text-xs font-mono text-agrya-slate-400">In-House Force Multiplication</span>
+                  <span className="text-xs font-mono text-agrya-slate-600 font-semibold">In-House Force Multiplication</span>
                 </div>
 
                 <h3 className="text-2xl font-bold text-agrya-slate-900 mb-2 group-hover:text-agrya-teal-700 spring-standard transition-colors">

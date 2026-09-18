@@ -23,7 +23,7 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({
             Proven Results in High-Stakes Financial Navigation
           </h2>
         </div>
-        <span className="font-mono text-xs text-agrya-slate-400">
+        <span className="font-mono text-xs text-agrya-slate-600 font-semibold">
           Historical Client Transformations • Audited Outcomes
         </span>
       </div>
@@ -72,7 +72,7 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({
                 <span>Read Virtual CFO Roadmap</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
-              <span className="font-mono text-[11px] text-agrya-slate-400">4-Year Retainer</span>
+              <span className="font-mono text-[11px] text-agrya-slate-600 font-semibold">4-Year Retainer</span>
             </div>
           </div>
         </DoubleBezel>
@@ -119,7 +119,7 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({
                 <span>Request Case Review</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
-              <span className="font-mono text-[11px] text-agrya-slate-400">Debt & Audit Protocol</span>
+              <span className="font-mono text-[11px] text-agrya-slate-600 font-semibold">Debt & Audit Protocol</span>
             </div>
           </div>
         </DoubleBezel>

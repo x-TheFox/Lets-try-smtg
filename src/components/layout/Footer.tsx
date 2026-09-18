@@ -21,11 +21,18 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               className="bg-white px-3.5 py-2 rounded-xl inline-flex items-center shadow-sm hover:opacity-95 transition-opacity"
               aria-label="Agrya Consulting Home"
             >
-              <img
-                src="/assets/logo-agrya.png"
-                alt="Agrya Consulting"
-                className="h-7 w-auto object-contain"
-              />
+              <picture>
+                <source srcSet="/assets/logo-agrya.webp" type="image/webp" />
+                <img
+                  src="/assets/logo-agrya.png"
+                  alt="Agrya Consulting"
+                  width="114"
+                  height="28"
+                  loading="lazy"
+                  decoding="async"
+                  className="h-7 w-auto object-contain"
+                />
+              </picture>
             </button>
 
             <div className="text-[11px] text-agrya-teal-400 font-mono tracking-widest uppercase font-semibold">
@@ -153,22 +160,22 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         </div>
 
         {/* BOTTOM LEGAL & COPYRIGHT */}
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between text-[11px] text-agrya-slate-500 font-mono gap-4 border-t border-agrya-slate-800/40">
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between text-[11px] text-agrya-slate-400 font-mono gap-4 border-t border-agrya-slate-800/40">
           <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
-            <span>© 2026 Agrya Consulting Private Limited</span>
-            <span className="hidden sm:inline">•</span>
+            <span className="text-agrya-slate-300 font-medium">© 2026 Agrya Consulting Private Limited</span>
+            <span className="hidden sm:inline text-agrya-slate-600">•</span>
             <span className="text-agrya-slate-400">Led by Fellows (FCA) & Associates (ACA) of the Institute of Chartered Accountants of India</span>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <button onClick={() => onNavigate('/terms')} className="hover:text-white transition-colors">
+            <button onClick={() => onNavigate('/terms')} className="text-agrya-slate-300 hover:text-white transition-colors underline-offset-4 hover:underline">
               Terms
             </button>
-            <span>•</span>
-            <button onClick={() => onNavigate('/privacy')} className="hover:text-white transition-colors">
+            <span className="text-agrya-slate-600">•</span>
+            <button onClick={() => onNavigate('/privacy')} className="text-agrya-slate-300 hover:text-white transition-colors underline-offset-4 hover:underline">
               Privacy
             </button>
-            <span>•</span>
-            <span className="text-agrya-teal-400">Encrypted Form Handling & Statutory Rigor</span>
+            <span className="text-agrya-slate-600">•</span>
+            <span className="text-agrya-teal-400 font-medium">Encrypted Form Handling & Statutory Rigor</span>
           </div>
         </div>
 

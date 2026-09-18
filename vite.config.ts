@@ -13,4 +13,26 @@ export default defineConfig({
     port: 5173,
     host: true,
   },
+  build: {
+    target: 'es2020',
+    cssCodeSplit: true,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('lucide-react')) {
+              return 'vendor-icons';
+            }
+            if (id.includes('react') || id.includes('scheduler')) {
+              return 'vendor-react';
+            }
+            if (id.includes('@radix-ui')) {
+              return 'vendor-radix';
+            }
+            return 'vendor-core';
+          }
+        },
+      },
+    },
+  },
 });

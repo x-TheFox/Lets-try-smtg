@@ -25,10 +25,17 @@
     <meta property="twitter:description" content="Agrya empowers growth-focused companies with expert Virtual CFO, Accounting, and financial intelligence services." />
     <meta property="twitter:image" content="https://www.agrya.in/assets/original/vcfo-hero.jpg" />
 
-    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <!-- Preload Critical LCP Resource -->
+    <link rel="preload" as="image" href="/assets/logo-agrya.webp" type="image/webp" fetchpriority="high" />
+
+    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono (Non-blocking with swap) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" />
+    </noscript>
 
     <!-- Schema.org JSON-LD (Verbatim preservation from live forensics) -->
     <script type="application/ld+json">
