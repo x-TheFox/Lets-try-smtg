@@ -53,14 +53,14 @@ export const StoryPage: React.FC<StoryPageProps> = ({ onOpenInquiry }) => {
 
           <div className="mt-8 flex items-center justify-center -space-x-3">
             <img 
-              src="/assets/team-priya.png" 
-              alt="Priya Raghavan - Co-founder" 
-              className="w-16 h-16 rounded-full border-4 border-white shadow-md object-cover"
+              src="/assets/original/team/priya.png" 
+              alt="Priya Raghavan - Co-founder and Managing Partner" 
+              className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-4 border-white shadow-md object-cover relative z-10"
             />
             <img 
-              src="/assets/team-jayakumar.png" 
-              alt="Jayakumar M - Co-founder" 
-              className="w-16 h-16 rounded-full border-4 border-white shadow-md object-cover"
+              src="/assets/original/team/jayakumar.png" 
+              alt="Jayakumar M - Co-founder and Managing Partner" 
+              className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-4 border-white shadow-md object-cover relative z-0"
             />
           </div>
 
