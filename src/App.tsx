@@ -136,9 +136,19 @@ export function App() {
           />
         );
       case '/terms':
-        return <TermsPage onOpenInquiry={() => { setInquiryPartner(undefined); setIsInquiryOpen(true); }} />;
+        return (
+          <TermsPage
+            onNavigate={navigate}
+            onOpenInquiry={() => { setInquiryPartner(undefined); setIsInquiryOpen(true); }}
+          />
+        );
       case '/privacy':
-        return <PrivacyPage onOpenInquiry={() => { setInquiryPartner(undefined); setIsInquiryOpen(true); }} />;
+        return (
+          <PrivacyPage
+            onNavigate={navigate}
+            onOpenInquiry={() => { setInquiryPartner(undefined); setIsInquiryOpen(true); }}
+          />
+        );
       default:
         return <NotFoundPage onNavigate={navigate} />;
     }
