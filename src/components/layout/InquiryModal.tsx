@@ -297,7 +297,7 @@ export const InquiryModal: React.FC<InquiryModalProps> = ({
                 aria-controls="panel-book"
                 onClick={() => setActiveTab('book')}
                 className={clsx(
-                  "flex-1 min-h-[44px] py-2 rounded-lg flex items-center justify-center gap-1.5 spring-snappy transition-all",
+                  "flex-1 min-h-[44px] py-2 rounded-lg flex items-center justify-center gap-1.5 spring-snappy transition-[background-color,color,box-shadow]",
                   activeTab === 'book' ? "bg-white text-agrya-slate-900 shadow-sm font-bold" : "text-agrya-slate-600 hover:text-agrya-slate-900"
                 )}
               >
@@ -311,7 +311,7 @@ export const InquiryModal: React.FC<InquiryModalProps> = ({
                 aria-controls="panel-inquire"
                 onClick={() => setActiveTab('inquire')}
                 className={clsx(
-                  "flex-1 min-h-[44px] py-2 rounded-lg flex items-center justify-center gap-1.5 spring-snappy transition-all",
+                  "flex-1 min-h-[44px] py-2 rounded-lg flex items-center justify-center gap-1.5 spring-snappy transition-[background-color,color,box-shadow]",
                   activeTab === 'inquire' ? "bg-white text-agrya-slate-900 shadow-sm font-bold" : "text-agrya-slate-600 hover:text-agrya-slate-900"
                 )}
               >
@@ -349,7 +349,7 @@ export const InquiryModal: React.FC<InquiryModalProps> = ({
                   id="inquiry-partner"
                   value={selectedPartner}
                   onChange={(e) => setSelectedPartner(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-agrya-slate-200 text-xs text-agrya-slate-900 focus:outline-none focus:ring-2 focus:ring-agrya-teal-600 focus:border-transparent transition-all bg-white"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-agrya-slate-200 text-xs text-agrya-slate-900 focus:outline-none focus:ring-2 focus:ring-agrya-teal-600 focus:border-transparent transition-[border-color,box-shadow] bg-white"
                 >
                   <option value="Jayakumar M (Co-Founder & Managing Partner)">Jayakumar M — Co-Founder (FCA, ACS • jk@agrya.in)</option>
                   <option value="Priya Raghavan (Co-Founder & Managing Partner)">Priya Raghavan — Co-Founder (FCA, ACCA London • priya@agrya.in)</option>
@@ -373,7 +373,7 @@ export const InquiryModal: React.FC<InquiryModalProps> = ({
                           type="button"
                           onClick={() => setSelectedDate(`${bDate.label} (${bDate.dateStr})`)}
                           className={clsx(
-                            "min-h-[44px] p-2 rounded-xl text-left border text-xs spring-snappy transition-all",
+                            "min-h-[44px] p-2 rounded-xl text-left border text-xs spring-snappy transition-[background-color,color,border-color,box-shadow]",
                             selectedDate.startsWith(bDate.label)
                               ? "bg-agrya-teal-700 text-white border-agrya-teal-700 shadow-sm"
                               : "bg-white text-agrya-slate-700 border-agrya-slate-200 hover:border-agrya-teal-300"
@@ -399,7 +399,7 @@ export const InquiryModal: React.FC<InquiryModalProps> = ({
                           type="button"
                           onClick={() => setSelectedSlot(slot)}
                           className={clsx(
-                            "min-h-[44px] p-2.5 rounded-xl text-left border text-xs font-mono flex items-center justify-between spring-snappy transition-all",
+                            "min-h-[44px] p-2.5 rounded-xl text-left border text-xs font-mono flex items-center justify-between spring-snappy transition-[background-color,color,border-color,box-shadow]",
                             selectedSlot === slot
                               ? "bg-agrya-teal-700 text-white border-agrya-teal-700 font-bold shadow-sm"
                               : "bg-white text-agrya-slate-700 border-agrya-slate-200 hover:border-agrya-teal-300"
@@ -427,7 +427,7 @@ export const InquiryModal: React.FC<InquiryModalProps> = ({
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="e.g. Anand V"
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-agrya-slate-200 text-xs text-agrya-slate-900 focus:outline-none focus:ring-2 focus:ring-agrya-teal-600 focus:border-transparent transition-all"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-agrya-slate-200 text-xs text-agrya-slate-900 focus:outline-none focus:ring-2 focus:ring-agrya-teal-600 focus:border-transparent transition-[border-color,box-shadow]"
                   />
                 </div>
                 <div>
@@ -441,7 +441,7 @@ export const InquiryModal: React.FC<InquiryModalProps> = ({
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="anand@company.com"
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-agrya-slate-200 text-xs text-agrya-slate-900 focus:outline-none focus:ring-2 focus:ring-agrya-teal-600 focus:border-transparent transition-all"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-agrya-slate-200 text-xs text-agrya-slate-900 focus:outline-none focus:ring-2 focus:ring-agrya-teal-600 focus:border-transparent transition-[border-color,box-shadow]"
                   />
                 </div>
               </div>
@@ -458,7 +458,7 @@ export const InquiryModal: React.FC<InquiryModalProps> = ({
                     value={company}
                     onChange={(e) => setCompany(e.target.value)}
                     placeholder="e.g. Acme Health Tech"
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-agrya-slate-200 text-xs text-agrya-slate-900 focus:outline-none focus:ring-2 focus:ring-agrya-teal-600 focus:border-transparent transition-all"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-agrya-slate-200 text-xs text-agrya-slate-900 focus:outline-none focus:ring-2 focus:ring-agrya-teal-600 focus:border-transparent transition-[border-color,box-shadow]"
                   />
                 </div>
                 <div>
@@ -469,7 +469,7 @@ export const InquiryModal: React.FC<InquiryModalProps> = ({
                     id="inquiry-service"
                     value={service}
                     onChange={(e) => setService(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-agrya-slate-200 text-xs text-agrya-slate-900 focus:outline-none focus:ring-2 focus:ring-agrya-teal-600 focus:border-transparent transition-all bg-white"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-agrya-slate-200 text-xs text-agrya-slate-900 focus:outline-none focus:ring-2 focus:ring-agrya-teal-600 focus:border-transparent transition-[border-color,box-shadow] bg-white"
                   >
                     <option value="Virtual CFO">Virtual CFO (Strategic Advisory)</option>
                     <option value="Accounting Hub">Accounting Hub (Bookkeeping & MIS)</option>
@@ -489,7 +489,7 @@ export const InquiryModal: React.FC<InquiryModalProps> = ({
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="e.g. Preparing for Series A round, current ERP stack, or accelerated month-end close..."
-                  className="w-full px-3.5 py-2 rounded-xl border border-agrya-slate-200 text-xs text-agrya-slate-900 focus:outline-none focus:ring-2 focus:ring-agrya-teal-600 focus:border-transparent transition-all"
+                  className="w-full px-3.5 py-2 rounded-xl border border-agrya-slate-200 text-xs text-agrya-slate-900 focus:outline-none focus:ring-2 focus:ring-agrya-teal-600 focus:border-transparent transition-[border-color,box-shadow]"
                 />
               </div>
 
@@ -507,7 +507,7 @@ export const InquiryModal: React.FC<InquiryModalProps> = ({
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full sm:w-auto min-h-[44px] px-6 py-2.5 bg-agrya-slate-900 hover:bg-agrya-slate-800 disabled:bg-agrya-slate-600 text-white rounded-full text-xs font-semibold transition-all flex items-center justify-center gap-2 shadow-sm"
+                  className="w-full sm:w-auto min-h-[44px] px-6 py-2.5 bg-agrya-slate-900 hover:bg-agrya-slate-800 disabled:bg-agrya-slate-600 text-white rounded-full text-xs font-semibold transition-[background-color,transform] active:scale-[0.98] flex items-center justify-center gap-2 shadow-sm"
                 >
                   {isSubmitting ? (
                     <>
@@ -570,7 +570,7 @@ export const InquiryModal: React.FC<InquiryModalProps> = ({
               <button
                 type="button"
                 onClick={handleDownloadICS}
-                className="w-full sm:w-auto min-h-[44px] px-5 py-2.5 bg-agrya-teal-700 hover:bg-agrya-teal-800 text-white rounded-full text-xs font-semibold flex items-center justify-center gap-1.5 transition-all shadow-sm"
+                className="w-full sm:w-auto min-h-[44px] px-5 py-2.5 bg-agrya-teal-700 hover:bg-agrya-teal-800 text-white rounded-full text-xs font-semibold flex items-center justify-center gap-1.5 transition-[background-color,transform] active:scale-[0.98] shadow-sm"
               >
                 <Download className="w-3.5 h-3.5" />
                 <span>Add to Calendar (.ics)</span>
@@ -579,7 +579,7 @@ export const InquiryModal: React.FC<InquiryModalProps> = ({
               <button
                 type="button"
                 onClick={handleTriggerMailClient}
-                className="w-full sm:w-auto min-h-[44px] px-5 py-2.5 bg-white border border-agrya-slate-200 hover:bg-agrya-slate-50 text-agrya-slate-800 rounded-full text-xs font-semibold flex items-center justify-center gap-1.5 transition-all"
+                className="w-full sm:w-auto min-h-[44px] px-5 py-2.5 bg-white border border-agrya-slate-200 hover:bg-agrya-slate-50 text-agrya-slate-800 rounded-full text-xs font-semibold flex items-center justify-center gap-1.5 transition-[background-color,border-color,transform] active:scale-[0.98]"
               >
                 <Mail className="w-3.5 h-3.5" />
                 <span>Open in Email App</span>

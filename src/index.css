@@ -81,6 +81,15 @@
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes metricGlides {
   from {
     opacity: 0;
@@ -103,6 +112,18 @@
   }
 }
 
+@keyframes progressBarIndeterminate {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 .animate-modal-in {
   animation: scaleModalIn 240ms var(--ease-spring) forwards;
 }
@@ -112,12 +133,20 @@
   animation: dropdownEnter 160ms var(--ease-out) forwards;
 }
 
+.animate-fade-in {
+  animation: fadeIn 180ms var(--ease-out) forwards;
+}
+
 .animate-metric {
   animation: metricGlides 200ms var(--ease-out) forwards;
 }
 
 .animate-page-entrance {
-  animation: pageEntrance 180ms var(--ease-out) forwards;
+  animation: pageEntrance 220ms var(--ease-out) forwards;
+}
+
+.animate-top-progress {
+  animation: progressBarIndeterminate 1.2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
 }
 
 /* Fine-Pointer Hover Micro-Interactions (Prevents sticky touch hovers on mobile) */
@@ -130,7 +159,7 @@
   }
 }
 
-/* Graceful Reduced Motion Degradation (Keeps visual opacity feedback, drops spatial motion) */
+/* Graceful Reduced Motion Degradation (Gentler opacity fades, drops spatial displacement) */
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {
     animation-duration: 200ms !important;
@@ -141,10 +170,19 @@
   
   .animate-modal-in,
   .animate-dropdown-in,
-  .animate-metric,
   .animate-page-entrance,
+  .animate-metric {
+    transform: none !important;
+    animation: fadeIn 200ms ease-out forwards !important;
+  }
+
+  .animate-top-progress {
+    animation: none !important;
+    transform: none !important;
+    opacity: 0.6 !important;
+  }
+  
   .hover-lift:hover {
     transform: none !important;
-    animation: none !important;
   }
 }

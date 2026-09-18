@@ -124,7 +124,7 @@ export const FinancialMaturityModal: React.FC<FinancialMaturityModalProps> = ({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-agrya-slate-950/60 backdrop-blur-sm animate-fade-in">
       <div 
-        className="relative w-full max-w-2xl bg-white rounded-3xl border border-agrya-slate-200 shadow-card-elevated overflow-hidden animate-modal-entrance"
+        className="relative w-full max-w-2xl bg-white rounded-3xl border border-agrya-slate-200 shadow-card-elevated overflow-hidden animate-modal-in"
         role="dialog"
         aria-modal="true"
       >
@@ -148,7 +148,7 @@ export const FinancialMaturityModal: React.FC<FinancialMaturityModalProps> = ({
         {/* CONTENT */}
         <div className="p-6 sm:p-8">
           {!isFinished ? (
-            <div className="space-y-6">
+            <div key={currentStep} className="space-y-6 animate-metric">
               
               {/* PROGRESS INDICATOR */}
               <div className="flex items-center justify-between text-xs font-mono text-agrya-slate-400 border-b border-agrya-slate-100 pb-3">
@@ -167,7 +167,7 @@ export const FinancialMaturityModal: React.FC<FinancialMaturityModalProps> = ({
                   <button
                     key={opt.label}
                     onClick={() => handleSelectOption(q.id, opt.points)}
-                    className="w-full text-left p-4 rounded-2xl border border-agrya-slate-200 hover:border-agrya-teal-500 hover:bg-agrya-teal-50/40 spring-snappy transition-all flex items-center justify-between group"
+                    className="w-full text-left p-4 rounded-2xl border border-agrya-slate-200 hover:border-agrya-teal-500 hover:bg-agrya-teal-50/40 spring-snappy transition-[border-color,background-color] flex items-center justify-between group active:scale-[0.99]"
                   >
                     <span className="text-xs sm:text-sm font-medium text-agrya-slate-800 group-hover:text-agrya-teal-900">
                       {opt.label}
@@ -183,7 +183,7 @@ export const FinancialMaturityModal: React.FC<FinancialMaturityModalProps> = ({
           ) : (
             
             /* COMPLETED SUMMARY SCREEN */
-            <div className="space-y-6 text-center py-4">
+            <div className="space-y-6 text-center py-4 animate-metric">
               
               <div className="w-16 h-16 rounded-full bg-agrya-teal-50 border border-agrya-teal-200 flex items-center justify-center text-agrya-teal-700 mx-auto mb-2">
                 <Sparkles className="w-8 h-8" />

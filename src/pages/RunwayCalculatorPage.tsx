@@ -94,7 +94,7 @@ export const RunwayCalculatorPage: React.FC<RunwayCalculatorPageProps> = ({ onOp
                 <button
                   onClick={() => { setScenario('conservative'); trackEvent('simulator_interact', { scenario: 'conservative' }); }}
                   className={clsx(
-                    "px-3 py-1.5 rounded-lg spring-snappy transition-all",
+                    "px-3 py-1.5 rounded-lg spring-snappy transition-[background-color,color,box-shadow]",
                     scenario === 'conservative' ? "bg-white text-agrya-slate-900 shadow-sm" : "text-agrya-slate-500 hover:text-agrya-slate-900"
                   )}
                 >
@@ -103,7 +103,7 @@ export const RunwayCalculatorPage: React.FC<RunwayCalculatorPageProps> = ({ onOp
                 <button
                   onClick={() => { setScenario('base'); trackEvent('simulator_interact', { scenario: 'base' }); }}
                   className={clsx(
-                    "px-3 py-1.5 rounded-lg spring-snappy transition-all",
+                    "px-3 py-1.5 rounded-lg spring-snappy transition-[background-color,color,box-shadow]",
                     scenario === 'base' ? "bg-white text-agrya-slate-900 shadow-sm" : "text-agrya-slate-500 hover:text-agrya-slate-900"
                   )}
                 >
@@ -112,7 +112,7 @@ export const RunwayCalculatorPage: React.FC<RunwayCalculatorPageProps> = ({ onOp
                 <button
                   onClick={() => { setScenario('aggressive'); trackEvent('simulator_interact', { scenario: 'aggressive' }); }}
                   className={clsx(
-                    "px-3 py-1.5 rounded-lg spring-snappy transition-all",
+                    "px-3 py-1.5 rounded-lg spring-snappy transition-[background-color,color,box-shadow]",
                     scenario === 'aggressive' ? "bg-white text-agrya-slate-900 shadow-sm" : "text-agrya-slate-500 hover:text-agrya-slate-900"
                   )}
                 >
@@ -259,7 +259,7 @@ export const RunwayCalculatorPage: React.FC<RunwayCalculatorPageProps> = ({ onOp
                     <div
                       style={{ width: `${Math.min(100, Math.max(5, (runwayMonths / 30) * 100))}%` }}
                       className={clsx(
-                        "h-full rounded-full transition-all duration-300 ease-out",
+                        "h-full rounded-full transition-[width,background-color,box-shadow] duration-250 ease-out",
                         runwayMonths < 12 
                           ? "bg-amber-400 shadow-[0_0_12px_rgba(251,191,36,0.6)]" 
                           : runwayMonths < 20 

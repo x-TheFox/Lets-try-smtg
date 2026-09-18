@@ -190,10 +190,10 @@ export const AccountingHubPage: React.FC<AccountingHubPageProps> = ({ onOpenInqu
                   <span className="text-[11px] font-mono text-agrya-teal-400 uppercase tracking-wider">
                     Projected Annual Cost Reduction
                   </span>
-                  <div className="text-4xl font-extrabold font-mono text-white tracking-tight mt-1">
+                  <div className="text-4xl font-extrabold font-mono tabular-nums text-white tracking-tight mt-1">
                     ₹{annualSavingsLakhs} <span className="text-xl font-normal text-agrya-slate-400">Lakhs / yr</span>
                   </div>
-                  <div className="text-xs text-emerald-400 font-medium mt-1">
+                  <div className="text-xs text-emerald-400 font-medium mt-1 font-mono tabular-nums">
                     ≈ ₹{(modeledSavings).toLocaleString('en-IN')} monthly operating cash savings (modeled)
                   </div>
                 </div>
@@ -201,7 +201,7 @@ export const AccountingHubPage: React.FC<AccountingHubPageProps> = ({ onOpenInqu
                 <div className="grid grid-cols-2 gap-4 border-t border-agrya-slate-800 pt-4 text-xs">
                   <div>
                     <span className="text-agrya-slate-400 block mb-0.5">Hours Reclaimed</span>
-                    <span className="font-mono font-bold text-white text-base">~{hoursSavedPerMonth} hrs / mo</span>
+                    <span className="font-mono font-bold tabular-nums text-white text-base">~{hoursSavedPerMonth} hrs / mo</span>
                   </div>
                   <div>
                     <span className="text-agrya-slate-400 block mb-0.5">Month-End Close</span>

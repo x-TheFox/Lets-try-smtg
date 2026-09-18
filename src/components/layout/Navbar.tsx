@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronDown, Menu, X, ArrowUpRight } from 'lucide-react';
 import { clsx } from 'clsx';
+import { prefetchRoute } from '../../utils/routePrefetch';
 
 interface NavbarProps {
   currentPath: string;
@@ -28,11 +29,13 @@ export const Navbar: React.FC<NavbarProps> = ({
     <header className="sticky top-4 z-50 max-w-5xl mx-auto px-4 w-full">
       <nav 
         aria-label="Main Navigation"
-        className="bg-white/95 backdrop-blur-xl border border-agrya-slate-200/90 rounded-full px-5 py-2.5 shadow-float-nav flex items-center justify-between transition-all"
+        className="bg-white/95 backdrop-blur-xl border border-agrya-slate-200/90 rounded-full px-5 py-2.5 shadow-float-nav flex items-center justify-between transition-[box-shadow,border-color,background-color]"
       >
         {/* BRAND LOGO (OFFICIAL AGRYA LOGO) */}
         <button
           onClick={() => handleNavClick('/')}
+          onMouseEnter={() => prefetchRoute('/')}
+          onFocus={() => prefetchRoute('/')}
           className="flex items-center gap-3 group text-left focus:outline-none focus:ring-2 focus:ring-agrya-teal-500 rounded-xl p-1 transition-transform group-hover:scale-[1.02]"
           aria-label="Agrya Consulting Home"
         >
@@ -72,7 +75,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
             <div 
               className={clsx(
-                "absolute top-full left-0 pt-2 w-64 z-50 origin-top-left transition-all duration-200 ease-out",
+                "absolute top-full left-0 pt-2 w-64 z-50 origin-top-left transition-[opacity,transform] duration-180 ease-out",
                 isServicesOpen 
                   ? "opacity-100 scale-100 translate-y-0 pointer-events-auto" 
                   : "opacity-0 scale-95 -translate-y-1 pointer-events-none"
@@ -81,6 +84,8 @@ export const Navbar: React.FC<NavbarProps> = ({
               <div className="bg-white border border-agrya-slate-200 rounded-2xl p-2 shadow-card-elevated space-y-1">
                 <button
                   onClick={() => handleNavClick('/accounting-hub')}
+                  onMouseEnter={() => prefetchRoute('/accounting-hub')}
+                  onFocus={() => prefetchRoute('/accounting-hub')}
                   className={clsx(
                     "w-full text-left px-3 py-2.5 rounded-xl hover:bg-agrya-slate-50 spring-snappy transition-colors group",
                     currentPath === '/accounting-hub' && "bg-agrya-teal-50"
@@ -92,6 +97,8 @@ export const Navbar: React.FC<NavbarProps> = ({
 
                 <button
                   onClick={() => handleNavClick('/cfo')}
+                  onMouseEnter={() => prefetchRoute('/cfo')}
+                  onFocus={() => prefetchRoute('/cfo')}
                   className={clsx(
                     "w-full text-left px-3 py-2.5 rounded-xl hover:bg-agrya-slate-50 spring-snappy transition-colors group",
                     currentPath === '/cfo' && "bg-agrya-teal-50"
@@ -103,6 +110,8 @@ export const Navbar: React.FC<NavbarProps> = ({
 
                 <button
                   onClick={() => handleNavClick('/cfo-support')}
+                  onMouseEnter={() => prefetchRoute('/cfo-support')}
+                  onFocus={() => prefetchRoute('/cfo-support')}
                   className={clsx(
                     "w-full text-left px-3 py-2.5 rounded-xl hover:bg-agrya-slate-50 spring-snappy transition-colors group",
                     currentPath === '/cfo-support' && "bg-agrya-teal-50"
@@ -118,6 +127,8 @@ export const Navbar: React.FC<NavbarProps> = ({
                   </div>
                   <button
                     onClick={() => handleNavClick('/tools/runway-calculator')}
+                    onMouseEnter={() => prefetchRoute('/tools/runway-calculator')}
+                    onFocus={() => prefetchRoute('/tools/runway-calculator')}
                     className={clsx(
                       "w-full text-left px-3 py-2 rounded-xl hover:bg-agrya-slate-50 spring-snappy transition-colors group flex items-center justify-between",
                       currentPath === '/tools/runway-calculator' && "bg-agrya-teal-50"
@@ -198,6 +209,8 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           <button
             onClick={() => handleNavClick('/story')}
+            onMouseEnter={() => prefetchRoute('/story')}
+            onFocus={() => prefetchRoute('/story')}
             className={clsx(
               "hover:text-agrya-slate-900 spring-snappy transition-colors",
               currentPath === '/story' && "text-agrya-teal-700 font-bold"
@@ -208,6 +221,8 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           <button
             onClick={() => handleNavClick('/team')}
+            onMouseEnter={() => prefetchRoute('/team')}
+            onFocus={() => prefetchRoute('/team')}
             className={clsx(
               "hover:text-agrya-slate-900 spring-snappy transition-colors",
               currentPath === '/team' && "text-agrya-teal-700 font-bold"
@@ -244,7 +259,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       {/* MOBILE COLLAPSED DRAWER */}
       <div 
         className={clsx(
-          "md:hidden overflow-hidden transition-all duration-300 ease-out origin-top",
+          "md:hidden overflow-hidden transition-[max-height,opacity,transform] duration-250 ease-out origin-top",
           isMobileMenuOpen 
             ? "max-h-[500px] opacity-100 mt-2 pointer-events-auto scale-100" 
             : "max-h-0 opacity-0 mt-0 pointer-events-none scale-98"

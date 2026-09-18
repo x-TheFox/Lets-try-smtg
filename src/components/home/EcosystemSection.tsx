@@ -168,7 +168,7 @@ export const EcosystemSection: React.FC = () => {
                   key={tab}
                   onClick={() => setActivePreview(tab)}
                   className={clsx(
-                    "px-3.5 py-1.5 rounded-lg spring-snappy transition-all",
+                    "px-3.5 py-1.5 rounded-lg spring-snappy transition-[background-color,color,box-shadow]",
                     activePreview === tab
                       ? "bg-white text-agrya-slate-900 shadow-sm"
                       : "text-agrya-slate-700 hover:text-agrya-slate-950 font-medium"

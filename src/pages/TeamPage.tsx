@@ -223,7 +223,7 @@ export const TeamPage: React.FC<TeamPageProps> = ({ onOpenInquiry }) => {
           <div className="pt-2">
             <a
               href="mailto:hr@agrya.in"
-              className="inline-flex items-center justify-center px-6 py-3 text-xs font-semibold rounded-full text-agrya-slate-900 bg-white hover:bg-agrya-slate-100 transition-all hover:scale-105 shadow-md shadow-white/10"
+              className="inline-flex items-center justify-center px-6 py-3 text-xs font-semibold rounded-full text-agrya-slate-900 bg-white hover:bg-agrya-slate-100 transition-[transform,background-color,box-shadow] hover:scale-[1.02] spring-snappy shadow-md shadow-white/10"
             >
               View Openings • Contact HR (hr@agrya.in)
             </a>

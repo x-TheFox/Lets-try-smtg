@@ -181,7 +181,7 @@ export const CfoPage: React.FC<CfoPageProps> = ({ onOpenInquiry, onNavigate, onO
                       <div
                         style={{ width: `${Math.min(100, Math.max(6, (Math.min(36, rawMonths) / 36) * 100))}%` }}
                         className={clsx(
-                          "h-full rounded-full transition-all duration-300 ease-out",
+                          "h-full rounded-full transition-[width,background-color,box-shadow] duration-250 ease-out",
                           rawMonths < 12 
                             ? "bg-amber-400 shadow-[0_0_12px_rgba(251,191,36,0.6)]" 
                             : rawMonths <= 24 

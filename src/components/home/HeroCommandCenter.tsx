@@ -124,7 +124,7 @@ export const HeroCommandCenter: React.FC<HeroCommandCenterProps> = ({
                 <button
                   onClick={() => setActiveStage('seed')}
                   className={clsx(
-                    "min-h-[44px] px-4 py-2 rounded-lg spring-snappy transition-all whitespace-nowrap flex items-center justify-center",
+                    "min-h-[44px] px-4 py-2 rounded-lg spring-snappy transition-[background-color,color,box-shadow] whitespace-nowrap flex items-center justify-center",
                     activeStage === 'seed' 
                       ? "bg-white text-agrya-slate-900 shadow-sm font-bold" 
                       : "text-agrya-slate-600 hover:text-agrya-slate-900"
@@ -135,7 +135,7 @@ export const HeroCommandCenter: React.FC<HeroCommandCenterProps> = ({
                 <button
                   onClick={() => setActiveStage('growth')}
                   className={clsx(
-                    "min-h-[44px] px-4 py-2 rounded-lg spring-snappy transition-all whitespace-nowrap flex items-center justify-center",
+                    "min-h-[44px] px-4 py-2 rounded-lg spring-snappy transition-[background-color,color,box-shadow] whitespace-nowrap flex items-center justify-center",
                     activeStage === 'growth' 
                       ? "bg-white text-agrya-slate-900 shadow-sm font-bold" 
                       : "text-agrya-slate-600 hover:text-agrya-slate-900"
@@ -146,7 +146,7 @@ export const HeroCommandCenter: React.FC<HeroCommandCenterProps> = ({
                 <button
                   onClick={() => setActiveStage('enterprise')}
                   className={clsx(
-                    "min-h-[44px] px-4 py-2 rounded-lg spring-snappy transition-all whitespace-nowrap flex items-center justify-center",
+                    "min-h-[44px] px-4 py-2 rounded-lg spring-snappy transition-[background-color,color,box-shadow] whitespace-nowrap flex items-center justify-center",
                     activeStage === 'enterprise' 
                       ? "bg-white text-agrya-slate-900 shadow-sm font-bold" 
                       : "text-agrya-slate-600 hover:text-agrya-slate-900"

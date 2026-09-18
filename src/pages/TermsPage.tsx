@@ -136,14 +136,14 @@ export const TermsPage: React.FC<TermsPageProps> = ({ onOpenInquiry, onNavigate 
         {/* SWITCHER TABS: TERMS VS PRIVACY */}
         <div className="inline-flex p-1 rounded-xl bg-agrya-slate-100 border border-agrya-slate-200 text-xs font-semibold">
           <button
-            className="px-4 py-1.5 rounded-lg bg-white text-agrya-slate-900 shadow-sm transition-all"
+            className="px-4 py-1.5 rounded-lg bg-white text-agrya-slate-900 shadow-sm transition-[background-color,color,box-shadow]"
             disabled
           >
             Terms of Service
           </button>
           <button
             onClick={() => onNavigate?.('/privacy')}
-            className="px-4 py-1.5 rounded-lg text-agrya-slate-600 hover:text-agrya-slate-900 transition-all flex items-center gap-1"
+            className="px-4 py-1.5 rounded-lg text-agrya-slate-600 hover:text-agrya-slate-900 transition-[background-color,color] flex items-center gap-1"
           >
             <span>Privacy Policy</span>
             <ChevronRight className="w-3.5 h-3.5 opacity-60" />
@@ -235,7 +235,7 @@ export const TermsPage: React.FC<TermsPageProps> = ({ onOpenInquiry, onNavigate 
                     key={c.id}
                     onClick={() => scrollToSection(c.id)}
                     className={clsx(
-                      "w-full text-left px-3 py-2.5 rounded-xl text-xs font-medium flex items-center justify-between transition-all group border",
+                      "w-full text-left px-3 py-2.5 rounded-xl text-xs font-medium flex items-center justify-between transition-[background-color,color,border-color,box-shadow] group border",
                       isActive 
                         ? "bg-agrya-teal-50 text-agrya-teal-900 font-bold border-agrya-teal-200 shadow-sm" 
                         : "text-agrya-slate-600 hover:bg-agrya-slate-50 hover:text-agrya-slate-900 border-transparent"
@@ -249,7 +249,7 @@ export const TermsPage: React.FC<TermsPageProps> = ({ onOpenInquiry, onNavigate 
                       </span>
                     </div>
                     <div className={clsx(
-                      "w-1.5 h-1.5 rounded-full transition-all shrink-0 ml-2",
+                      "w-1.5 h-1.5 rounded-full transition-[background-color,transform,opacity] shrink-0 ml-2",
                       isActive ? "bg-agrya-teal-600 scale-100 opacity-100" : "bg-transparent scale-50 opacity-0"
                     )} />
                   </button>

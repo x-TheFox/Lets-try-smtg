@@ -135,12 +135,12 @@ export const PrivacyPage: React.FC<PrivacyPageProps> = ({ onOpenInquiry, onNavig
         <div className="inline-flex p-1 rounded-xl bg-agrya-slate-100 border border-agrya-slate-200 text-xs font-semibold">
           <button
             onClick={() => onNavigate?.('/terms')}
-            className="px-4 py-1.5 rounded-lg text-agrya-slate-600 hover:text-agrya-slate-900 transition-all flex items-center gap-1"
+            className="px-4 py-1.5 rounded-lg text-agrya-slate-600 hover:text-agrya-slate-900 transition-[background-color,color] flex items-center gap-1"
           >
             <span>Terms of Service</span>
           </button>
           <button
-            className="px-4 py-1.5 rounded-lg bg-white text-agrya-slate-900 shadow-sm transition-all"
+            className="px-4 py-1.5 rounded-lg bg-white text-agrya-slate-900 shadow-sm transition-[background-color,color,box-shadow]"
             disabled
           >
             Privacy Policy
@@ -232,7 +232,7 @@ export const PrivacyPage: React.FC<PrivacyPageProps> = ({ onOpenInquiry, onNavig
                     key={s.id}
                     onClick={() => scrollToSection(s.id)}
                     className={clsx(
-                      "w-full text-left px-3 py-2.5 rounded-xl text-xs font-medium flex items-center justify-between transition-all group border",
+                      "w-full text-left px-3 py-2.5 rounded-xl text-xs font-medium flex items-center justify-between transition-[background-color,color,border-color,box-shadow] group border",
                       isActive 
                         ? "bg-agrya-teal-50 text-agrya-teal-900 font-bold border-agrya-teal-200 shadow-sm" 
                         : "text-agrya-slate-600 hover:bg-agrya-slate-50 hover:text-agrya-slate-900 border-transparent"
@@ -246,7 +246,7 @@ export const PrivacyPage: React.FC<PrivacyPageProps> = ({ onOpenInquiry, onNavig
                       </span>
                     </div>
                     <div className={clsx(
-                      "w-1.5 h-1.5 rounded-full transition-all shrink-0 ml-2",
+                      "w-1.5 h-1.5 rounded-full transition-[background-color,transform,opacity] shrink-0 ml-2",
                       isActive ? "bg-agrya-teal-600 scale-100 opacity-100" : "bg-transparent scale-50 opacity-0"
                     )} />
                   </button>

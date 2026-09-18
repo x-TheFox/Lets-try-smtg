@@ -3,6 +3,10 @@ import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
 import { InquiryModal } from './components/layout/InquiryModal';
 import { FinancialMaturityModal } from './components/ui/FinancialMaturityModal';
+import { PageTransition } from './components/layout/PageTransition';
+import { PageSkeleton } from './components/layout/PageSkeleton';
+import { TopProgressBar } from './components/layout/TopProgressBar';
+import { prefetchRoute } from './utils/routePrefetch';
 
 import { HomePage } from './pages/HomePage';
 
@@ -15,6 +19,13 @@ const RunwayCalculatorPage = lazy(() => import('./pages/RunwayCalculatorPage').t
 const TermsPage = lazy(() => import('./pages/TermsPage').then(m => ({ default: m.TermsPage })));
 const PrivacyPage = lazy(() => import('./pages/PrivacyPage').then(m => ({ default: m.PrivacyPage })));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(m => ({ default: m.NotFoundPage })));
+
+const SuspenseFallback: React.FC = () => (
+  <>
+    <TopProgressBar isLoading={true} />
+    <PageSkeleton />
+  </>
+);
 
 export function App() {
   const [currentPath, setCurrentPath] = useState<string>(() => {
@@ -74,6 +85,7 @@ export function App() {
 
   const navigate = (path: string) => {
     if (path !== currentPath) {
+      prefetchRoute(path);
       window.history.pushState({}, '', path);
       setCurrentPath(path);
     }
@@ -166,13 +178,13 @@ export function App() {
         onOpenDiagnostic={() => setIsMaturityModalOpen(true)}
       />
 
-      {/* DYNAMIC ROUTE CONTAINER */}
+      {/* DYNAMIC ROUTE CONTAINER WITH SUSPENSE PROGRESS & ENTRANCE ANIMATION */}
       <main className="flex-1 w-full" id="main-content">
-        <div key={currentPath} className="animate-page-entrance">
-          <Suspense fallback={<div className="min-h-[50vh]" />}>
+        <Suspense fallback={<SuspenseFallback />}>
+          <PageTransition routeKey={currentPath}>
             {renderRoute()}
-          </Suspense>
-        </div>
+          </PageTransition>
+        </Suspense>
       </main>
 
       {/* FOOTER */}
