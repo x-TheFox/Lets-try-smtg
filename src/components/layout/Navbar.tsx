@@ -26,7 +26,8 @@ export const Navbar: React.FC<NavbarProps> = ({
   };
 
   return (
-    <header className="sticky top-4 z-50 max-w-5xl mx-auto px-4 w-full">
+    <header className="sticky top-4 z-50 w-full px-4">
+      <div className="max-w-5xl mx-auto">
       <nav 
         aria-label="Main Navigation"
         className="bg-white/95 backdrop-blur-xl border border-agrya-slate-200/90 rounded-full px-5 py-2.5 shadow-float-nav flex items-center justify-between transition-[box-shadow,border-color,background-color]"
@@ -256,15 +257,16 @@ export const Navbar: React.FC<NavbarProps> = ({
         </div>
       </nav>
 
-      {/* MOBILE COLLAPSED DRAWER */}
+      {/* MOBILE COLLAPSED DRAWER — grid-rows animation avoids overflow:hidden clipping */}
       <div 
         className={clsx(
-          "md:hidden overflow-hidden transition-[max-height,opacity,transform] duration-250 ease-out origin-top",
+          "md:hidden grid transition-[grid-template-rows,opacity,transform] duration-250 ease-out origin-top",
           isMobileMenuOpen 
-            ? "max-h-[500px] opacity-100 mt-2 pointer-events-auto scale-100" 
-            : "max-h-0 opacity-0 mt-0 pointer-events-none scale-98"
+            ? "grid-rows-[1fr] opacity-100 mt-2 pointer-events-auto scale-100" 
+            : "grid-rows-[0fr] opacity-0 mt-0 pointer-events-none scale-[0.98]"
         )}
       >
+        <div className="overflow-hidden">
         <div className="bg-white/98 backdrop-blur-2xl border border-agrya-slate-200 rounded-3xl p-5 shadow-card-elevated space-y-4">
           <div className="space-y-1">
             <div className="text-[10px] font-mono font-semibold uppercase text-agrya-slate-400 px-3 py-1">Services</div>
@@ -383,6 +385,8 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
           </div>
         </div>
+        </div>
+      </div>
       </div>
     </header>
   );
